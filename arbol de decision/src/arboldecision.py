@@ -5,7 +5,6 @@ from sklearn.metrics import accuracy_score, f1_score
 from scipy.stats import zscore
 import matplotlib.pyplot as plt
 import numpy as np
-from collections import Counter
 import os
 
 # --- Preparación y Clasificación de Datos ---
@@ -27,8 +26,10 @@ def preparar_datos(df):
         'remitente': 'sender'
     })
 
-    # Eliminar filas con valores faltantes en la columna 'etiqueta'
+    df['label'].fillna(df['label'].mode()[0], inplace=True)
     df.dropna(subset=['label'], inplace=True)
+    
+    print(f"Total de correos utilizados para el proceso: {len(df)}")
 
     # Definir la lista de caracteristicas (features) que usara el modelo.
     features = [
@@ -52,6 +53,11 @@ def entrenar_y_evaluar(X, y, test_size, random_state):
     """
     # Dividir los datos en conjuntos de entrenamiento (para aprender) y prueba (para evaluar).
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_size, random_state=random_state)
+    
+    # Mostrar el numero de correos usados en esta iteracion.
+    print(f"  -> Iteracion {random_state + 1}:")
+    print(f"     Conjunto de entrenamiento: {len(X_train)} correos")
+    print(f"     Conjunto de prueba: {len(X_test)} correos")
     
     # Inicializar y entrenar el modelo de Arbol de Decisión (algoritmo CART por defecto).
     modelo = DecisionTreeClassifier(random_state=42)
@@ -88,20 +94,26 @@ def graficar_resultados(df_resultados, img_path):
 
     plt.tight_layout()
     
-    # Guardar la grafica en la ruta especifica.
+    # Guardar la grafica en la ruta especificada.
     grafico_path = os.path.join(img_path, 'metricas_boxplot.png')
     plt.savefig(grafico_path)
     print(f"\nGráfica de resultados guardada en:\n{grafico_path}")
     plt.show()
 
-### Proceso Principal
+# --- Proceso Principal ---
 
 def main():
-    # Rutas relativas para la entrada y salida de datos
-    csv_path = os.path.join('data', 'correos_limpios.csv')
+    """
+    Flujo completo: Clasificación y análisis de resultados usando un CSV existente.
+    """
+    # Se corrige la ruta para que sea relativa a la carpeta del script 'src'.
+    # El '..' le dice a Python que suba un nivel de directorio para acceder a 'data'.
+    csv_path = os.path.join('..', 'data', 'correos_limpios.csv')
+    img_path = os.path.join('..', 'imgs')
     
-    # La ruta de salida para las imagenes
-    img_path = os.path.join('imgs')
+    # Crear las carpetas de salida si no existen.
+    os.makedirs(os.path.dirname(os.path.join('..', 'data', 'resultados_clasificacion.csv')), exist_ok=True)
+    os.makedirs(img_path, exist_ok=True)
 
     if not os.path.exists(csv_path):
         print(f"Error: El archivo '{csv_path}' no se encuentra.")
@@ -162,11 +174,10 @@ def main():
     print(df_resultados.describe())
 
     # Guardar los resultados en un archivo CSV en la ruta especificada.
-    nombre_archivo_resultados = os.path.join('data', 'resultados_clasificacion.csv')
+    nombre_archivo_resultados = os.path.join('..', 'data', 'resultados_clasificacion.csv')
     df_resultados.to_csv(nombre_archivo_resultados, index=False)
     print(f"\nResultados guardados en '{nombre_archivo_resultados}'.")
 
-    # Generar y guardar las graficas de boxplot.
     graficar_resultados(df_resultados, img_path)
 
 if __name__ == "__main__":
