@@ -1,0 +1,997 @@
+asunto,cuerpo,etiqueta,remitente,tiene_links,errores_gramaticales,todo_mayusculas,solicita_info_personal,clasificacion,feat_tiene_links,feat_errores_gramaticales,feat_todo_mayusculas,feat_solicita_info_personal,feat_cuerpo_len,feat_num_exclam,feat_upper_ratio,feat_num_words_body
+Oferta Increíble: ¡Gana un Millón!,¡Felicidades! Ha ganado un millón de dólares. Reclame su premio aquí: [enlace sospechoso],spam,ganador@ofertasespeciales.com,1,1,1,1,SPAM,1,1,1,1,93,2,0.09722222222222222,13
+"Re: Tu pedido ha sido enviado;""Estimado cliente; su pedido ha sido enviado. Puede rastrearlo aquí: [enlace legítimo]"";ham;pedidos@example.com;True;False;False;False;Spam",,,,1,1,1,1,HAM,1,1,1,1,0,0,0.0,0
+"Actualiza tu contraseña ahora;""Estimado usuario; por favor actualiza tu contraseña para mejorar la seguridad de tu cuenta. [enlace sospechoso]"";spam;seguridad@emailsinseguros.net;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Tu paquete está listo para ser recogido,Tu paquete ya está listo para ser recogido en la oficina de correos más cercana. [enlace legítimo],ham,notificaciones@correo.com,1,1,1,1,HAM,1,1,1,1,101,0,0.05063291139240506,17
+"Gana un viaje a Hawaii;""Felicidades; ha ganado un viaje a Hawái para dos personas. Haga clic aquí para reclamar su premio: [enlace sospechoso]"";spam;premios@sorteosfantasticos.net;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Problemas con tu cuenta,Hemos detectado actividad inusual en tu cuenta. Por favor verifica tu información aquí: [enlace sospechoso],spam,seguridad@cuentasinseguras.com,0,0,0,0,SPAM,0,0,0,0,109,0,0.0449438202247191,15
+"Mensaje importante de tu banco;""Estimado cliente; por favor verifica tu información bancaria aquí: [enlace sospechoso]"";spam;banco@correofalso.com;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Tu pedido #12345 ha sido enviado,Tu pedido #12345 ha sido enviado. Haz clic aquí para rastrearlo: [enlace legítimo],ham,pedidos@tiendaonline.com,0,0,0,0,SPAM,0,0,0,0,84,0,0.06666666666666667,13
+¡¡GRAN OFERTA!!,¡Aprovecha nuestra gran oferta! ¡Compra ahora!,spam,ofertas@grandesofertas.net,0,0,0,0,SPAM,0,0,0,0,48,4,0.10256410256410256,6
+"Re: Reunión mañana;""Hola Juan; recuerda nuestra reunión mañana a las 10:00 AM."";ham;ana@gmail.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Mensaje urgente,Por favor responde inmediatamente a este correo.,spam,urgente@correoimportante.net,0,0,0,0,HAM,0,0,0,0,48,0,0.024390243902439025,7
+Oferta especial: 50% de descuento,Aprovecha nuestra oferta especial del 50% de descuento en todos nuestros productos. [enlace sospechoso],spam,descuentos@ofertasirresistibles.net,0,0,0,0,SPAM,0,0,0,0,103,0,0.011904761904761904,14
+Tu cuenta ha sido suspendida,Tu cuenta ha sido suspendida debido a actividad sospechosa.  [enlace sospechoso],spam,seguridad@cuentacomprometida.com,0,0,0,0,SPAM,0,0,0,0,80,0,0.015151515151515152,11
+"Actualización de seguridad;""Por favor; actualiza tu información de seguridad. [enlace sospechoso]"";spam;seguridad@actualizatucuenta.net;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Re: Cita médica;""Doctor; ¿podría reprogramar mi cita para el próximo martes?"";ham;paciente@gmail.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡Fel#cidades! ¡Has ganado un premio!,¡Felici#ades! Ha ganado un premio. Reclame su premio aquí: [enlace sospechoso],spam,premios@ganapremios.com,0,0,0,0,SPAM,0,0,0,0,80,3,0.08064516129032258,11
+Recuerda pagar tu factura,Recuerda pagar tu factura antes de la fecha de vencimiento.,ham,facturas@empresa.com,0,0,0,0,HAM,0,0,0,0,59,0,0.02040816326530612,10
+Compra tu nuevo auto hoy,Compra tu nuevo auto hoy con nuestros increíbles precios!,spam,autos@ventaautos.com,0,0,0,0,SPAM,0,0,0,0,58,1,0.041666666666666664,9
+"Problemas con tu cuenta de correo electrónico;""Hemos detectado actividad sospechosa en tu cuenta. Por favor; inicia sesión aquí: [enlace sospechoso]"";spam;seguridad@correoelectronico.com;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Re: Proyecto X;""Hola equipo; actualicemos el estado del proyecto X."";ham;jefe@empresa.com;False;False;False;False;Ham",,,,1,1,1,1,HAM,1,1,1,1,0,0,0.0,0
+¡Gana un iPhone!,¡Gana un iPhone gratis! ¡Participa ahora!,spam,iphone@ganaiphone.com,1,1,1,1,SPAM,1,1,1,1,43,3,0.14705882352941177,6
+Recuerda tu cita con el dentista,Recuerda tu cita con el dentista para mañana a las 3:00 PM.,ham,citas@dentista.com,0,0,0,0,HAM,0,0,0,0,60,0,0.09302325581395349,12
+Oferta exclusiva para ti,Oferta exclusiva solo para ti. ¡Compra ahora!,spam,ofertas@exclusivo.net,0,0,0,0,SPAM,0,0,0,0,46,1,0.08108108108108109,7
+"Tu envío está en camino;""Tu envío está en camino; puedes rastrearlo aquí [enlace legítimo]"";ham;envios@empresa.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"¡Oferta limitada por tiempo!;""Oferta limitada por tiempo; no te quedes sin tu producto!"";spam;ofertas@limitadas.net;False;True;True;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,2,0.0,0
+"Re: Planificación del evento;""Hola equipo; revisemos la planificación del evento."";ham;eventos@empresa.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Problemas con tu pago,Hemos detectado un problema con tu pago reciente. [enlace sospechoso],spam,pagos@pagosfraudulentos.net,0,0,0,0,SPAM,0,0,0,0,69,0,0.017543859649122806,10
+¡Gana un auto nuevo!,¡Gana un auto nuevo! ¡Participa ahora!,spam,autos@ganaautos.com,0,0,0,0,SPAM,0,0,0,0,40,3,0.12903225806451613,6
+"Re: Vacaciones;""Hola; ¿cómo van los preparativos para las vacaciones?"";ham;amigo@gmail.com;False;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡Oferta irresistible!,¡Oferta irresistible que no puedes dejar pasar!,spam,ofertas@irresistible.net,0,0,0,0,SPAM,0,0,0,0,48,2,0.05,7
+Recuerda tu cita,Recuerda tu cita para mañana a las 10:00 AM.,ham,citas@empresa.com,0,0,0,0,SPAM,0,0,0,0,45,0,0.13333333333333333,9
+Tu pedido ha sido confirmado,Tu pedido ha sido confirmado. [enlace legítimo],ham,confirmacion@tienda.com,0,0,0,0,SPAM,0,0,0,0,48,0,0.05263157894736842,7
+Oferta Increíble: ¡Gana un Millón!,¡Felicidades! Ha ganado un millón de dólares. Reclame su premio aquí: [enlace sospechoso],spam,ganador@ofertasespeciales.com,1,1,1,1,SPAM,1,1,1,1,93,2,0.09722222222222222,13
+Tu paquete está listo para ser recogido,Tu paquete ya está listo para ser recogido en la oficina de correos más cercana. [enlace legítimo],ham,notificaciones@correo.com,0,0,0,0,SPAM,0,0,0,0,101,0,0.05063291139240506,17
+"Gana un viaje a Hawaii;""Felicidades# ha ganado un viaje a Hawái para dos personas. Haga clic aquí para reclamar su premio: [enlace sospechoso]"";spam;premios@sorteosfantasticos.net;True;False;False;False;Spam",N#ne,,,0,0,0,0,HAM,0,0,0,0,4,0,0.3333333333333333,1
+Problemas con tu cuenta,Hemos detectado actividad inusual en tu cuenta. Por favor verifica tu información aquí: [enlace sospechoso],spam,seguridad@cuentasinseguras.com,1,1,1,1,SPAM,1,1,1,1,109,0,0.0449438202247191,15
+"Mensaje importante de tu banco;""Estimado cliente; por favor verifica tu información bancaria aquí: [enlace sospechoso]"";spam;banco@correofalso.com;True;False;False;True;Spam",,,,1,1,1,1,HAM,1,1,1,1,0,0,0.0,0
+Tu pedido #12345 ha sido enviado,Tu pedido #12345 ha sido enviado. Haz clic aquí para rastrearlo: [enlace legítimo],ham,pedidos@tiendaonline.com,0,0,0,0,SPAM,0,0,0,0,84,0,0.06666666666666667,13
+¡¡GRAN OFERTA!!,¡Aprovecha nuestra gran oferta! ¡Compra ahora!,spam,ofertas@grandesofertas.net,1,1,1,1,SPAM,1,1,1,1,48,4,0.10256410256410256,6
+"Re: Reunión mañana;""Hola Juan; recuerda nuestra reunión mañana a las 10:00 AM."";ham;ana@gmail.com;False;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Mensaje urgente,Por favor responde inmediatamente a este correo.,spam,urgente@correoimportante.net,0,0,0,0,SPAM,0,0,0,0,48,0,0.024390243902439025,7
+Oferta especial: 50% de descuento,Aprovecha nuestra oferta especial del 50% de descuento en todos nuestros productos. [enlace sospechoso],spam,descuentos@ofertasirresistibles.net,1,1,1,1,SPAM,1,1,1,1,103,0,0.011904761904761904,14
+Tu cuenta ha sido suspendida,Tu cuenta ha sido suspendida debido a actividad sospechosa.  [enlace sospechoso],spam,seguridad@cuentacomprometida.com,0,0,0,0,SPAM,0,0,0,0,80,0,0.015151515151515152,11
+"Actualización de seguridad;""Por favor; actualiza tu información de seguridad. [enlace sospechoso]"";spam;seguridad@actualizatucuenta.net;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Re: Cita médica;""Doctor; ¿podría reprogramar mi cita para el próximo martes?"";ham;paciente@gmail.com;False;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡Felicidades! ¡Has ganado un premio!,¡Felicidades! Ha ganado un premio. Reclame su premio aquí: [enlace sospechoso],spam,premios@ganapremios.com,0,0,0,0,SPAM,0,0,0,0,80,3,0.07936507936507936,11
+Recuerda pagar tu factura,Recuerda pagar tu factura antes de la fecha de vencimiento.,ham,facturas@empresa.com,0,0,0,0,SPAM,0,0,0,0,59,0,0.02040816326530612,10
+Compra tu nuevo auto hoy,Compra tu nuevo auto hoy con nuestros increíbles precios!,spam,autos@ventaautos.com,0,0,0,0,SPAM,0,0,0,0,58,1,0.041666666666666664,9
+Oferta Increíble: ¡Gana un Millón!,¡Felicidades! Ha ganado un millón de dólares. Reclame su premio aquí: [enlace sospechoso],spam,premios@ofertasespeciales.com,0,0,0,0,SPAM,0,0,0,0,93,2,0.09722222222222222,13
+"Re: Tu cuenta ha sido comprometida;""Estimado usuario; hemos detectado actividad sospechosa en su cuenta. Por favor; verifique su información aquí: [enlace sospechoso]"";spam;seguridad@banconacional.com.uy;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Actualización de tu pedido #12345,Su pedido ha sido actualizado. Haga clic aquí para ver los detalles: [enlace seguro],ham,pedidos@amazon.com,0,0,0,0,SPAM,0,0,0,0,85,0,0.04477611940298507,14
+"Re: Cita médica mañana a las 10 AM;""Doctora; ¿podría confirmar la cita de mañana a las 10 AM?"";ham;paciente@gmail.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Nuevo correo electrónico,¡Hola! ¿Qué tal todo?,ham,amigo@yahoo.com,0,0,0,0,HAM,0,0,0,0,24,1,0.3125,4
+Oferta Limitada: ¡50% de descuento!,¡No te pierdas esta increíble oferta! ¡50% de descuento en todos nuestros productos. Compra ahora: [enlace sospechoso],spam,ofertas@megapromociones.net,1,1,1,1,SPAM,1,1,1,1,121,2,0.05319148936170213,17
+"Tu paquete ha llegado;""Su paquete ha llegado a la oficina de correos. Para más información; visite: [enlace seguro]"";ham;notificaciones@correos.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Gana un viaje a Hawai;""Felicidades; ha ganado un viaje a Hawai. Reclame su premio aquí: [enlace sospechoso]"";spam;concursos@viajesgratis.com;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Re: Reunión de trabajo;""Buenos días; adjunto la presentación para la reunión de esta tarde."";ham;compañero@outlook.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"ACTUALIZACION DE SU CUENTA;""Estimado cliente; actualice su información de pago para evitar la suspensión de su cuenta: [enlace sospechoso]"";spam;seguridad@bancofalso.com;True;True;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Re: Proyecto X;""Estimado equipo; actualizacion sobre el proyecto X. Saludos."";ham;jefe@empresa.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"GANE UN AUTO NUEVO!!!;""Felicidades; has ganado un auto nuevo. Reclame su premio aquí: [enlace sospechoso]"";spam;premios@ganautos.com;True;True;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,3,0.0,0
+"Re: Planificación del evento;""Hola equipo; les adjunto la planificación del evento. Saludos cordiales."";ham;organizador@gmail.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Solicitud de amistad;""Hola; me gustaría agregarlos a mis contactos."";ham;nuevoamigo@yahoo.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Importante: Actualice su contraseña;""Por motivos de seguridad; actualice su contraseña inmediatamente: [enlace sospechoso]"";spam;seguridad@tucuenta.com.do;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Re: Cita con el dentista,Dra. ¿Confirma la cita para mañana a las 3pm?,ham,paciente@outlook.com,0,0,0,0,SPAM,0,0,0,0,47,0,0.11764705882352941,9
+Tu pedido ha sido enviado,Su pedido ha sido enviado. Puede rastrearlo aquí: [enlace seguro],ham,envios@tiendaonline.com,1,1,1,1,SPAM,1,1,1,1,66,0,0.057692307692307696,10
+¡Oferta Flash! ¡Descuento del 70%,¡Solo por hoy! ¡70% de descuento en todos nuestros productos. Compre ahora: [enlace sospechoso],spam,ofertasflash@descuentos.net,0,0,0,0,SPAM,0,0,0,0,97,2,0.05405405405405406,14
+"Re: Informe del proyecto;""Estimado jefe; adjunto el informe del proyecto. Saludos."";ham;empleado@empresa.com;False;False;False;False;Ham",,,,1,1,1,1,HAM,1,1,1,1,0,0,0.0,0
+¡Gana un iPhone!,Ha ganado un iPhone! Reclame su premio aquí: [enlace sospechoso],spam,concursos@iphonegratis.com,0,0,0,0,HAM,0,0,0,0,65,2,0.0784313725490196,10
+"Re: Reunion del equipo;""Estimados; confirmo la reunion para mañana a las 11 am."";ham;gerente@gmail.com;False;False;False;False;Ham",,,,1,1,1,1,HAM,1,1,1,1,0,0,0.0,0
+¡Oferta Exclusiva: Viajes a Europa!,¡Viajes a Europa con descuentos increíbles! Reserve ahora: [enlace sospechoso],spam,viajes@europa.com,0,0,0,0,SPAM,0,0,0,0,80,2,0.07692307692307693,10
+"Re: Problemas con la impresora;""Estimado departamento de IT; la impresora sigue sin funcionar."";ham;empleado@empresa.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Confirmación de tu compra,Gracias por su compra. Puede ver los detalles aquí: [enlace seguro],ham,compras@tiendaonline.com,0,0,0,0,SPAM,0,0,0,0,68,0,0.05660377358490566,11
+¡PRESTAMO RAPIDO Y FACIL!,¡Obtenga un préstamo rápido y fácil! Solicite ahora: [enlace sospechoso],spam,prestamos@creditorapido.com,0,0,0,0,SPAM,0,0,0,0,76,2,0.1016949152542373,10
+"Re: Presentación del proyecto;""Estimado equipo; adjunto la presentación del proyecto."";ham;jefe@empresa.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡Gana un auto!,Felicidades! Ha ganado un auto nuevo. Reclame su premio aquí: [enlace sospechoso],spam,premios@autosgratis.com,0,0,0,0,SPAM,0,0,0,0,82,2,0.06153846153846154,12
+"Re: Reserva de hotel;""Hola; ¿podría confirmar la reserva del hotel para el próximo fin de semana?"";ham;cliente@gmail.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Tu contraseña ha sido restablecida;""Su contraseña ha sido restablecida. Si no fue usted; contacte con nosotros: [enlace seguro]"";ham;seguridad@gmail.com;True;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Aumente sus ventas,Aumente sus ventas con nuestra nueva herramienta. Más información: [enlace sospechoso],spam,ventas@aumentesusventas.net,0,0,0,0,SPAM,0,0,0,0,88,0,0.05555555555555555,11
+"Re: Cita médica;""Doctor; ¿podría confirmar la cita para el lunes a las 2 PM?"";ham;paciente@yahoo.com;False;False;False;False;Ham",,,,1,1,1,1,HAM,1,1,1,1,0,0,0.0,0
+¡Oferta irresistible!#¡50% de descuento!,¡No te pierdas esta oferta# ¡50% de descuento en todos nuestros productos. Compra ahora: [enlace sospechoso],spam,ofertas@descuentos.net,0,0,0,0,SPAM,0,0,0,0,110,2,0.047058823529411764,16
+"Re: Informe semanal;""Estimado jefe; adjunto el informe semanal."";ham;empleado@outlook.com;False;False;False;False;Ham",,,,1,1,1,1,HAM,1,1,1,1,0,0,0.0,0
+"¡Gane un viaje a Europa!;""Felicidades; ha ganado un viaje a Europa. Reclame su premio aquí: [enlace sospechoso]"";spam;concursos@viajesgratis.com;True;False;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,1,0.0,0
+"R#: Reunión de equipo;""Estimados; recuerden la reunión de mañana a las 9 AM."";ham;gerente@yahoo.com;False;False;False;False;Ham",No#e,,,0,0,0,0,HAM,0,0,0,0,4,0,0.3333333333333333,1
+¡Oferta Flash! ¡75% de descuento!,¡Solo por hoy! ¡75% de descuento en todos nuestros productos. Compre ahora: [enlace sospechoso],spam,ofertasflash@descuentos.net,0,0,0,0,SPAM,0,0,0,0,97,3,0.05405405405405406,14
+"Re: Proyecto Alfa;""Estimado equipo; actualizacion sobre el proyecto Alfa."";ham;jefe@empresa.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡Gana un millón de dólares!,¡Felicidades! Ha ganado un millón de dólares. Reclame su premio aquí: [enlace sospechoso],spam,premios@ofertasespeciales.com,0,0,0,0,SPAM,0,0,0,0,93,2,0.09722222222222222,13
+"Re: Cita con el médico;""Doctor; ¿podría confirmar la cita para el martes a las 10 AM?"";ham;paciente@gmail.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡Oferta Increíble: ¡Gana un auto!,¡Felicidades! Ha ganado un auto nuevo. Reclame su premio aquí: [enlace sospechoso],spam,premios@ofertasespeciales.com,0,0,0,0,SPAM,0,0,0,0,84,2,0.07575757575757576,12
+"Re: Reunión de proyecto;""Estimados; les recuerdo la reunión de proyecto para mañana a las 2 PM."";ham;gerente@outlook.com;False;False;False;False;Ham",,,,1,1,1,1,HAM,1,1,1,1,0,0,0.0,0
+¡Oferta Limitada! ¡60% de descuento!,¡No te pierdas esta increíble oferta! ¡60% de descuento en todos nuestros productos. Compra ahora: [enlace sospechoso],spam,ofertas@megapromociones.net,0,0,0,0,SPAM,0,0,0,0,121,3,0.05319148936170213,17
+"Re: Problemas técnicos;""Estimado soporte técnico; estoy teniendo problemas con el sistema."";ham;usuario@gmail.com;False;False;False;False;Ham",,,,1,1,1,1,HAM,1,1,1,1,0,0,0.0,0
+Oferta Increíble: ¡Gana un Millón!,¡Felicidades! Ha ganado un millón de dólares. Reclame su premio aquí: [enlace sospechoso],spam,ofertasincreibles@ganamillon.com,0,0,0,0,SPAM,0,0,0,0,93,2,0.09722222222222222,13
+"Re: Tu pedido ha sido enviado;""Estimado cliente; su pedido ha sido enviado. Puede rastrearlo aquí: [enlace seguro]"";ham;pedidos@micompañia.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Actualiza tu contraseña ahora;""Estimado usuario; por favor actualice su contraseña para mayor seguridad. Haga clic aquí: [enlace sospechoso]"";spam;seguridad@actualizatucuenta.net;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Tu cuenta ha sido bloqueada,Su cuenta ha sido bloqueada debido a actividad sospechosa. Ingrese sus datos para desbloquearla: [enlace sospechoso],spam,seguridad@bancofalso.com,0,0,0,0,SPAM,0,0,0,0,116,0,0.020618556701030927,16
+"Nueva promoción en nuestra tienda online;""Aprovecha nuestras increíbles ofertas en productos electrónicos; ¡solo por tiempo limitado!"";ham;marketing@tiendavirtual.com;False;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,1,0.0,0
+"Re: Cita médica;""Estimado paciente; le recordamos su cita médica del día 15 de octubre a las 10:00 am."";ham;citas@hospital.com;False;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"¡Oferta Exclusiva! ¡No te lo pierdas!;""Aprovecha nuestra increíble oferta; ¡solo por tiempo limitado! [enlace sospechoso]"";spam;ofertas@ofertasespeciales.com;True;True;True;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,3,0.0,0
+Problemas con tu cuenta bancaria,Hemos detectado actividad inusual en su cuenta bancaria. Ingrese sus datos para verificar su identidad: [enlace sospechoso],spam,seguridad@banconacional.net,0,0,0,0,SPAM,0,0,0,0,123,0,0.019417475728155338,17
+Confirma tu compra,Gracias por su compra. Puede revisar su pedido aquí: [enlace seguro],ham,compras@tiendaonline.com,0,0,0,0,SPAM,0,0,0,0,69,0,0.05555555555555555,11
+GANE UN AUTO NUEVO,Usted ha ganado un auto nuevo. Visite nuestra web para reclamarlo: [enlace sospechoso],spam,concursos@ganeauto.com,0,0,0,0,SPAM,0,0,0,0,86,0,0.02857142857142857,13
+"Re: Tu solicitud ha sido aprobada;""Estimado cliente; su solicitud ha sido aprobada. Puede consultar más información aquí: [enlace seguro]"";ham;solicitudes@empresa.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Actualiza tus datos,Por favor actualice sus datos personales para poder seguir usando nuestros servicios. [enlace sospechoso],spam,soporte@actualizatusdatos.net,0,0,0,0,SPAM,0,0,0,0,105,0,0.011235955056179775,14
+"Problemas con tu cuenta;""Hemos detectado un problema con su cuenta. Por favor; actualice sus datos: [enlace sospechoso]"";spam;soporte@cuentaproblematica.com;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Tu pedido está listo para ser recogido;""Estimado cliente; su pedido está listo para ser recogido en nuestra tienda."";ham;pedidos@misupermercado.com;False;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Oferta limitada: ¡50% de descuento!,Aprovecha nuestra oferta limitada de 50% de descuento en todos nuestros productos. [enlace sospechoso],spam,ofertas@descuentosincreibles.net,0,0,0,0,SPAM,0,0,0,0,102,1,0.012048192771084338,14
+"Re: Cambio de horario;""Estimado empleado; se informa cambio de horario a partir de la próxima semana."";ham;rrhh@empresa.com;False;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡Gane un viaje a las Bahamas!,¡Felicidades! Ha ganado un viaje a las Bahamas. Reclame su premio aquí: [enlace sospechoso],spam,concursos@viajesgratis.com,0,0,0,0,HAM,0,0,0,0,93,2,0.0821917808219178,14
+"Re: Tu factura está lista;""Estimado cliente; su factura está lista para ser descargada: [enlace seguro]"";ham;facturas@empresa.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Atención: ¡Su cuenta ha sido comprometida!,Hemos detectado actividad sospechosa en su cuenta. Ingrese sus datos para asegurarla: [enlace sospechoso],spam,seguridad@bancounido.com,0,0,0,0,SPAM,0,0,0,0,105,1,0.022727272727272728,14
+"Recuerda tu cita;""Hola; este es un recordatorio para tu cita del martes a las 3pm."";ham;recordatorios@clinicadental.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡Gran Rebaja!,Aprovecha nuestra gran rebaja en todos nuestros productos. [enlace sospechoso],spam,rebajas@superrebajas.net,0,0,0,0,SPAM,0,0,0,0,78,1,0.015151515151515152,10
+"Re: Confirmación de reserva;""Estimado cliente; su reserva ha sido confirmada. Puede ver los detalles aquí: [enlace seguro]"";ham;reservas@hotel.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡Gana un iPhone gratis!,Participa en nuestro concurso y gana un iPhone gratis. [enlace sospechoso],spam,concursos@iphonegratis.com,0,0,0,0,SPAM,0,0,0,0,74,1,0.03278688524590164,11
+"Re: Actualización de software;""Estimado usuario; hay una nueva actualización de software disponible para su dispositivo."";ham;soporte@software.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Tu premio te espera,¡Felicidades! Ha ganado un premio. Reclámelo ahora: [enlace sospechoso],spam,premios@ganapremios.net,0,0,0,0,SPAM,0,0,0,0,73,1,0.08620689655172414,9
+"Re: Tu paquete ha llegado;""Estimado cliente; su paquete ha llegado a la oficina de correos."";ham;envios@correos.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡Oferta Flash!,Oferta flash por tiempo limitado. ¡No te lo pierdas! [enlace sospechoso],spam,ofertasflash@ofertasrapidas.com,1,1,1,1,SPAM,1,1,1,1,73,2,0.05172413793103448,11
+"Re: Tu cuenta ha sido creada;""Estimado usuario; su cuenta ha sido creada correctamente. Puede acceder aquí: [enlace seguro]"";ham;soporte@plataforma.com;True;False;False;False;Spam",,,,1,1,1,1,HAM,1,1,1,1,0,0,0.0,0
+¡Gane un millón de dólares!,¡Felicidades! Ha ganado un millón de dólares. Reclame su premio aquí: [enlace sospechoso],spam,ofertasincreibles@ganamillon.com,1,1,1,1,SPAM,1,1,1,1,93,2,0.09722222222222222,13
+"Re: Tu pedido ha sido enviado;""Estimado cliente; su pedido ha sido enviado. Puede rastrearlo aquí: [enlace seguro]"";ham;pedidos@micompañia.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Actualiza tu contraseña ahora;""Estimado usuario; por favor actualice su contraseña para mayor seguridad. Haga clic aquí: [enlace sospechoso]"";spam;seguridad@actualizatucuenta.net;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Tu cuenta ha sido#bloqueada,Su cuenta ha sido bl#queada debido a actividad sospechosa. Ingrese sus datos para desbloquearla: [enlace sospechoso],spam,seguridad@bancofalso.com,0,0,0,0,SPAM,0,0,0,0,116,0,0.020833333333333332,16
+"Nueva promoción en nuestra tienda online;""Aprovecha nuestras increíbles ofertas en productos electrónicos; ¡solo por tiempo limitado!"";ham;marketing@tiendavirtual.com;False;False;False;False;Spam",,,,1,1,1,1,HAM,1,1,1,1,0,1,0.0,0
+"Re: Cita médica;""Estimado paciente; le recordamos su cita médica del día 15 de octubre a las 10:00 am."";ham;citas@hospital.com;False;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"¡Oferta Exclusiva! ¡No te lo pierdas!;""Aprovecha nuestra increíble oferta; ¡solo por tiempo limitado! [enlace sospechoso]"";spam;ofertas@ofertasespeciales.com;True;True;True;False;Spam",,,,1,1,1,1,HAM,1,1,1,1,0,3,0.0,0
+Problemas con tu cuenta bancaria,Hemos detectado actividad inusual en su cuenta bancaria. Ingrese sus datos para verificar su identidad: [enlace sospechoso],spam,seguridad@banconacional.net,0,0,0,0,SPAM,0,0,0,0,123,0,0.019417475728155338,17
+Confirma tu compra,Gracias por su compra. Puede revisar su pedido aquí: [enlace seguro],ham,compras@tiendaonline.com,0,0,0,0,SPAM,0,0,0,0,69,0,0.05555555555555555,11
+GANE UN AUTO#NUEVO,Usted ha ganado un auto nue#o. Visite nuestra web para reclamarlo: [enlace sospechoso],spam,concursos@ganeauto.com,0,0,0,0,SPAM,0,0,0,0,86,0,0.028985507246376812,13
+"Re: Tu solicitud ha sido aprobada;""Estimado cliente; su solicitud ha sido aprobada. Puede consultar más información aquí: [enlace seguro]"";ham;solicitudes@empresa.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Actualiza tus datos,Por favor actualice sus datos personales para poder seguir usando nuestros servicios. [enlace sospechoso],spam,soporte@actualizatusdatos.net,0,0,0,0,SPAM,0,0,0,0,105,0,0.011235955056179775,14
+"Problemas con tu cuenta;""Hemos detectado un problema con su cuenta. Por favor; actualice sus datos: [enlace sospechoso]"";spam;soporte@cuentaproblematica.com;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Tu pedido está listo para ser recogido;""Estimado cliente; su pedido está listo para ser recogido en nuestra tienda."";ham;pedidos@misupermercado.com;False;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Oferta limitada: ¡50% de descuento!,Aprovecha nuestra oferta limitada de 50% de descuento en todos nuestros productos. [enlace sospechoso],spam,ofertas@descuentosincreibles.net,0,0,0,0,SPAM,0,0,0,0,102,1,0.012048192771084338,14
+"Re: Cambio de horario;""Estimado empleado; se informa cambio de horario a partir de la próxima semana."";ham;rrhh@empresa.com;False;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡Gane un viaje a las Bahamas!,¡Felicidades! Ha ganado un viaje a las Bahamas. Reclame su premio aquí: [enlace sospechoso],spam,concursos@viajesgratis.com,0,0,0,0,SPAM,0,0,0,0,93,2,0.0821917808219178,14
+Oferta Increíble: ¡Gana un Millón!,¡Felicidades! Ha ganado un millón de dólares. Reclame su premio aquí: [enlace sospechoso],spam,ofertasincreibles@ganamillon.com,1,1,1,1,SPAM,1,1,1,1,93,2,0.09722222222222222,13
+"Re: Tu pedido ha sido enviado;""Estimado cliente; su pedido ha sido enviado. Puede rastrearlo aquí: [enlace seguro]"";ham;pedidos@micompañia.com;True;False;False;False;Spam",,,,1,1,1,1,HAM,1,1,1,1,0,0,0.0,0
+"Actualiza tu contraseña;""Estimado usuario; por favor actualiza tu contraseña para mantener tu cuenta segura. [enlace seguro]"";ham;seguridad@gmail.com;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Re: Tu cuenta ha sido comprometida;""Hemos detectado actividad sospechosa en tu cuenta. Por favor; verifica tu información aquí: [enlace sospechoso]"";spam;seguridadfalsa@gmail.com;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Oferta Exclusiva: ¡Viajes Gratis!,¡Viajes gratis a cualquier parte del mundo! Solo por tiempo limitado. [enlace sospechoso],spam,viajesgratis@ofertas.net,0,0,0,0,SPAM,0,0,0,0,90,2,0.0410958904109589,13
+"Su suscripción a Netflix ha caducado;""Estimado cliente; su suscripción a Netflix ha caducado. Renueve su suscripción aquí: [enlace segu#o]"";ham;netflix@netflix.com;True;False;False;False;Spam",No#e,,,0,0,0,0,HAM,0,0,0,0,4,0,0.3333333333333333,1
+"¡Gana un auto nuevo!;""Felicidades; has ganado un auto nuevo. Reclame su premio aquí: [enlace sospechoso]"";spam;ganatuauto@correo.com;True;True;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,1,0.0,0
+"Actualización de seguridad;""Estimado usuario; hemos mejorado nuestra seguridad. Lea más aquí: [enlace seguro]"";ham;seguridad@yahoo.com;True;False;False#False;Spam",Non#,,,0,0,0,0,HAM,0,0,0,0,4,0,0.3333333333333333,1
+Re: ¡Oferta irresistible!,¡Oferta irresistible! Productos a mitad de precio. [enlace sospechoso],spam,ofertasirresistibles@promociones.net,0,0,0,0,SPAM,0,0,0,0,71,2,0.05172413793103448,9
+Tu paquete ha llegado,Su paquete ha llegado a la oficina de correos. Recójalo dentro de 48 horas.,ham,envios@correo.com,1,1,1,1,SPAM,1,1,1,1,76,0,0.05172413793103448,14
+Re: ¡Gana un millón de dólares!,¡Felicidades! Ha ganado un millón de dólares. Reclame su premio aquí: [enlace sospechoso],spam,ofertasespeciales@ofertas.net,0,0,0,0,SPAM,0,0,0,0,93,2,0.09722222222222222,13
+"Re: Tu pedido está listo para ser enviado;""Estimado cliente; su pedido está listo para ser enviado. Puede rastrearlo aquí: [enlace seguro]"";ham;pedidos@micompañia.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡Atención! Tu cuenta ha sido bloqueada,Tu cuenta ha sido bloqueada debido a actividad sospechosa. Ingresa aquí para desbloquearla: [enlace sospechoso],spam,seguridad@bloqueo.com,0,0,0,0,SPAM,0,0,0,0,112,1,0.03225806451612903,15
+Re: ¡Oferta Increíble! ¡Gana un Millón!,¡Felicidades! Ha ganado un millón de dólares. Reclame su premio aquí: [enlace sospechoso],spam,ofertasincreibles@ganamillon.com,0,0,0,0,SPAM,0,0,0,0,93,3,0.09722222222222222,13
+Re: ¡Viajes Gratis!,¡Viajes gratis a cualquier parte del mundo! Solo por tiempo limitado. [enlace sospechoso],spam,viajesgratis@ofertas.net,0,0,0,0,SPAM,0,0,0,0,90,2,0.0410958904109589,13
+"Re: ¡Gana un auto nuevo!;""Felicidades; has ganado un auto nuevo. Reclame su premio aquí: [enlace sospechoso]"";spam;ganatuauto@correo.com;True;True;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,1,0.0,0
+Re: Tu paquete ha llegado,Su paquete ha llegado a la oficina de correos. Recójalo dentro de 48 horas.,ham,envios@correo.com,0,0,0,0,SPAM,0,0,0,0,76,0,0.05172413793103448,14
+Re: ¡Oferta irresistible!,¡Oferta irresistible! Productos a mitad de precio. [enlace sospechoso],spam,ofertasirresistibles@promociones.net,0,0,0,0,SPAM,0,0,0,0,71,2,0.05172413793103448,9
+"Tu compra ha sido confirmada;""Estimado cliente; su compra ha sido confirmada. Puede ver los detalles aquí: [enlace seguro]"";ham;compras@micompañia.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Re: ¡Atención! Tu cuenta ha sido bloqueada,Tu cuenta ha sido bloqueada debido a actividad sospechosa. Ingresa aquí para desbloquearla: [enlace sospechoso],spam,seguridad@bloqueo.com,0,0,0,0,SPAM,0,0,0,0,112,1,0.03225806451612903,15
+"Re: Su suscripción a Netflix ha caducado;""Estimado cliente; su suscripción a Netflix ha caducado. Renueve su suscripción aquí: [enlace seguro]"";ham;netflix@netflix.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Re: Actualiza tu contraseña;""Estimado usuario; por favor actualiza tu contraseña para mantener tu cuenta segura. [enlace seguro]"";ham;seguridad@gmail.com;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Re: Actualización de seguridad;""Estimado usuario; hemos mejorado nuestra seguridad. Lea más aquí: [enlace seguro]"";ham;seguridad@yahoo.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Re: Tu pedido ha sido enviado;""Estimado cliente; su pedido ha sido enviado. Puede rastrearlo aquí: [enlace seguro]"";ham;pedidos@micompañia.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Re: Tu cuenta ha sido comprometida;""Hemos detectado actividad sospechosa en tu cuenta. Por favor; verifica tu información aquí: [enlace sospechoso]"";spam;seguridadfalsa@gmail.com;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Re: Tu compra ha sido confirmada;""Estimado cliente; su compra ha sido confirmada. Puede ver los detalles aquí: [enlace seguro]"";ham;compras@micompañia.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Re: Tu pedido está listo para ser enviado;""Estimado cliente; su pedido está listo para ser enviado. Puede rastrearlo aquí: [enlace seguro]"";ham;pedidos@micompañia.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Oferta: Gana dinero fácil;""Gana dinero fácil desde casa; sin esfuerzo. Inscríbete aquí: [enlace sospechoso]"";spam;dinero@facil.com;True;True;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Re: Oferta: Gana dinero fácil;""Gana dinero fácil desde casa; sin esfuerzo. Inscríbete aquí: [enlace sospechoso]"";spam;dinero@facil.com;True;True;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Re: Oferta: Gana dinero fácil;""Gana dinero fácil desde casa; sin esfuerzo. Inscríbete aquí: [enlace sospechoso]"";spam;dinero@facil.com;True;True;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Re: Oferta: Gana dinero fácil;""Gana dinero fácil desde casa; sin esfuerzo. Inscríbete aquí: [enlace sospechoso]"";spam;dinero@facil.com;True;True;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Re: Oferta: Gana dinero fácil;""Gana dinero fácil desde casa; sin esfuerzo. Inscríbete aquí: [enlace sospechoso]"";spam;dinero@facil.com;True;True;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Tu paquete será entregado mañana,Su paquete será entregado mañana. Gracias por su compra.,ham,envios@correo.com,0,0,0,0,SPAM,0,0,0,0,58,0,0.08695652173913043,9
+Re: Tu paquete será entregado mañana,Su paquete será entregado mañana. Gracias por su compra.,ham,envios@correo.com,0,0,0,0,SPAM,0,0,0,0,58,0,0.08695652173913043,9
+Re: Tu paquete será entregado mañana,Su paquete será entregado mañana. Gracias por su compra.,ham,envios@correo.com,0,0,0,0,SPAM,0,0,0,0,58,0,0.08695652173913043,9
+Re: Tu paquete será entregado mañana,Su paquete será entregado mañana. Gracias por su compra.,ham,envios@correo.com,0,0,0,0,SPAM,0,0,0,0,58,0,0.08695652173913043,9
+Re: Tu paquete será entregado mañana,Su paquete será entregado mañana. Gracias por su compra.,ham,envios@correo.com,0,0,0,0,SPAM,0,0,0,0,58,0,0.08695652173913043,9
+"Problemas con tu cuenta;""Hemos detectado un problema con tu cuenta. Por favor; contacta con soporte técnico: [enlace seguro]"";ham;soporte@gmail.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Re: Problemas con tu cuenta;""Hemos detectado un problema con tu cuenta. Por favor; contacta con soporte técnico: [enlace seguro]"";ham;soporte@gmail.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Re: Problemas con tu cuenta;""Hemos detectado un problema con tu cuenta. Por favor; contacta con soporte técnico: [enlace seguro]"";ham;soporte@gmail.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Re: Problemas con tu cuenta;""Hemos detectado un problema con tu cuenta. Por favor; contacta con soporte técnico: [enlace seguro]"";ham;soporte@gmail.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Re: Problemas con tu cuenta;""Hemos detectado un problema con tu cuenta. Por favor; contacta con soporte técnico: [enlace seguro]"";ham;soporte@gmail.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Oferta Increíble: ¡Gana un Millón!,¡Felicidades! Ha ganado un millón de dólares. Reclame su premio aquí: [enlace sospechoso],spam,premios@ofertasespeciales.com,0,0,0,0,SPAM,0,0,0,0,93,2,0.09722222222222222,13
+"Re: Su pedido ha sido enviado;""Estimado cliente; su pedido ha sido enviado y llegará en 2-3 días hábiles. Puede rastrearlo aquí: [enlace legítimo]"";ham;ventas@ejemplo.com;False;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Actualiza tu contraseña;""Estimado usuario; por favor actualiza tu contraseña para mejorar la seguridad de tu cuenta. [enlace legítimo]"";ham;seguridad@gmail.com;False;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Problemas con tu cuenta;""Hemos detectado actividad sospechosa en tu cuenta. Por favor; verifica tu información aquí: [enlace sospechoso]"";spam;seguridad_cuenta@spam.net;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+REBAJAS!!!,APROVECHA NUESTRAS GRANDES REBAJAS. ¡Ofertas limitadas! [enlace sospechoso],spam,ofertas@grandesrebajas.net,1,1,1,1,SPAM,1,1,1,1,76,4,0.515625,8
+Tu paquete está #isto para enviar,Tu paquete está listo para enviar. Haz clic aquí para ver los detall#s: [enlace legítimo],ham,envios@yahoo.com,0,0,0,0,HAM,0,0,0,0,92,0,0.07142857142857142,15
+"Notificación Importante;""Estimado cliente; le informamos sobre un cambio en nuestra política de privacidad. [enlace legítimo]"";ham;soporte@ejemplo.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+GANE DINERO FACIL,Gane dinero fácil desde casa. ¡Inscríbase ahora! [enlace sospechoso],spam,ganardinero@facil.com,0,0,0,0,SPAM,0,0,0,0,71,1,0.08928571428571429,9
+Compra tus re#alos ahora,No te pie#das nuestras ofertas en regalos de Navidad. [enlace legítimo],ham,ventas@navidad.com,0,0,0,0,SPAM,0,0,0,0,72,0,0.05263157894736842,11
+Tu pedido ha sido actualizado,El estado de tu pedido ha sido actualizado. Haz clic aquí para más detalles: [enlace legítimo],ham,pedidos@ejemplo.com,1,1,1,1,HAM,1,1,1,1,97,0,0.06666666666666667,16
+¡¡¡GRAN OFE#TA!!!,¡Aprovecha nuestr# gran oferta por tiempo limitado! [enlace sospechoso],spam,ofertas@superofertas.net,0,0,0,0,SPAM,0,0,0,0,72,4,0.03389830508474576,9
+"Actualización de seguridad;""Por favor; actualiza tu información de seguridad para mantener tu cuenta segura. [enlace legítimo]"";ham;seguridad@gmail.com;False;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Problemas con tu cuenta bancaria,Hemos detectado actividad sospechosa en tu cuenta bancaria. Verifica tu información aquí: [enlace sospechoso],spam,seguridad_bancaria@spam.com,0,0,0,0,SPAM,0,0,0,0,111,0,0.043478260869565216,14
+Oferta Limitada por 24 horas,Aprovecha nuestra oferta limitada solo por 24 horas.  [enlace sospechoso],spam,ofertas@24horas.net,0,0,0,0,SPAM,0,0,0,0,73,0,0.017241379310344827,10
+Bienvenido a nuestro sitio web,Gracias por registrarte. Puedes acceder aquí: [enlace legítimo],ham,bienvenida@ejemplo.com,0,0,0,0,HAM,0,0,0,0,65,0,0.07692307692307693,8
+Tu cuenta ha sido bloqueada,Tu cuenta ha sido bloqueada debido a actividad sospechosa.  [enlace sospechoso],spam,seguridad@bloqueado.net,0,0,0,0,SPAM,0,0,0,0,79,0,0.015384615384615385,11
+Gana un auto nuevo,Participa en nuestro sorteo y gana un auto nuevo. [enlace sospechoso],spam,sorteos@autos.com,0,0,0,0,SPAM,0,0,0,0,69,0,0.017857142857142856,11
+"Tu pedido ha sido enviado;""Estimado cliente; su pedido ha sido enviado. Puede rastrearlo aquí: [enlace legítimo]"";ham;envios@gmail.com;False;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡Oferta Flash!,¡Oferta flash por tiempo limitado! [enlace sospechoso],spam,ofertasflash@flash.com,0,0,0,0,SPAM,0,0,0,0,55,2,0.044444444444444446,7
+Confirma tu correo electrónico,Por favor confirma tu correo electrónico haciendo clic aquí: [enlace legítimo],ham,confirmacion@ejemplo.com,0,0,0,0,HAM,0,0,0,0,81,0,0.06153846153846154,11
+¡Gana un viaje a Hawai!,¡Participa en nuestro concurso y gana un viaje a Hawai! [enlace sospechoso],spam,concursos@hawaii.com,0,0,0,0,HAM,0,0,0,0,76,2,0.04918032786885246,12
+Actualiza tu información,Por favor actualiza tu información de contacto. [enlace legítimo],ham,actualizacion@ejemplo.com,0,0,0,0,HAM,0,0,0,0,67,0,0.05555555555555555,9
+Dinero fácil y rápido,Gana dinero fácil y rápido desde casa. [enlace sospechoso],spam,dinero@rapido.com,0,0,0,0,SPAM,0,0,0,0,60,0,0.06382978723404255,9
+Tu contraseña ha expirado,Tu contraseña ha expirado. Restablecela aquí: [enlace legítimo],ham,seguridad@gmail.com,0,0,0,0,SPAM,0,0,0,0,66,0,0.09615384615384616,8
+Increíble oportunidad de negocio,Descubre la increíble oportunidad de negocio que cambiará tu vida. [enlace sospechoso],spam,oportunidades@negocios.com,0,0,0,0,SPAM,0,0,0,0,88,0,0.041666666666666664,12
+Gracias por tu compra,Gracias por tu compra. Tu pedido se enviará pronto. [enlace legítimo],ham,compras@ejemplo.com,0,0,0,0,HAM,0,0,0,0,71,0,0.07272727272727272,11
+¡Oferta imperdible!,¡Oferta imperdible por tiempo limitado! [enlace sospechoso],spam,ofertas@imperdible.com,1,1,1,1,SPAM,1,1,1,1,60,2,0.04,7
+Tu pedido está en camino,Tu pedido está en camino. Puedes rastrearlo aquí: [enlace legítimo],ham,envios@yahoo.com,0,0,0,0,HAM,0,0,0,0,70,0,0.09259259259259259,10
+"Gane un millón de dolares;""Felicidades; ha ganado un millón de dólares.  [enlace sospechoso]"";spam;premios@millonario.com;True;True;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Recuerda tu cita,Recuerda tu cita médica para mañana a las 10:00 AM. [enlace legítimo],ham,citas@hospital.com,0,0,0,0,HAM,0,0,0,0,72,0,0.12,12
+Nuevo mensaje,Tienes un nuevo mensaje. [enlace legítimo],ham,mensajes@gmail.com,0,0,0,0,HAM,0,0,0,0,43,0,0.058823529411764705,6
+Aumenta tus ventas,Aumenta tus ventas con nuestra plataforma. [enlace sospechoso],spam,ventas@aumentar.com,0,0,0,0,SPAM,0,0,0,0,62,0,0.019230769230769232,8
+¡Gran descuento!,¡Gran descuento en nuestros productos! [enlace sospechoso],spam,descuentos@grandes.com,0,0,0,0,HAM,0,0,0,0,59,2,0.04081632653061224,7
+Tu reserva ha sido confirmada,Tu reserva ha sido confirmada.  [enlace legítimo],ham,reservas@hotel.com,0,0,0,0,HAM,0,0,0,0,50,0,0.05128205128205128,7
+¡Última oportunidad!,¡Última oportunidad para aprovechar esta oferta! [enlace sospechoso],spam,ofertas@ultima.com,0,0,0,0,SPAM,0,0,0,0,70,2,0.034482758620689655,8
+Tu suscripción ha sido renovada,Tu suscripción ha sido renovada exitosamente. [enlace legítimo],ham,suscripciones@ejemplo.com,0,0,0,0,HAM,0,0,0,0,65,0,0.05660377358490566,8
+Problemas de inicio de sesión,Parece que tienes problemas para iniciar sesión. [enlace legítimo],ham,soporte@ejemplo.com,0,0,0,0,HAM,0,0,0,0,68,0,0.05454545454545454,9
+Gana dinero fácil,Gana dinero fácil desde casa. ¡Inscríbete ahora! [enlace sospechoso],spam,ganardinero@facil.com,0,0,0,0,HAM,0,0,0,0,71,1,0.08928571428571429,9
+Oferta Exclusiva para ti,Oferta exclusiva para ti. ¡No te la pierdas! [enlace sospechoso],spam,ofertas@exclusivas.com,0,0,0,0,SPAM,0,0,0,0,65,1,0.058823529411764705,10
+Tu factura está lista,Tu factura está lista para descargar. [enlace legítimo],ham,facturas@ejemplo.com,1,1,1,1,HAM,1,1,1,1,57,0,0.06666666666666667,8
+¡No te pierdas esta oferta!,¡No te pierdas esta increíble oferta! [enlace sospechoso],spam,ofertas@increibles.com,0,0,0,0,SPAM,0,0,0,0,59,2,0.06382978723404255,8
+Información importante sobre tu cuenta,Información importante sobre tu cuenta. [enlace legítimo],ham,cuentas@ejemplo.com,0,0,0,0,HAM,0,0,0,0,59,0,0.0625,7
+"Oferta Increíble: ¡Gana un millón de dólares!;""Felicidades; ha ganado un millón de dólares. Para reclamar su premio; por favor; proporcione sus datos bancarios."";spam;premiomillonario@ofertasespeciales.com;True;False;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,1,0.0,0
+"Re: Tu pedido ha sido enviado;""Estimado cliente; su pedido ha sido enviado. Puede rastrearlo aquí: [enlace]."";ham;pedidos@ejemplo.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Actualiza tu contraseña ahora;""Estimado usuario; por razones de seguridad; actualiza tu contraseña haciendo click aquí: [enlace]."";spam;seguridad@actualiza.net;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Nuevo mensaje de Juan;""Hola; ¿cómo estás? Te quería contar..."";ham;juan.perez@gmail.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Tu cuenta ha sido bloqueada;""Tu cuenta ha sido bloqueada debido a actividad sospechosa. Para desbloquearla; ingresa a [enlace] y actualiza tu contraseña."";spam;seguridadcuenta@bloqueada.com;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Re: Cita médica;""Estimado paciente; su cita médica está confirmada para mañana a las 10:00 AM."";ham;citasmedicas@hospital.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Oferta Exclusiva: ¡50% de descuento!,¡Aprovecha nuestra oferta exclusiva del 50% de descuento! Solo por tiempo limitado.,spam,ofertas@descuento.net,0,0,0,0,SPAM,0,0,0,0,84,2,0.04477611940298507,12
+"Problemas con tu cuenta bancaria;""Hemos detectado actividad inusual en su cuenta bancaria. Por favor; verifique su información ingresando a [enlace]."";spam;seguridadbancaria@bancofalso.com;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Inv#tación a evento,Te invitamos a nuestro evento especial el próxi#o sábado. ¡No te lo pierdas!,ham,eventos@empresa.com,0,0,0,0,HAM,0,0,0,0,79,1,0.08196721311475409,13
+Felicidades! Has ganado un premio,Felicidades! Has ganado un premio. Reclámalo ahora aquí: [enlace],spam,ganador@premiofalso.com,1,1,1,1,SPAM,1,1,1,1,67,2,0.09615384615384616,9
+Actualiza tu información personal,Por favor actualiza tu información personal para mantener tu cuenta activa. [enlace],spam,actualiza@datos.net,1,1,1,1,SPAM,1,1,1,1,85,0,0.02857142857142857,12
+Tu paquete ha llegado,Tu paquete ha llegado a la oficina de correos. Recógelo antes de 5 días.,ham,paqueteria@correo.com,0,0,0,0,SPAM,0,0,0,0,74,0,0.07142857142857142,14
+¡¡GRAN OFERTA!!,¡¡Aprovecha esta gran oferta!!  [enlace],spam,ofertas@superoferta.net,0,0,0,0,SPAM,0,0,0,0,42,4,0.0967741935483871,5
+Recordatorio de cita,Recordatorio de su cita con el Dr. Pérez mañana a las 2pm.,ham,citasmedicas@hospital.com,1,1,1,1,HAM,1,1,1,1,60,0,0.11363636363636363,12
+"Oferta Increíble: ¡Gana un millón de dólares!;""Felicidades; ha ganado un millón de dólares. Para reclamar su premio; por favor; proporcione sus datos bancarios."";spam;premiomillonario@ofertasespeciales.com;True;False;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,1,0.0,0
+"Re: Proyecto X;""Hola; te envío los archivos adjuntos."";ham;ana.garcia@yahoo.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Tu cuenta ha sido comprometida,Hemos detectado actividad sospechosa en tu cuenta.  Cambia tu contraseña inmediatamente. [enlace],spam,seguridad@cuentacomprometida.com,0,0,0,0,SPAM,0,0,0,0,98,0,0.037037037037037035,12
+"Reunion de equipo;""Estimados colegas; la reunion del equipo sera el viernes a las 10 AM."";ham;gerencia@empresa.com;False;False;False;False;Ham",,,,1,1,1,1,HAM,1,1,1,1,0,0,0.0,0
+Gana un auto nuevo,Participa en nuestro concurso y gana un auto nuevo,spam,concursos@ganarauto.com,1,1,1,1,SPAM,1,1,1,1,50,0,0.023809523809523808,9
+Problemas con tu tarjeta de credito,Hemos detectado un problema con tu tarjeta de credito. Contacta con nosotros a traves de [enlace].,spam,seguridad@tarjeta.com,0,0,0,0,SPAM,0,0,0,0,98,0,0.02531645569620253,16
+"Hola; como estas?;""Hola; ¿como estas? Espero que bien. Queria preguntarte..."";ham;maria.rodriguez@gmail.com;False;True;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Oferta Increible: ¡70% de descuento!,Aprovecha nuestra oferta increible del 70% de descuento. [enlace],spam,ofertas@descuentomaximo.com,0,0,0,0,SPAM,0,0,0,0,65,1,0.0196078431372549,9
+"Re: Reserva de hotel;""Estimado cliente; su reserva de hotel esta confirmada."";ham;reservas@hotel.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Tu premio te espera;""Felicidades; has ganado un premio. Reclamalo ahora en este enlace: [enlace]"";spam;premio@ganador.com;True;False;False;False;Spam",,,,1,1,1,1,HAM,1,1,1,1,0,0,0.0,0
+"Cambio de contraseña;""#stimado cliente; por favor cambia tu contraseña siguiendo este enlace: [enlace]"";spam;seguridad@contrasena.com;True;False;False;True;Spam",Non#,,,0,0,0,0,HAM,0,0,0,0,4,0,0.3333333333333333,1
+Re: Proyecto Alfa,Adjunto información relevante al proyecto Alfa. Saludos.,ham,pedro.martinez@yahoo.com,0,0,0,0,HAM,0,0,0,0,57,0,0.08333333333333333,7
+¡Oferta Limitada! ¡Compra Ahora!,¡No te pierdas nuestra oferta limitada! ¡Compra ahora antes de que se agoten!,spam,ofertas@limitadas.com,0,0,0,0,SPAM,0,0,0,0,79,4,0.06349206349206349,13
+"Re: Reunión mañana;""Hola; confirmo nuestra reunión para mañana a las 10 AM."";ham;luis.hernandez@gmail.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Mensaje importante,Este es un mensaje importante que no debes ignorar. [enlace],spam,importante@mensaje.com,0,0,0,0,SPAM,0,0,0,0,60,0,0.020833333333333332,10
+Confirmación#de pedido,Tu pedi#o ha sido confirmado.  Revisa tu número de pedido: #12345,ham,pedidos@tiendaonline.com,0,0,0,0,HAM,0,0,0,0,66,0,0.06666666666666667,11
+Tu cuenta esta en riesgo,Tu cuenta esta en riesgo. Cambia tu contraseña ahora mismo [enlace],spam,seguridad@riesgo.com,0,0,0,0,SPAM,0,0,0,0,68,0,0.05555555555555555,11
+"Re: Presupuesto;""Hola; te adjunto el presupuesto solicitado."";ham;sofia.lopez@outlook.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Oferta Increíble: ¡Gana un viaje gratis!;""Felicidades; has ganado un viaje gratis. Reclámalo aquí: [enlace]"";spam;viajesgratis@ganarviaje.com;True;False;True;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,1,0.0,0
+"Re: Vacaciones;""Hola; ¿cómo van los preparativos para las vacaciones?"";ham;elena.gomez@gmail.com;False;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡Gana dinero fácil!,¡Gana dinero fácil y rápido! ¡Inscríbete ahora! [enlace],spam,dinero@facil.com,0,0,0,0,SPAM,0,0,0,0,61,3,0.15555555555555556,8
+"Re: Cita para el lunes;""Hola; confirmo nuestra cita para el lunes a las 3 PM."";ham;david.gonzalez@yahoo.com;False;False;False;False;Ham",,,,1,1,1,1,HAM,1,1,1,1,0,0,0.0,0
+"Tu pedido ha sido enviado;""Estimado cliente; su pedido ha sido enviado. Puede rastrearlo aquí: [enlace]"";ham;envios@correo.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Oferta Increíble: ¡Gana un millón de dólares!;""Felicidades; ha ganado un millón de dólares. Para reclamar su premio; por favor; proporcione sus datos bancarios."";spam;premiomillonario@ofertasespeciales.com;True;False;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,1,0.0,0
+"Re: Informe semanal;""Hola; adjunto el informe semanal."";ham;jefe@empresa.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡Última oportunidad! ¡Compra ahora!,¡No te pierdas nuestra última oportunidad! ¡Compra ahora antes de que se agoten!,spam,ofertas@ultimodia.com,0,0,0,0,SPAM,0,0,0,0,83,4,0.07575757575757576,13
+"Re: Planificación proyecto;""Hola; te confirmo la reunión para la planificación del proyecto."";ham;carmen.suarez@gmail.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Mensaje urgente,Este es un mensaje urgente que requiere tu atención inmediata. [enlace],spam,urgente@correo.com,0,0,0,0,SPAM,0,0,0,0,72,0,0.034482758620689655,11
+"Oferta increíble: ¡Gane un millón de dólares!;""¡Felicidades! Ha ganado un millón de dólares. Para reclamar su premio; haga clic aquí: [enlace sospechoso]"";spam;ganador@ofertasespeciales.com;True;True;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,2,0.0,0
+"Re: Tu pedido ha sido enviado;""Estimado cliente; su pedido ha sido enviado y llegará en 2-3 días hábiles. Puede rastrearlo aquí: [enlace legítimo]"";ham;pedidos@ejemplo.com;False;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Actualiza tu contraseña ahora;""Estimado usuario; por razones de seguridad; actualice su contraseña inmediatamente. Haga clic aquí: [enlace sospechoso]"";spam;seguridad@correofalso.net;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Nueva promoción,Aprovecha nuestra nueva promoción. ¡Ofertas exclusivas te esperan!,spam,promociones@superofertas.net,0,0,0,0,HAM,0,0,0,0,68,1,0.07017543859649122,8
+"Re: Cita médica;""Estimado paciente; le recordamos su cita médica el próximo martes a las 10:00 AM."";ham;citas@hospital.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Tu paquete está listo para ser recogido,Tu paquete está listo para ser recogido en la oficina de correos más cercana. ID de seguimiento: 1234567890,ham,notificaciones@correo.com,0,0,0,0,HAM,0,0,0,0,109,0,0.0641025641025641,18
+"Oferta imperdible;""No te pierdas esta oferta; ¡únicamente por tiempo limitado! Haz clic aquí: [enlace sospechoso]"";spam;ofertas@correo.es;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,1,0.0,0
+Alerta de seguridad,Hemos detectado actividad sospechosa en tu cuenta. Ingresa aquí para verificar: [enlace sospechoso],spam,seguridad@bancorincon.com,0,0,0,0,SPAM,0,0,0,0,100,0,0.03614457831325301,13
+Bienvenido a nuestro sitio web,Gracias por registrarte en nuestro sitio web. ¡Esperamos que disfrutes de nuestros servicios!,ham,soporte@ejemplo.com,0,0,0,0,HAM,0,0,0,0,94,1,0.0379746835443038,13
+¡¡¡GRAN OFERTA!!!,¡Aprovecha esta increíble oferta! ¡Solo por hoy!,spam,ofertas@ofertasflash.net,0,0,0,0,SPAM,0,0,0,0,51,5,0.125,7
+"Mensaje importante;""Por favor; verifica tu información personal para mantener tu cuenta segura. [enlace sospechoso]"";spam;seguridad@correo.net;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Re: Reunión de equipo;""Estimado equipo; recuerden que la reunión es mañana a las 9:00 AM."";ham;gerente@empresa.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Tu cuenta ha sido bloqueada,Tu cuenta ha sido bloqueada debido a actividad sospechosa. Ingresa aquí para desbloquearla: [enlace sospechoso],spam,seguridad@cuenta.com,0,0,0,0,SPAM,0,0,0,0,112,0,0.03225806451612903,15
+¡Gana un auto nuevo!,¡Participa en nuestro sorteo y gana un auto nuevo! Haz clic aquí para registrarte: [enlace sospechoso],spam,sorteo@autos.com,0,0,0,0,SPAM,0,0,0,0,104,2,0.04819277108433735,16
+"Re:Solicitud de empleo;""Estimado/a [Nombre]; Gracias por su interés en nuestra empresa. Lamentamos informarle que en esta ocasión su solicitud no ha sido seleccionada."";ham;rrhh@empresa.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+CONFIRMACION DE PEDIDO,Su pedido ha sido confirmado. Puede ver los detalles aquí: [enlace legítimo],ham,pedidos@tiendaonline.com,0,0,0,0,SPAM,0,0,0,0,78,0,0.06557377049180328,12
+"¡Oferta Flash!;""¡Por tiempo limitado; aprovecha esta increíble oferta! [enlace sospechoso]"";spam;ofertas@ofertasflash.net;True;False;True;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,2,0.0,0
+"Re: Consulta;""Estimado cliente; gracias por su consulta. Le responderemos a la brevedad."";ham;soporte@empresa.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Tu cuenta ha sido comprometida,Tu cuenta ha sido comprometida. Restablece tu contraseña inmediatamente: [enlace sospechoso],spam,seguridad@bancofalso.com,0,0,0,0,HAM,0,0,0,0,93,0,0.038461538461538464,11
+"¡Gane un millón de dólares!;""¡Felicidades! Ha ganado un millón de dólares. Para reclamar su premio; haga clic aquí: [enlace sospechoso]"";spam;ganador@ofertasespeciales.com;True;True;True;True;Spam",,,,1,1,1,1,HAM,1,1,1,1,0,2,0.0,0
+"Re: Reserva de hotel;""Estimado huésped; su reserva de hotel ha sido confirmada.  Ver detalles: [enlace legítimo]"";ham;reservas@hotel.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡Increíble descuento!,¡No te pierdas nuestro increíble descuento! [enlace sospechoso],spam,descuentos@correo.es,0,0,0,0,SPAM,0,0,0,0,65,2,0.05660377358490566,8
+"Re: Factura;""Estimado cliente; adjunta encontrará su factura."";ham;facturas@empresa.com;False;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡Oferta exclusiva!,¡Aprovecha nuestra oferta exclusiva! [enlace sospechoso],spam,ofertas@correo.net,0,0,0,0,SPAM,0,0,0,0,57,2,0.041666666666666664,6
+"Re: Reunión;""Estimado colega; la reunión ha sido pospuesta para mañana."";ham;colega@empresa.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Tu pedido ha sido enviado;""Estimado cliente; su pedido ha sido enviado y llegará en 2-3 días hábiles."";ham;pedidos@tiendaonline.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡Gana dinero fácil!,¡Gana dinero fácil y rápido! ¡Inscríbete ahora!: [enlace sospechoso],spam,dinero@facil.com,0,0,0,0,SPAM,0,0,0,0,73,3,0.12727272727272726,9
+"Re: Solicitud de información;""Estimado cliente; gracias por su solicitud de información.  A continuación encontrará la respuesta a su consulta."";ham;soporte@empresa.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡Oferta limitada!,¡Aprovecha nuestra oferta limitada! [enlace sospechoso],spam,ofertas@correo.es,0,0,0,0,HAM,0,0,0,0,56,2,0.0425531914893617,6
+"Re: Cambio de horario;""Estimado equipo; les informo sobre el cambio de horario para la próxima reunión."";ham;gerente@empresa.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Mensaje importante del banco;""Estimado cliente; hemos detectado una actividad sospechosa en su cuenta. [enlace sospechoso]"";spam;seguridad@bancorincon.com;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Re: Cita;""Estimado cliente; le recordamos su cita para mañana."";ham;citas@empresa.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Increíble oportunidad de negocio,No pierda esta oportunidad de negocio única! [enlace sospechoso],spam,negocios@oportunidad.com,0,0,0,0,SPAM,0,0,0,0,65,1,0.03773584905660377,9
+"Re: Proyecto X;""Estimado equipo; les adjunto el documento del proyecto X."";ham;jefe_proyecto@empresa.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡Gran premio!,¡Ha ganado un gran premio! Reclámelo aquí: [enlace sospechoso],spam,premios@correo.net,0,0,0,0,HAM,0,0,0,0,65,2,0.1,9
+"Re: Presupuesto;""Estimado cliente; adjunto encontrará el presupuesto solicitado."";ham;presupuestos@empresa.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡Aumente sus ganancias!,¡Aprenda a aumentar sus ganancias con este curso online! [enlace sospechoso],spam,ganancias@online.com,0,0,0,0,SPAM,0,0,0,0,77,2,0.031746031746031744,11
+"Re: Seguimiento de pedido;""Estimado cliente; puede seguir su pedido aquí: [enlace legítimo]"";ham;seguimiento@tiendaonline.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡Gana un viaje gratis!,¡Participa en nuestro sorteo y gana un viaje gratis! [enlace sospechoso],spam,sorteos@viajes.com,0,0,0,0,SPAM,0,0,0,0,73,2,0.03389830508474576,11
+"Re: Queja;""Estimado cliente; lamentamos las molestias ocasionadas.  Nos pondremos en contacto con usted a la brevedad."";ham;atencion_cliente@empresa.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡Oferta irresistible!,¡No deje pasar esta oferta irresistible! [enlace sospechoso],spam,ofertas@correo.es,0,0,0,0,SPAM,0,0,0,0,61,2,0.04,8
+"Re: Cotización;""Estimado cliente; le enviamos la cotización solicitada."";ham;cotizaciones@empresa.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Su paquete ha llegado,Su paquete ha llegado a la oficina de correos. ID de seguimiento: 1234567890,ham,notificaciones@correo.com,0,0,0,0,HAM,0,0,0,0,76,0,0.057692307692307696,13
+"Re: ¡Oferta Increíble! 50% de descuento;""Estimado cliente; aproveche esta oferta única por tiempo limitado. Haga clic aquí para más información: [enlace sospechoso]"";spam;ofertas@ofertasespeciales.com;True;False;True;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,1,0.0,0
+Su pedido ha sido enviado,Su pedido número 12345 ha sido enviado. Puede rastrearlo aquí: [enlace seguro],ham,pedidos@tiendaonline.com,0,0,0,0,SPAM,0,0,0,0,80,0,0.06896551724137931,12
+"Re: ¡Gane un millón de dólares!;""¡Felicidades! Ha ganado un millón de dólares. Para reclamar su premio; haga clic aquí: [enlace sospechoso]"";spam;ganador@loteria.net;True;True;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,2,0.0,0
+"Correo electrónico importante;""Estimado usuario; por favor verifique su información de cuenta.  Para evitar problemas; actualice su contraseña aquí:[enlace sospechoso]"";spam;seguridad@bancomundial.org;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Invitación a evento;""Estimado/a [nombre]; le invitamos a nuestro próximo evento. Más información en [enlace seguro]"";ham;eventos@empresa.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Re: ¡Oferta Increíble! 50% de descuento;""Estimado cliente; aproveche esta oferta única por tiempo limitado. Haga clic aquí para más información: [enlace sospechoso]"";spam;ofertas@ofertasespeciales.com;True;False;True;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,1,0.0,0
+"Su cuenta ha sido bloqueada;""Estimado usuario; su cuenta ha sido bloqueada debido a actividad sospechosa. Por favor; inicie sesión para desbloquearla: [enlace sospechoso]"";spam;seguridad@bancofalso.com;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Actualización de software;""Estimado usuario; hemos lanzado una nueva actualización de software. Descargue la actualización aquí: [enlace seguro]"";ham;soporte@software.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Re: ¡Gane un millón de dólares!;""¡Felicidades! Ha ganado un millón de dólares. Para reclamar su premio; haga clic aquí: [enlace sospechoso]"";spam;ganador@loteria.net;True;True;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,2,0.0,0
+"Problemas con su cuenta;""Estimado cliente; hemos detectado problemas con su cuenta. Por favor; actualice su información aquí: [enlace sospechoso]"";spam;seguridad@banconacional.com;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Nuevo mensaje;""Hola [nombre]; tienes un nuevo mensaje en tu bandeja de entrada."";ham;notificaciones@correo.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Re: ¡Oferta Increíble! 50% de descuento;""Estimado cliente; aproveche esta oferta única por tiempo limitado. Haga clic aquí para más información: [enlace sospechoso]"";spam;ofertas@ofertasespeciales.com;True;False;True;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,1,0.0,0
+"Recordatorio de cita;""Estimado/a [nombre]; este correo es un recordatorio de su cita el [fecha] a las [hora]."";ham;citas@clinica.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Re: ¡Gane un millón de dólares!;""¡Felicidades! Ha ganado un millón de dólares. Para reclamar su premio; haga clic aquí: [enlace sospechoso]"";spam;ganador@loteria.net;True;True;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,2,0.0,0
+"Confirmación de compra;""Estimado cliente; su compra ha sido c#nfirmada. Número de pedido: [número de pedido]"";ham;compras@tiendaonline.com;False;False;False;False;Ham",No#e,,,0,0,0,0,HAM,0,0,0,0,4,0,0.3333333333333333,1
+"Actualización de la política de privacidad;""Estimado usuario; hemos actualizado nuestra política de privacidad. Lea la información completa aquí: [enlace seguro]"";ham;privacidad@empresa.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Re: ¡Oferta Increíble! 50% de descuento;""Estimado cliente; aproveche esta oferta única por tiempo limitado. Haga clic aquí para más información: [enlace sospechoso]"";spam;ofertas@ofertasespeciales.com;True;False;True;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,1,0.0,0
+"Problemas de inicio de sesión;""Estimado usuario; hemos detectado problemas con su inicio de sesión. Por favor; restablezca su contraseña aquí: [enlace sospechoso]"";spam;seguridad@emailfalso.com;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Re: ¡Gane un millón de dólares!;""¡Felicidades! Ha ganado un millón de dólares. Para reclamar su premio; haga clic aquí: [enlace sospechoso]"";spam;ganador@loteria.net;True;True;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,2,0.0,0
+Solicitud de amistad,[nombre] te ha enviado una solicitud de amistad.,ham,notificaciones@redsocial.com,0,0,0,0,HAM,0,0,0,0,48,0,0.0,8
+"Re: ¡Oferta Increíble! 50% de descuento;""Estimado cliente; aproveche esta oferta única por tiempo limitado. Haga clic aquí para más información: [enlace sospechoso]"";spam;ofertas@ofertasespeciales.com;True;False;True;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,1,0.0,0
+"Re: ¡Gane un millón de dólares!;""¡Felicidades! Ha ganado un millón de dólares. Para reclamar su premio; haga clic aquí: [enlace sospechoso]"";spam;ganador@loteria.net;True;True;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,2,0.0,0
+"Re: ¡Oferta Increíble! 50% de descuento;""Estimado cliente; aproveche esta oferta única por tiempo limitado. Haga clic aquí para más información: [enlace sospechoso]"";spam;ofertas@ofertasespeciales.com;True;False;True;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,1,0.0,0
+Nuevo comentario en tu publicación,Alguien ha comentado en tu publicación. Mira el comentario aquí: [enlace seguro],ham,notificaciones@blog.com,0,0,0,0,HAM,0,0,0,0,82,0,0.06153846153846154,12
+"Re: ¡Gane un millón de dólares!;""¡Felicidades! Ha ganado un millón de dólares. Para reclamar su premio; haga clic aquí: [enlace sospechoso]"";spam;ganador@loteria.net;True;True;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,2,0.0,0
+"Re: ¡Oferta Increíble! 50% de descuento;""Estimado cliente; aproveche esta oferta única por tiempo limitado. Haga clic aquí para más información: [enlace sospechoso]"";spam;ofertas@ofertasespeciales.com;True;False;True;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,1,0.0,0
+"Re: ¡Gane un millón de dólares!;""¡Felicidades! Ha ganado un millón de dólares. Para reclamar su premio; haga clic aquí: [enlace sospechoso]"";spam;ganador@loteria.net;True;True;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,2,0.0,0
+"Re: ¡Oferta Increíble! 50% de descuento;""Estimado cliente; aproveche esta oferta única por tiempo limitado. Haga clic aquí para más información: [enlace sospechoso]"";spam;ofertas@ofertasespeciales.com;True;False;True;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,1,0.0,0
+"Re: ¡Gane un millón de dólares!;""¡Felicidades! Ha ganado un millón de dólares. Para reclamar su premio; haga clic aquí: [enlace sospechoso]"";spam;ganador@loteria.net;True;True;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,2,0.0,0
+"Re: ¡Oferta Increíble! 50% de descuento;""Estimado cliente; aproveche esta oferta única por tiempo limitado. Haga clic aquí para más información: [enlace sospechoso]"";spam;ofertas@ofertasespeciales.com;True;False;True;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,1,0.0,0
+"Re: ¡Gane un millón de dólares!;""¡Felicidades! Ha ganado un millón de dólares. Para reclamar su premio; haga clic aquí: [enlace sospechoso]"";spam;ganador@loteria.net;True;True;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,2,0.0,0
+"Re: ¡Oferta Increíble! 50% de descuento;""Estimado cliente; aproveche esta oferta única por tiempo limitado. Haga clic aquí para más información: [enlace sospechoso]"";spam;ofertas@ofertasespeciales.com;True;False;True;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,1,0.0,0
+"Re: ¡Gane un millón de dólares!;""¡Felicidades! Ha ganado un millón de dólares. Para reclamar su premio; haga clic aquí: [enlace sospechoso]"";spam;ganador@loteria.net;True;True;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,2,0.0,0
+"Re: ¡Oferta Increíble! 50% de descuento;""Estimado cliente; aproveche esta oferta única por tiempo limitado. Haga clic aquí para más información: [enlace sospechoso]"";spam;ofertas@ofertasespeciales.com;True;False;True;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,1,0.0,0
+"Re: ¡Gane un millón de dólares!;""¡Felicidades! Ha ganado un millón de dólares. Para reclamar su premio; haga clic aquí: [enlace sospechoso]"";spam;ganador@loteria.net;True;True;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,2,0.0,0
+"Re: ¡Oferta Increíble! 50% de descuento;""Estimado cliente; aproveche esta oferta única por tiempo limitado. Haga clic aquí para más información: [enlace sospechoso]"";spam;ofertas@ofertasespeciales.com;True;False;True;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,1,0.0,0
+"Re: ¡Gane un millón de dólares!;""¡Felicidades! Ha ganado un millón de dólares. Para reclamar su premio; haga clic aquí: [enlace sospechoso]"";spam;ganador@loteria.net;True;True;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,2,0.0,0
+"Re: ¡Oferta Increíble! 50% de descuento;""Estimado cliente; aproveche esta oferta única por tiempo limitado. Haga clic aquí para más información: [enlace sospechoso]"";spam;ofertas@ofertasespeciales.com;True;False;True;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,1,0.0,0
+"Re: ¡Gane un millón de dólares!;""¡Felicidades! Ha ganado un millón de dólares. Para reclamar su premio; haga clic aquí: [enlace sospechoso]"";spam;ganador@loteria.net;True;True;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,2,0.0,0
+"Re: ¡Oferta Increíble! 50% de descuento;""Estimado cliente; aproveche esta oferta única por tiempo limitado. Haga clic aquí para más información: [enlace sospechoso]"";spam;ofertas@ofertasespeciales.com;True;False;True;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,1,0.0,0
+"Re: ¡Gane un millón de dólares!;""¡Felicidades! Ha ganado un millón de dólares. Para reclamar su premio; haga clic aquí: [enlace sospechoso]"";spam;ganador@loteria.net;True;True;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,2,0.0,0
+"Re: ¡Oferta Increíble! 50% de descuento;""Estimado cliente; aproveche esta oferta única por tiempo limitado. Haga clic aquí para más información: [enlace sospechoso]"";spam;ofertas@ofertasespeciales.com;True;False;True;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,1,0.0,0
+"Re: ¡Gane un millón de dólares!;""¡Felicidades! Ha ganado un millón de dólares. Para reclamar su premio; haga clic aquí: [enlace sospechoso]"";spam;ganador@loteria.net;True;True;True;True;Spam",,,,1,1,1,1,HAM,1,1,1,1,0,2,0.0,0
+"Oferta Increíble: ¡Gana un millón de dólares!;""Felicidades; has ganado un millón de dólares. Para reclamar tu premio; haz clic aquí: [enlace sospechoso]"";spam;ofertasincreibles@ganamillones.com;True;False;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,1,0.0,0
+"Re: Tu pedido ha sido enviado;""Estimado cliente; su pedido ha sido enviado y llegará en 2-3 días hábiles. Puede rastrearlo aquí: [enlace legítimo]"";ham;pedidos@ejemplo.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"ACTUALIZACIÓN IMPORTANTE DE SU CUENTA;""Estimado cliente; detectamos actividad inusual en su cuenta. Por favor; actualice su información aquí: [enlace sospechoso]"";spam;seguridad@bancofalso.com;True;True;True;True;Spam",,,,1,1,1,1,HAM,1,1,1,1,0,0,0.0,0
+Nueva promoción:#50% de descuento,Aprovecha nuestra nueva promoción y obtén un 50% de descuento en todos nuestros productos. ¡Compra aho#a!,spam,promociones@descuentos.net,0,0,0,0,SPAM,0,0,0,0,108,1,0.05952380952380952,16
+"Invitación a conectar en LinkedIn;""Hola [Nombre]; me gustaría conectar contigo en LinkedIn. Compartimos intereses en [Intereses]."";ham;usuario@gmail.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Gana un auto nuevo;""Felicidades; has ganado un auto nuevo. Para reclamarlo; responde a este correo con tus datos personales."";spam;ganagana@autosnuevos.com;False;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Re: Reunión de mañana;""Hola equipo; recuerden que la reunión es mañana a las 10 am. Saludos!"";ham;jefe@empresa.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,1,0.0,0
+"Tu paquete está listo para ser recogido;""Su paquete ya está listo para ser recogido en nuestra oficina.  Por favor; traiga una identificación con foto."";ham;envios@empresa.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Oferta Exclusiva: ¡Solo por hoy!,Oferta exclusiva solo por hoy: 70% de descuento en todos nuestros productos. ¡Compra ahora!,spam,ofertas@exclusivas.com,1,1,1,1,SPAM,1,1,1,1,92,2,0.041666666666666664,14
+"Problemas con tu cuenta;""Hemos detectado un problema con tu cuenta. Por favor; actualiza tus datos lo antes posible"";spam;seguridad@tucuenta.net;False;False;False;True;Spam",,,,1,1,1,1,HAM,1,1,1,1,0,0,0.0,0
+"Felicidades has ganado un premio;""Felicidades; has ganado un premio. Para reclamarlo; visita este enlace [enlace sospechoso]"";spam;premios@ganapremios.com;True;True;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Re: Cita médica;""Estimado paciente; le recordamos su cita médica para mañana a las 3 pm."";ham;citas@clinicamedica.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Actualiza tu información;""Por favor; actualiza tu información personal para mantener tu cuenta segura"";spam;seguridad@actualiza.com;False;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Tu pedido está en camino,Tu pedido número [número de pedido] está en camino y llegará en breve.,ham,pedidos@tiendaonline.com,0,0,0,0,HAM,0,0,0,0,74,0,0.09090909090909091,13
+GRAN REMATE!!,GRAN REMATE!! Aprovecha nuestras increíbles ofertas por tiempo limitado. ¡Compra ahora!,spam,remate@grandesofertas.net,0,0,0,0,SPAM,0,0,0,0,89,5,0.1917808219178082,11
+"Recordatorio de pago;""Estimado cliente; le recordamos que su pago vence el [fecha]."";ham;pagos@empresa.com;F#lse;False;False;False;Ham",#one,,,0,0,0,0,HAM,0,0,0,0,4,0,0.0,1
+¡Oferta imperdible!,¡Oferta imperdible! Obtenga un 50% de descuento en su próxima compra.,spam,ofertas@imperdibles.com,0,0,0,0,SPAM,0,0,0,0,71,2,0.07407407407407407,11
+"Re: Proyecto X;""Hola equipo; aquí está la actualización del proyecto X."";ham;compañero@empresa.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Gana un viaje a las Bahamas;""Felicidades; has ganado un viaje a las Bahamas. Para reclamarlo; envía tus datos personales."";spam;viajes@ganaviajes.com;False;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Tu suscripción ha expirado,Tu suscripción ha expirado. Renueva tu suscripción ahora para acceder a todos nuestros servicios.,spam,suscripciones@servicios.net,0,0,0,0,SPAM,0,0,0,0,99,0,0.04878048780487805,14
+"Re: Reunión de equipo;""Hola equipo; la reunión de hoy ha sido cancelada."";ham;jefe@empresa.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡Última oportunidad!,¡Última oportunidad para aprovechar nuestra oferta! ¡Compra ahora antes de que se acabe!,spam,ofertas@ultimahora.net,0,0,0,0,SPAM,0,0,0,0,91,3,0.05405405405405406,13
+"Actualiza tu contraseña;""Por razones de seguridad; actualiza tu contraseña lo antes posible."";spam;seguridad@contraseña.com;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Re: Presupuesto del proyecto;""Hola equipo; adjunto el presupuesto del proyecto."";ham;proyecto@empresa.com;False;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Oferta de trabajo,Tenemos una oferta de trabajo que podría interesarte. ¡Postula ahora!,ham,rrhh@empresa.com,0,0,0,0,SPAM,0,0,0,0,71,1,0.06896551724137931,10
+"Felicidades; has ganado!;""Felicidades; has ganado un premio. Para reclamarlo; haz clic aquí: [enlace sospechoso]"";spam;premios@ganapremios.com;True;False;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,1,0.0,0
+"Re: Informe semanal;""Hola equipo; adjunto el informe semanal."";ham;informes@empresa.com;False;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡Gana un iPhone!,¡Gana un iPhone gratis! Responde a este correo con tus datos personales.,spam,concursos@iphonegratis.com,0,0,0,0,SPAM,0,0,0,0,73,2,0.06779661016949153,12
+Tu pedido ha sido procesado,Tu pedido ha sido procesado y se está preparando para su envío.,ham,pedidos@tiendaonline.com,0,0,0,0,HAM,0,0,0,0,65,0,0.058823529411764705,12
+Oferta limitada,Oferta limitada por tiempo. ¡Compra ahora antes de que se acabe!,spam,ofertas@limitadas.com,0,0,0,0,SPAM,0,0,0,0,65,1,0.057692307692307696,11
+"Re: Cita de negocios;""Hola; confirmo nuestra cita de negocios para mañana a las 11 am."";ham;negocios@ejemplo.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡Aumenta tus ventas!,¡Aumenta tus ventas con nuestra nueva herramienta!,spam,ventas@aumentatusventas.com,0,0,0,0,SPAM,0,0,0,0,51,2,0.046511627906976744,7
+"Re: Planificación del proyecto;""Hola equipo; aquí está el plan del proyecto. Saludos!"";ham;proyecto@empresa.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,1,0.0,0
+"¡Oferta Flash!;""¡Oferta Flash! Solo por hoy; 80% de descuento en todos nuestros productos."";spam;ofertasflash@descuentos.com;False;False;True;False;Spam",,,,1,1,1,1,HAM,1,1,1,1,0,2,0.0,0
+Tu pago ha sido recibido,Tu pago ha sido recibido correctamente. Gracias por tu compra.,ham,pagos@empresa.com,0,0,0,0,HAM,0,0,0,0,62,0,0.0392156862745098,10
+"Ganaste un premio;""Ganaste un premio. Para reclamarlo; ingresa tus datos personales aquí: [enlace sospechoso]"";spam;premios@ganapremios.com;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Re: Reunión del equipo;""Hola equipo; nos vemos en la reunión del equipo."";ham;jefe@empresa.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡No te lo pierdas!,¡No te lo pierdas! Oferta válida solo por hoy.,spam,ofertas@nopierdas.com,0,0,0,0,SPAM,0,0,0,0,48,2,0.1111111111111111,9
+"Re: Asunto importante;""Hola; adjunto el documento que solicitaste."";ham;compañero@empresa.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡Ahorra dinero!,¡Ahorra dinero con nuestra nueva promoción!,spam,promociones@ahorra.com,0,0,0,0,SPAM,0,0,0,0,45,2,0.08108108108108109,6
+"Tu cuenta ha sido bloqueada;""Tu cuenta ha sido bloqueada debido a actividad sospechosa. Para desbloquearla; haz clic aquí: [enlace sospechoso]"";spam;seguridad@cuenta.com;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Re: Actualización de proyecto;""Hola equipo; aquí está la actualización del proyecto."";ham;proyecto@empresa.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡Increíble oferta!,¡Increíble oferta! ¡No te lo pierdas!,spam,ofertas@increibles.com,0,0,0,0,SPAM,0,0,0,0,40,3,0.16666666666666666,6
+"Re: Informe mensual;""Hola equipo; adjunto el informe mensual."";ham;informes@empresa.com;False;False;False;False#Spam",Non#,,,1,1,1,1,HAM,1,1,1,1,4,0,0.3333333333333333,1
+¡Gana una casa!,¡Gana una casa gratis! Participa en nuestro sorteo.,spam,sorteos@casagratis.com,0,0,0,0,SPAM,0,0,0,0,52,2,0.07142857142857142,8
+Oferta Increíble: ¡Gane un millón de dólares!,¡Felicidades! Ha ganado un millón de dólares. Haga clic aquí para reclamar su premio: http://example.com/premio,spam,premios@ofertasespeciales.com,0,0,0,0,SPAM,0,0,0,0,115,2,0.07865168539325842,15
+"Re: Tu pedido ha sido enviado;""Estimado cliente; su ped#do ha sido enviado. Puede rastrearlo aquí: [tracking link]"";ham;ventas@example.com;True;False;False;False;Spam",No#e,,,0,0,0,0,HAM,0,0,0,0,4,0,0.3333333333333333,1
+"Actualice su contraseña;""Estimado usuario; por favor actualice su contraseña para mayor seguridad."";ham;seguridad@gmail.com;False;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Re:Tu cuenta ha sido bloqueada,Tu cuenta ha sido bloqueada por razones de seguridad.  Ingresa aquí para desbloquearla: [enlace sospechoso],spam,seguridad@fakemail.net,0,0,0,0,SPAM,0,0,0,0,108,0,0.03409090909090909,15
+"GANE UN COCHE!;""¡Felicidades! Ha ganado un coche nuevo.  Para reclamarlo; visite: [enlace sospechoso]"";spam;ganador@sorteos.net;True;True;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,2,0.0,0
+Nueva promoción,Disfrute de nuestras nuevas ofertas. Visite nuestra tienda en [enlace],ham,promociones@yahoo.com,0,0,0,0,SPAM,0,0,0,0,70,0,0.034482758620689655,10
+Su pedido está listo para enviarse,Su pedido ya está listo para ser enviado.  Gracias por su compra.  Puede ver el detalle de su pedido aquí [enlace],ham,pedidos@example.com,0,0,0,0,SPAM,0,0,0,0,116,0,0.056818181818181816,21
+Aumente su tamaño,Incrementa tu tamaño con nuestra revolucionaria píldora. Visite [enlace],spam,salud@pills.net,1,1,1,1,SPAM,1,1,1,1,74,0,0.06557377049180328,9
+Oferta especial: ¡50% de descuento!,Aproveche nuestra oferta especial del 50% de descuento en todos nuestros productos. Visite nuestra tienda en línea: [enlace],spam,ofertas@descuentos.com,0,0,0,0,SPAM,0,0,0,0,125,1,0.03,18
+Su paquete ha llegado,Su paquete ha llegado a su destino. Puede rastrearlo aquí: [enlace],ham,envios@gmail.com,0,0,0,0,SPAM,0,0,0,0,68,0,0.05660377358490566,11
+"Problemas con su cuenta;""Hemos detectado actividad sospechosa en su cuenta.  Por favor; actualice su información aquí: [enlace]"";spam;seguridad@malware.com;True;False;False;True;Spam",,,,1,1,1,1,HAM,1,1,1,1,0,0,0.0,0
+"Confirme su correo electrónico;""Por favor; confirme su correo electrónico haciendo clic en el enlace a continuación: [enlace]"";ham;soporte@example.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Felicidades; has ganado un premio!;""Felicidades! Has ganado un premio; reclama tu premio aqui [enlace]"";spam;premios@fakemail.net;True;True;True;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,2,0.0,0
+"Actualice su información personal;""Por favor; actualice su información personal para mantener su cuenta segura"";ham;soporte@gmail.com;False;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Gane un viaje a las Bahamas,Gane un viaje todo pagado a las Bahamas. Visite [enlace] para más información,spam,viajes@scam.com,0,0,0,0,SPAM,0,0,0,0,79,0,0.08064516129032258,13
+"Solicitud de amistad;""Hola; quiero ser tu amigo. Agrégame a Facebook."";ham;friend@gmail.com;False;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Re: Cita médica;""Estimado paciente; le recordamos su cita médica el día de mañana."";ham;citas@clinic.com;False;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Oferta especial: ¡Computadora gratis!,¡Obtenga una computadora gratis! Visite [enlace],spam,ofertas@free.com,0,0,0,0,SPAM,0,0,0,0,49,2,0.075,6
+Tu pago ha sido procesado,Tu pago ha sido procesado correctamente.  Gracias por tu compra.,ham,pagos@example.com,0,0,0,0,SPAM,0,0,0,0,64,0,0.038461538461538464,10
+"Re: Tu cuenta ha sido comprometida;""Tu cuenta ha sido comprometida.  Por favor; cambia tu contraseña inmediatamente."";spam;seguridad@phishing.com;False;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡Gane un millón de dólares!,¡Felicidades! Ha ganado un millón de dólares. Haga clic aquí para reclamar su premio: http://example.com/premio,spam,premios@ofertasespeciales.com,0,0,0,0,SPAM,0,0,0,0,115,2,0.07865168539325842,15
+"Re: Tu pedido ha sido enviado;""Estimado cliente; su pedido ha sido enviado. Puede rastrearlo aquí: [tracking link]"";ham;ventas@example.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Actualice su contraseña;""Estimado usuario; por favor actualice su contraseña para mayor seguridad."";ham;seguridad@gmail.com;False;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Re:Tu cuenta ha sido bloqueada,Tu cuenta ha sido bloqueada por razones de seguridad.  Ingresa aquí para desbloquearla: [enlace sospechoso],spam,seguridad@fakemail.net,0,0,0,0,SPAM,0,0,0,0,108,0,0.03409090909090909,15
+"GANE UN COCHE!;""¡Felicidades! Ha ganado un coche nuevo.  Para reclamarlo; visite: [enlace sospechoso]"";spam;ganador@sorteos.net;True;True;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,2,0.0,0
+Nueva promoción,Disfrute de nuestras nuevas ofertas. Visite nuestra tienda en [enlace],ham,promociones@yahoo.com,1,1,1,1,SPAM,1,1,1,1,70,0,0.034482758620689655,10
+Su ped#do está listo para enviarse,Su pedido ya está listo para ser #nviado.  Gracias por su compra.  Puede ver el detalle de su pedido aquí [enlace],ham,pedidos@example.com,0,0,0,0,SPAM,0,0,0,0,116,0,0.05747126436781609,21
+Aumente su tamaño,Incrementa tu tamaño con nuestra revolucionaria píldora. Visite [enlace],spam,salud@pills.net,0,0,0,0,SPAM,0,0,0,0,74,0,0.06557377049180328,9
+Oferta especial: ¡50% de descuento!,Aproveche nuestra oferta especial del 50% de descuento en todos nuestros productos. Visite nuestra tienda en línea: [enlace],spam,ofertas@descuentos.com,0,0,0,0,SPAM,0,0,0,0,125,1,0.03,18
+Su paquete ha llegado,Su paquete ha llegado a su destino. Puede rastrearlo aquí: [enlace],ham,envios@gmail.com,0,0,0,0,HAM,0,0,0,0,68,0,0.05660377358490566,11
+"Problemas con su cuenta;""H#mos detectado actividad sospechosa en su cuenta.  Por favor; actualice su información aquí: [enlace]"";spam;seguridad@malware.com;True;False;False;True;Spam",#one,,,0,0,0,0,HAM,0,0,0,0,4,0,0.0,1
+"Confirme su correo electrónico;""Por favor; confirme su correo electrónico haciendo clic en el enlace a continuación: [enlace]"";ham;soporte@example.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Felicidades; has ganado un premio!;""Felicidades! Has ganado un premio; reclama tu premio aqui [enlace]"";spam;premios@fakemail.net;True;True;True;False;Spam",,,,1,1,1,1,HAM,1,1,1,1,0,2,0.0,0
+"Actualice su información personal;""Por favor; actualice su información personal para mantener su cuenta segura"";ham;soporte@gmail.com;False;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Gane un viaje a las Bahamas,Gane un viaje todo pagado a las Bahamas. Visite [enlace] para más información,spam,viajes@scam.com,0,0,0,0,SPAM,0,0,0,0,79,0,0.08064516129032258,13
+"Solicitud de amistad;""Hola; quiero ser tu amigo. Agrégame a Facebook."";ham;friend@gmail.com;False;False;False;False;Spam",,,,1,1,1,1,HAM,1,1,1,1,0,0,0.0,0
+"Re: Cita médica;""Estimado paciente; le recordamos su cita médica el día de mañana."";ham;citas@clinic.com;False;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Oferta especial: ¡Computadora gratis!,¡Obtenga una computadora gratis! Visite [enlace],spam,ofertas@free.com,0,0,0,0,HAM,0,0,0,0,49,2,0.075,6
+Tu pago ha sido procesado,Tu pago ha sido procesado correctamente.  Gracias por tu compra.,ham,pagos@example.com,0,0,0,0,SPAM,0,0,0,0,64,0,0.038461538461538464,10
+"Re: Tu cuenta ha sido comprometida;""Tu cuenta ha sido comprometida.  Por favor; cambia tu contraseña inmediatamente."";spam;seguridad@phishing.com;False;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Recordatorio de pago,Este es un recordatorio para pagar su factura.,ham,facturas@example.com,0,0,0,0,HAM,0,0,0,0,46,0,0.02631578947368421,8
+Oferta irresistible: ¡Viaje gratis!,Gane un viaje gratis. Haga clic aqui para más detalles. [enlace],spam,ofertas@travel.net,0,0,0,0,SPAM,0,0,0,0,65,1,0.06,11
+"Problemas con tu compra;""Hemos detectado un problema con tu compra reciente.  Por favor; contacta a soporte."";ham;soporte@shop.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Oferta Increíble: ¡Gana un Millón!,¡Felicidades! Ha ganado un millón de dólares.  Reclame su premio aquí: [enlace sospechoso],spam,premios@ofertasespeciales.com,0,0,0,0,SPAM,0,0,0,0,94,2,0.09722222222222222,13
+"Re: Tu pedido ha sido enviado;""Estimado cliente; su pedido ha sido enviado. Puede rastrearlo aquí: [enlace seguro]"";ham;pedidos@empresa.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Actualiza tu contraseña ahora;""Estimado usuario; por favor actualiza tu contraseña para mejorar la seguridad de tu cuenta.  [enlace seguro]"";ham;seguridad@banco.com;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+GANE UN AUTO NUEVO!!!,¡Felicitaciones! Ha ganado un auto nuevo.  Visite nuestra página web: [enlace sospechoso],spam,ganador@autosnuevos.net,0,0,0,0,SPAM,0,0,0,0,91,4,0.06944444444444445,12
+"Tu paquete está listo para ser recogido;""Su paquete está listo para ser recogido en la oficina de correos.  Por favor; traiga su identificación."";ham;notificaciones@correo.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Oferta Exclusiva: ¡50% de descuento!,Aproveche esta oferta única.  Compre ahora: [enlace sospechoso],spam,ofertas@descuentos.org,0,0,0,0,SPAM,0,0,0,0,64,1,0.058823529411764705,8
+"Problemas con su cuenta bancaria;""Hemos detectado actividad sospechosa en su cuenta bancaria. Por favor; verifique su información: [enlace sospechoso]"";spam;seguridad@banconacional.com.co;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Cita médica confirmada,Su cita médica ha sido confirmada para mañana a las 10:00 AM.,ham,citas@clinicamedica.com,0,0,0,0,SPAM,0,0,0,0,63,0,0.11363636363636363,12
+"Nueva Mensaje;""Tienes un nuevo mensaje.  Por favor; verifica tu bandeja de entrada."";ham;notificaciones@gmail.com;False;True;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡Gane un viaje a Hawai!,¡Felicitaciones!  Ha ganado un viaje a Hawai. Visite: [enlace sospechoso],spam,viajes@hawai.net,0,0,0,0,SPAM,0,0,0,0,74,2,0.08620689655172414,10
+"Re: Tu solicitud de empleo;""Estimado/a [nombre]; lamentamos informarle que su solicitud de empleo no ha sido seleccionada en esta ocasión."";ham;rrhh@empresa.com;False;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Importante: Acción requerida,Su cuenta está a punto de ser suspendida.  Actualice su información ahora: [enlace sospechoso],spam,seguridad@cuenta.com,0,0,0,0,SPAM,0,0,0,0,96,0,0.05263157894736842,14
+"Tu compra ha sido procesada;""Estimado cliente; su compra ha sido procesada con éxito.  Gracias por su compra."";ham;compras@tienda.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Oferta Increíble: ¡Gana un Millón!,¡Felicidades! Ha ganado un millón de dólares.  Reclame su premio aquí: [enlace sospechoso],spam,premios@ofertasespeciales.com,0,0,0,0,SPAM,0,0,0,0,94,2,0.09722222222222222,13
+"Problemas con su cuenta bancaria;""Hemos detectado actividad sospechosa en su cuenta bancaria. Por favor; verifique su información: [enlace sospechoso]"";spam;seguridad@banconacional.com.co;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Tu suscripción ha sido renovada;""Estimado cliente; su suscripción ha sido renovada con éxito."";ham;suscripciones@servicio.com;False;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Oferta Exclusiva: ¡50% de descuento!,Aproveche esta oferta única. Compre ahora: [enlace sospechoso],spam,ofertas@descuentos.org,0,0,0,0,SPAM,0,0,0,0,63,1,0.058823529411764705,8
+"Gane un viaje a las Bahamas;""Felicitaciones; ha ganado un viaje a las Bahamas. Visite nuestro sitio web: [enlace sospechoso]"";spam;ganador@viajes.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Re: Reunión de mañana;""Estimado/a [nombre]; recordatorio de la reunión de mañana a las 9:00 AM."";ham;reuniones@empresa.com;False;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Tu pedido ha sido enviado;""Estimado cliente; su pedido ha sido enviado. Puede rastrearlo aquí: [enlace seguro]"";ham;pedidos@empresa.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Actualiza tu contraseña ahora;""Estimado usuario; por favor actualiza tu contraseña para mejorar la seguridad de tu cuenta. [enlace seguro]"";ham;seguridad@banco.com;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Oferta Increíble: ¡Gana un Millón!,¡Felicidades! Ha ganado un millón de dólares. Reclame su premio aquí: [enlace sospechoso],spam,premios@ofertasespeciales.com,0,0,0,0,SPAM,0,0,0,0,93,2,0.09722222222222222,13
+"Tu paquete está listo para ser recogido;""Su paquete está listo para ser recogido en la oficina de correos. Por favor; traiga su identificación."";ham;notificaciones@correo.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Alerta de Seguridad,Hemos detectado actividad sospechosa en su cuenta. Ingrese aquí para verificar: [enlace sospechoso],spam,seguridad@sistema.com,0,0,0,0,SPAM,0,0,0,0,100,0,0.03614457831325301,13
+"Re: Tu solicitud de información;""Estimado/a [nombre]; adjuntamos la información que solicitó."";ham;info@empresa.com;False;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Nueva Mensaje;""Tienes un nuevo mensaje. Por favor; verifica tu bandeja de entrada."";ham;notificaciones@gmail.com;False;True;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+GANE UN AUTO NUEVO!!!,¡Felicitaciones! Ha ganado un auto nuevo. Visite nuestra página web: [enlace sospechoso],spam,ganador@autosnuevos.net,0,0,0,0,SPAM,0,0,0,0,90,4,0.06944444444444445,12
+"Tu compra ha sido procesada;""Estimado cliente; su compra ha sido procesada con éxito. Gracias por su compra."";ham;compras@tienda.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Importante: Acción requerida,Su cuenta está a punto de ser suspendida. Actualice su información ahora: [enlace sospechoso],spam,seguridad@cuenta.com,0,0,0,0,HAM,0,0,0,0,95,0,0.05263157894736842,14
+"Re: Reunión de mañana;""Estimado/a [nombre]; recordatorio de la reunión de mañana a las 9:00 AM."";ham;reuniones@empresa.com;False;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Cita médica confirmada,Su cita médica ha sido confirmada para mañana a las 10:00 AM.,ham,citas@clinicamedica.com,0,0,0,0,SPAM,0,0,0,0,63,0,0.11363636363636363,12
+Alerta de Seguridad,Hemos detectado actividad sospechosa en su cuenta. Ingrese aquí para verificar: [enlace sospechoso],spam,seguridad@sistema.com,0,0,0,0,SPAM,0,0,0,0,100,0,0.03614457831325301,13
+"Re: Tu solicitud de información;""Estimado/a [nombre]; adjuntamos la información que solicitó."";ham;info@empresa.com;False;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Gane un viaje a las Bahamas;""Felicitaciones; ha ganado un viaje a las Bahamas. Visite nuestro sitio web: [enlace sospechoso]"";spam;ganador@viajes.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Tu suscripción ha sido renovada;""Estimado cliente; su suscripción ha sido renovada con éxito."";ham;suscripciones@servicio.com;False;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Oferta Exclusiva: ¡50% de descuento!,Aproveche esta oferta única. Compre ahora: [enlace sospechoso],spam,ofertas@descuentos.org,0,0,0,0,SPAM,0,0,0,0,63,1,0.058823529411764705,8
+"Problemas con su cuenta bancaria;""Hemos detectado actividad sospechosa en su cuenta bancaria. Por favor; verifique su información: [enlace sospechoso]"";spam;seguridad@banconacional.com.co;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+GANE UN AUTO NUEVO!!!,¡Felicitaciones! Ha ganado un auto nuevo. Visite nuestra página web: [enlace sospechoso],spam,ganador@autosnuevos.net,0,0,0,0,SPAM,0,0,0,0,90,4,0.06944444444444445,12
+Oferta Increíble: ¡Gana un Millón!,¡Felicidades! Ha ganado un millón de dólares. Reclame su premio aquí: [enlace sospechoso],spam,premios@ofertasespeciales.com,0,0,0,0,SPAM,0,0,0,0,93,2,0.09722222222222222,13
+"Tu pedido ha sido enviado;""Estimado cliente; su pedido ha sido enviado. Puede rastrearlo aquí: [enlace seguro]"";ham;pedidos@empresa.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Actualiza tu contraseña ahora;""Estimado usuario; por favor actualiza tu contraseña para mejorar la seguridad de tu cuenta. [enlace seguro]"";ham;seguridad@banco.com;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Re: Tu solicitud de empleo;""Estimado/a [nombre]; lamentamos informarle que su solicitud de empleo no ha sido seleccionada en esta ocasión."";ham;rrhh@empresa.com;False;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Nueva Mensaje;""Tienes un nuevo mensaje. Por favor; verifica tu bandeja de entrada."";ham;notificaciones@gmail.com;False;True;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Oferta Increíble: ¡Gana un Millón!,¡Felicidades! Has ganado un millón de dólares. Reclama tu premio aquí: [enlace sospechoso],spam,premios@ofertasespeciales.com,0,0,0,0,HAM,0,0,0,0,94,2,0.0958904109589041,13
+"Re: Tu pedido ha sido enviado;""Estimado cliente; su pedido ha sido enviado. Puede rastrearlo aquí: [enlace seguro]"";ham;pedidos@ejemplo.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Actualiza tu contraseña;""Estimado usuario; por favor actualiza tu contraseña para mejorar la seguridad de tu cuenta."";ham;seguridad@gmail.com;False;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Ganaste un premio!;""Felicidades; has ganado un premio! Reclamalo aquí: [enlace sospechoso]"";spam;premios@ganapremios.net;True;True;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,2,0.0,0
+"Tu paquete está en camino;""Estimado cliente; su paquete está en camino. Puede rastrearlo aquí: [enlace seguro]"";ham;envios@yahoo.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Oferta Exclusiva: ¡50% de descuento!,Aprovecha nuestra oferta exclusiva del 50% de descuento en todos nuestros productos. ¡Compra ahora!,spam,ofertas@descuentos.com,0,0,0,0,SPAM,0,0,0,0,100,2,0.037037037037037035,14
+"Problemas con tu cuenta;""Hemos detectado actividad sospechosa en tu cuenta. Por favor; inicia sesión para verificar."";ham;seguridad@gmail.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡Gana un viaje gratis!,¡Felicidades! Has ganado un viaje gratis. Reclama tu premio aquí: [enlace sospechoso],spam,viajes@ofertasincreibles.com,0,0,0,0,SPAM,0,0,0,0,87,2,0.07246376811594203,12
+"Re: Reunión de mañana;""Hola; recordatorio de la reunión de mañana a las 10am."";ham;reuniones@ejemplo.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡No pierdas esta oportunidad!,No pierdas esta increíble oportunidad de ganar un auto nuevo. [enlace sospechoso],spam,concursos@suerte.com,0,0,0,0,SPAM,0,0,0,0,82,1,0.029850746268656716,12
+"Tu pago ha sido procesado;""Estimado cliente; su pago ha sido procesado exitosamente."";ham;pagos@ejemplo.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Re: Proyecto X;""Hola equipo; actualizacion del proyecto X."";ham;proyectos@gmail.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Oferta especial para ti,Tenemos una oferta especial solo para ti. [enlace sospechoso],spam,ofertas@superofertas.net,0,0,0,0,SPAM,0,0,0,0,61,0,0.02,9
+"Actualizacion de tu cuenta;""Hemos actualizado tu cuenta. Para ver los cambios; haz clic aquí: [enlace seguro]"";ham;soporte@ejemplo.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡Increíble oferta!,¡Increíble oferta! ¡Compra ahora! [enlace sospechoso],spam,ofertas@ofertas.com,0,0,0,0,HAM,0,0,0,0,56,3,0.11363636363636363,6
+"Re: Ci#a médica;""Estimado paciente; recordatorio de su cita médica mañana."";ham;citas@clinica.com;False;False;False;False;Ham",No#e,,,0,0,0,0,HAM,0,0,0,0,4,0,0.3333333333333333,1
+¡Oferta limitada!,¡Oferta limitada! ¡Compra ahora antes de que se agote! [enlace sospechoso],spam,ofertas@limitadas.com,0,0,0,0,SPAM,0,0,0,0,76,3,0.06666666666666667,11
+"Re: Planificación del evento;""Hola equipo; actualización de la planificación del evento."";ham;eventos@gmail.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡Gana dinero fácil!,¡Gana dinero fácil! ¡Regístrate ahora! [enlace sospechoso],spam,dinero@facil.com,0,0,0,0,SPAM,0,0,0,0,62,3,0.125,7
+"Tu cuenta ha sido bloqueada;""Tu cuenta ha sido bloqueada por razones de seguridad. Por favor; contacta con soporte."";ham;seguridad@yahoo.com;False;False;False;False;H#m",No#e,,,0,0,0,0,HAM,0,0,0,0,4,0,0.3333333333333333,1
+¡Gana un auto nuevo!,¡Gana un auto nuevo! ¡Participa ahora! [enlace sospechoso],spam,concursos@autos.com,0,0,0,0,SPAM,0,0,0,0,60,3,0.0851063829787234,8
+"Re: Presupuesto del proyecto;""Hola equipo; adjunto el presupuesto del proyecto."";ham;presupuestos@ejemplo.com;False;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡Descuento increíble!,¡Descuento increíble! ¡Aprovecha ahora! [enlace sospechoso],spam,ofertas@descuentos.net,0,0,0,0,SPAM,0,0,0,0,62,3,0.1,6
+"Re: Informe semanal;""Hola equipo; adjunto el informe semanal."";ham;informes@gmail.com;False;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡Oferta irresistible!,¡Oferta irresistible! ¡No te lo pierdas! [enlace sospechoso],spam,ofertas@irresistibles.com,0,0,0,0,SPAM,0,0,0,0,62,3,0.08163265306122448,8
+"Re: Próxima reunión;""Hola equipo; recordatorio de la próxima reunión."";ham;reuniones@yahoo.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡Gana una casa!,¡Gana una casa! ¡Participa ya! [enlace sospechoso],spam,concursos@casas.com,0,0,0,0,SPAM,0,0,0,0,52,3,0.1,7
+"Re: Actualización del proyecto;""Hola equipo; actualización del proyecto."";ham;proyectos@ejemplo.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡Última oportunidad!,¡Última oportunidad! ¡Compra ahora! [enlace sospechoso],spam,ofertas@ultimas.com,0,0,0,0,SPAM,0,0,0,0,58,3,0.08695652173913043,6
+"Re: Reunión de equipo;""Hola equipo; recordatorio de la reunión de equipo."";ham;equipo@gmail.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡Oferta flash!,¡Oferta flash! ¡Por tiempo limitado! [enlace sospechoso],spam,ofertas@flash.com,0,0,0,0,SPAM,0,0,0,0,58,3,0.08695652173913043,7
+"Re: Presentación del proyecto;""Hola equipo; adjunto la presentación del proyecto."";ham;presentaciones@yahoo.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡Aumenta tus ingresos!,¡Aumenta tus ingresos! ¡Regístrate ahora! [enlace sospechoso],spam,ingresos@dinero.com,0,0,0,0,SPAM,0,0,0,0,64,3,0.09803921568627451,7
+"Re: Informe mensual;""Hola equipo; adjunto el informe mensual."";ham;informes@ejemplo.com;False;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡Gran oportunidad!,¡Gran oportunidad! ¡No te la pierdas! [enlace sospechoso],spam,oportunidades@grandes.com,0,0,0,0,SPAM,0,0,0,0,59,3,0.08695652173913043,8
+"Re: Planificación estratégica;""Hola equipo; actualización de la planificación estratégica."";ham;estrategia@gmail.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡Gana un viaje a Europa!,¡Gana un viaje a Europa! ¡Participa ahora! [enlace sospechoso],spam,concursos@europa.com,1,1,1,1,SPAM,1,1,1,1,64,3,0.1,9
+"Re: Informe de ventas;""Hola equipo; adjunto el informe de ventas."";ham;ventas@yahoo.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡Oferta por tiempo limitado!,¡Oferta por tiempo limitado! ¡Aprovecha ahora! [enlace sospechoso],spam,ofertas@limitado.com,0,0,0,0,SPAM,0,0,0,0,68,3,0.07272727272727272,8
+"Re: Reunión de proyecto;""Hola equipo; recordatorio de la reunión de proyecto."";ham;proyectos@gmail.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡Gana una laptop!,¡Gana una laptop! ¡Participa ya! [enlace sospechoso],spam,concursos@laptops.com,0,0,0,0,SPAM,0,0,0,0,54,3,0.09523809523809523,7
+"Re: Actualización del presupuesto;""Hola equipo; actualización del presupuesto."";ham;presupuestos@ejemplo.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡Oferta increíble de última hora!,¡Oferta increíble de última hora! ¡Compra ahora! [enlace sospechoso],spam,ofertas@ultima_hora.com,1,1,1,1,SPAM,1,1,1,1,72,3,0.10714285714285714,9
+Ofer#a increíble de vacaciones,¡Ap#ovecha nuestras ofertas exclusivas de vacaciones! Reserva ahora y ahorra hasta un 50%.,spam,ofertasincreibles@ofertasespeciales.com,0,0,0,0,HAM,0,0,0,0,91,1,0.041666666666666664,13
+"Re: Tu pedido ha sido enviado;""Estimado cliente; su pedido ha sido enviado. Puede rastrearlo aquí: [enlace de seguimiento]"";ham;pedidos@ejemplo.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Gana un millón de dólares;""Felicidades; has ganado un millón de dólares. Reclámalo aquí: [enlace sospechoso]"";spam;ganamillones@ganaunmillon.net;True;True;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Actualiza tu contraseña;""Estimado usuario; por favor actua#iza tu contraseña para mejorar tu seguridad. [enlace a página falsa]"";spam;seguridad@actualizatucuenta.com;True;False;False;True;Spam",Non#,,,0,0,0,0,HAM,0,0,0,0,4,0,0.3333333333333333,1
+Nueva notificación,Tienes una nueva notificación en tu cuenta.,ham,notificaciones@gmail.com,0,0,0,0,HAM,0,0,0,0,44,0,0.05555555555555555,7
+Increíble oferta por tiempo limitado,¡No te pierdas esta oferta! ¡Compra ahora!,spam,ofertaslimitadas@ofertas.net,0,0,0,0,SPAM,0,0,0,0,44,2,0.11764705882352941,7
+"Re: Reunión mañana;""Hola; recuerda que la reunión es mañana a las 10:00 AM."";ham;jefe@empresa.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Tu cuenta ha sido comprometida,Tu cuenta ha sido comprometida. Cambia tu contraseña inmediatamente: [enlace falso],spam,seguridad@cuentacomprometida.com,0,0,0,0,SPAM,0,0,0,0,84,0,0.043478260869565216,11
+Oferta irresistible,Oferta irresistible. ¡Aprovecha ahora!,spam,ofertasirresistible@ofertas.net,1,1,1,1,SPAM,1,1,1,1,39,1,0.09090909090909091,4
+Recordatorio de cita,Este es un recordatorio para su cita mañana a las 2:00 PM.,ham,citas@clinica.com,0,0,0,0,HAM,0,0,0,0,59,0,0.09523809523809523,12
+Oferta Exclusiva: ¡50% de descuento!,Oferta Exclusiva: ¡50% de descuento! ¡Compra ahora!,spam,descuentos@ofertasespeciales.com,0,0,0,0,SPAM,0,0,0,0,53,3,0.1282051282051282,7
+Re: Proyecto X,Actualización del proyecto X. Más detalles en la reunión de mañana.,ham,compañero@empresa.com,0,0,0,0,SPAM,0,0,0,0,71,0,0.12727272727272726,11
+¡Felicidades! Has ga#ado un premio,¡Felicidades! Has ganado#un premio. Reclámalo aquí: [enlace],spam,premios@ganapremios.com,0,0,0,0,SPAM,0,0,0,0,63,2,0.125,7
+Tu paquete ha sido enviado,Tu paquete ha sido enviado y llegará en 2-3 días hábiles.,ham,envios@empresa.com,0,0,0,0,HAM,0,0,0,0,60,0,0.09302325581395349,11
+¡Gana dinero fácil!,¡Gana dinero fácil! ¡Inscríbete ahora!,spam,dinero@ganadinero.com,0,0,0,0,SPAM,0,0,0,0,42,3,0.1875,5
+Re: Invitación a evento,Te esperamos en el evento el próximo sábado.,ham,eventos@empresa.com,0,0,0,0,HAM,0,0,0,0,46,0,0.08333333333333333,8
+Tu pedido está listo para recogerse,Tu pedido #12345 está listo para recogerse en nuestra tienda.,ham,pedidos@tienda.com,0,0,0,0,SPAM,0,0,0,0,62,0,0.044444444444444446,10
+¡Oferta flash!,¡Oferta flash! ¡Por tiempo limitado!,spam,ofertasflash@ofertas.net,0,0,0,0,SPAM,0,0,0,0,38,3,0.13333333333333333,5
+"Re: Problemas con la cuenta;""Por favor; contacta con soporte técnico para solucionar los problemas con tu cuenta."";ham;soporte@empresa.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡Aumenta tu tamaño!,¡Aumenta tu tamaño! ¡Pídelo ahora!,spam,aumento@ofertas.net,0,0,0,0,SPAM,0,0,0,0,38,3,0.21428571428571427,5
+Recuerda tu contraseña,Recuerda tu contraseña. [enlace a página falsa],spam,seguridad@contraseña.com,0,0,0,0,SPAM,0,0,0,0,49,0,0.07894736842105263,7
+Re: Presupuesto,Te envío el presupuesto que me pediste.,ham,presupuestos@empresa.com,0,0,0,0,HAM,0,0,0,0,40,0,0.0625,7
+Oferta de trabajo,Tenemos una oferta de trabajo que podría interesarte.,ham,rrhh@empresa.com,0,0,0,0,HAM,0,0,0,0,54,0,0.044444444444444446,8
+Oferta de préstamo,Necesitas un préstamo. Solicítalo aquí: [enlace sospechoso],spam,prestamos@prestamos.com,0,0,0,0,SPAM,0,0,0,0,62,0,0.10204081632653061,7
+Re: Cita médica,Tu cita médica está confirmada para mañana.,ham,citas@clinica.com,0,0,0,0,HAM,0,0,0,0,46,0,0.1111111111111111,7
+¡Última oportunidad!,¡Última oportunidad para aprovechar esta oferta! [enlace],spam,ultimaoportunidad@ofertas.net,0,0,0,0,HAM,0,0,0,0,59,2,0.041666666666666664,7
+Re: Informe semanal,Aquí está el informe semanal.,ham,informes@empresa.com,0,0,0,0,HAM,0,0,0,0,31,0,0.125,5
+Gana un coche,Has ganado un coche. Reclámalo ahora: [enlace],spam,coches@ganacoches.com,0,0,0,0,SPAM,0,0,0,0,47,0,0.08333333333333333,7
+Re: Vacaciones,Información sobre tus vacaciones.,ham,viajes@agenciadeviajes.com,0,0,0,0,HAM,0,0,0,0,34,0,0.06896551724137931,4
+¡Gana un viaje!,¡Gana un viaje gratis! [enlace],spam,viajes@ganaviajes.com,0,0,0,0,SPAM,0,0,0,0,32,2,0.08333333333333333,5
+Re: Reunión de equipo,Recuerda la reunión de equipo mañana a las 3 PM.,ham,equipo@empresa.com,0,0,0,0,SPAM,0,0,0,0,50,0,0.13513513513513514,10
+Aumenta tu masa muscular,Aumenta tu masa muscular con nuestro nuevo producto. [enlace],spam,musculos@musculos.com,0,0,0,0,SPAM,0,0,0,0,61,0,0.02,9
+Re: Proyecto Alpha,Actualización del proyecto Alpha. Ver detalles adjuntos.,ham,proyectos@empresa.com,0,0,0,0,SPAM,0,0,0,0,57,0,0.08333333333333333,7
+¡Oferta por tiempo limitado!,¡Oferta por tiempo limitado! ¡Compra ahora!,spam,ofertas@ofertas.net,1,1,1,1,SPAM,1,1,1,1,45,3,0.1111111111111111,6
+Re: Pedido #67890,Tu pedido #67890 ha sido enviado. [enlace de seguimiento],ham,pedidos@tiendaonline.com,0,0,0,0,SPAM,0,0,0,0,57,0,0.025,9
+¡Increíble descuento!,¡Increíble descuento! ¡Aprovecha ahora!,spam,descuentos@descuentos.com,0,0,0,0,SPAM,0,0,0,0,42,3,0.14705882352941177,4
+Re: Presentación,La presentación se ha pospuesto para la semana que viene.,ham,presentaciones@empresa.com,0,0,0,0,HAM,0,0,0,0,58,0,0.0425531914893617,10
+¡Gana dinero fácil y rápido!,¡Gana dinero fácil y rápido! ¡Inscríbete ahora!,spam,dinero@ganadinero.com,0,0,0,0,SPAM,0,0,0,0,52,3,0.1794871794871795,7
+Re: Reunión del lunes,Te recuerdo la reunión del lunes a las 11:00 AM.,ham,reuniones@empresa.com,0,0,0,0,HAM,0,0,0,0,49,0,0.12121212121212122,10
+Oferta de vacaciones,Aprovecha nuestras ofertas de vacaciones. [enlace],spam,vacaciones@ofertas.net,0,0,0,0,SPAM,0,0,0,0,50,0,0.023809523809523808,6
+Re: Informe de ventas,Aquí tienes el informe de ventas del mes.,ham,ventas@empresa.com,0,0,0,0,HAM,0,0,0,0,42,0,0.06060606060606061,8
+¡Última oportunidad para ganar!,¡Última oportunidad para ganar! ¡Participa ahora!,spam,ganapremios@ganapremios.com,0,0,0,0,SPAM,0,0,0,0,52,3,0.09523809523809523,6
+Re: Cita dentista,Tu cita con el dentista está confirmada para mañana a las 10 AM.,ham,citas@dentista.com,0,0,0,0,HAM,0,0,0,0,66,0,0.10204081632653061,13
+Oferta Increíble: ¡Gana un millón de dólares!,¡Felicidades! Ha ganado un millón de dólares. Reclame su premio haciendo clic aquí: [enlace sospechoso],spam,ganador@ofertasespeciales.com,0,0,0,0,SPAM,0,0,0,0,107,2,0.08333333333333333,15
+"Re: Tu pedido ha sido enviado;""Estimado cliente; su pedido ha sido enviado. Puede rastrearlo aquí: [enlace seguro]"";ham;pedidos@amazon.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Actualiza tu contraseña ahora;""Estimado usuario; por favor actualiza tu contraseña para m#jorar la seguridad de tu cuenta. Haz clic aquí: [enlace sospechoso]"";spam;seguridad@actualizacion.net;True;False;False;True;Spam",No#e,,,0,0,0,0,HAM,0,0,0,0,4,0,0.3333333333333333,1
+Nueva promoción de vuelos baratos,Aprovecha nuestros vuelos baratos a cualquier destino. ¡Reserva ahora!,ham,ofertas@aerolineas.com,0,0,0,0,HAM,0,0,0,0,71,1,0.05,9
+Tu cuenta ha sido bloqueada,Tu cuenta ha sido bloqueada debido a actividad sospechosa. Inicia sesión para desbloquearla: [enlace sospechoso],spam,seguridad@bancofalso.com,0,0,0,0,SPAM,0,0,0,0,113,0,0.031914893617021274,15
+Gana un auto nuevo,¡Felicidades! Has ganado un auto nuevo. Reclame su premio aquí: [enlace sospechoso],spam,premio@ganagratis.com,0,0,0,0,SPAM,0,0,0,0,85,1,0.07462686567164178,12
+Invitación a evento exclusivo,Te invitamos a un evento exclusivo con descuentos increíbles. ¡Regístrate aquí!,ham,eventos@empresa.com,0,0,0,0,SPAM,0,0,0,0,83,1,0.08955223880597014,11
+"Problemas con tu cuenta;""Hemos detectado un problema con tu cuenta. Por favor; contacta con nosotros inmediatamente."";ham;soporte@empresa.com;False;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Oferta Exclusiva: ¡50% de descuento!,Aprovecha nuestra oferta exclusiva del 50% de descuento. ¡Compra ahora!,ham,ofertas@tiendaonline.com,0,0,0,0,SPAM,0,0,0,0,72,2,0.05263157894736842,10
+Tu paquete ha llegado,Tu paquete ha llegado a la oficina de correos. Recógelo antes de 5 días.,ham,notificaciones@correo.com,0,0,0,0,SPAM,0,0,0,0,74,0,0.07142857142857142,14
+Oferta Increíble: ¡Gana un millón de dólares!,¡Felicidades! Ha ganado un millón de dólares. Reclame su premio haciendo clic aquí: [enlace sospechoso],spam,ganador@ofertasespeciales.com,0,0,0,0,SPAM,0,0,0,0,107,2,0.08333333333333333,15
+"Re: Tu pedido ha sido enviado;""Estimado cliente; su pedido ha sido enviado. Puede rastrearlo aquí: [enlace seguro]"";ham;pedidos@amazon.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Actualiza tu contraseña ahora;""Estimado usuario; por favor actualiza tu contraseña para mejorar la seguridad de tu cuenta. Haz clic aquí: [enlace sospechoso]"";spam;seguridad@actualizacion.net;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Nueva promoción de vuelos baratos,Aprovecha nuestros vuelos baratos a cualquier destino. ¡Reserva ahora!,ham,ofertas@aerolineas.com,0,0,0,0,SPAM,0,0,0,0,71,1,0.05,9
+Tu cuent# ha sido bloqueada,Tu cuenta ha sido bloqueada debido a actividad sos#echosa. Inicia sesión para desbloquearla: [enlace sospechoso],spam,seguridad@bancofalso.com,0,0,0,0,SPAM,0,0,0,0,113,0,0.03225806451612903,15
+Gana un auto nuevo,¡Felicidades! Has ganado un auto nuevo. Reclame su premio aquí: [enlace sospechoso],spam,premio@ganagratis.com,0,0,0,0,SPAM,0,0,0,0,85,1,0.07462686567164178,12
+Invitación a evento exclusivo,Te invitamos a un evento exclusivo con descuentos increíbles. ¡Regístrate aquí!,ham,eventos@empresa.com,0,0,0,0,HAM,0,0,0,0,83,1,0.08955223880597014,11
+"Problemas con tu cuenta;""Hemos detectado un problema con tu cuenta. Por favor; contacta con nosotros inmediatamente."";ham;soporte@empresa.com;False;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Oferta Exclusiva: ¡50% de descuento!,Aprovecha nuestra oferta exclusiva del 50% de descuento. ¡Compra ahora!,ham,ofertas@tiendaonline.com,0,0,0,0,SPAM,0,0,0,0,72,2,0.05263157894736842,10
+Tu paquete ha llegado,Tu paquete ha llegado a la oficina de correos. Recógelo antes de 5 días.,ham,notificaciones@correo.com,0,0,0,0,SPAM,0,0,0,0,74,0,0.07142857142857142,14
+¡Gana un viaje a Hawai!,¡Felicidades! Ha ganado un viaje a Hawai. Reclame su premio aquí: [enlace sospechoso],spam,viaje@hawai.net,0,0,0,0,SPAM,0,0,0,0,87,2,0.08823529411764706,13
+Re: Tu cita médica,Recuerda tu cita médica mañana a las 10:00 AM.,ham,citas@hospital.com,0,0,0,0,SPAM,0,0,0,0,48,0,0.15625,9
+Tu tarjeta de crédito ha sido bloqueada,Tu tarjeta de crédito ha sido bloqueada. Contacta con tu banco: [enlace sospechoso],spam,seguridad@bancofalso.com,0,0,0,0,HAM,0,0,0,0,84,0,0.04477611940298507,13
+Nueva oferta de empleo,Tenemos una nueva oferta de empleo que te puede interesar. ¡Postula ahora!,ham,empleos@empresa.com,0,0,0,0,SPAM,0,0,0,0,75,1,0.04918032786885246,12
+¡Gana una casa nueva!,¡Felicidades! Ha ganado una casa nueva. Reclame su premio aquí: [enlace sospechoso],spam,casa@ganacasas.com,0,0,0,0,SPAM,0,0,0,0,85,2,0.07462686567164178,12
+Recordatorio de pago,Recuerda que tu pago vence mañana.,ham,pagos@empresa.com,1,1,1,1,HAM,1,1,1,1,35,0,0.07142857142857142,6
+Oferta Increíble: ¡Gana un millón de dólares!,¡Felicidades! Ha ganado un millón de dólares. Reclame su premio haciendo clic aquí: [enlace sospechoso],spam,ganador@ofertasespeciales.com,0,0,0,0,SPAM,0,0,0,0,107,2,0.08333333333333333,15
+"Re: Tu pedido ha sido enviado;""Estimado cliente; su pedido ha sido enviado. Puede rastrearlo aquí: [enlace seguro]"";ham;pedidos@amazon.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Actualiza tu contraseña ahora;""Estimado usuario; por favor actualiza tu contraseña para mejorar la seguridad de tu cuenta. Haz clic aquí: [enlace sospechoso]"";spam;seguridad@actualizacion.net;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Nueva promoción de vuelos baratos,Aprovecha nuestros vuelos baratos a cualquier destino. ¡Reserva ahora!,ham,ofertas@aerolineas.com,1,1,1,1,SPAM,1,1,1,1,71,1,0.05,9
+Tu cuenta ha sido bloquea#a,Tu cuenta ha sido bloqueada debido a actividad sospechosa. Inicia sesión para des#loquearla: [enlace sospechoso],spam,seguridad@bancofalso.com,0,0,0,0,SPAM,0,0,0,0,113,0,0.03225806451612903,15
+Gana un auto nuevo,¡Felicidades! Has ganado un auto nuevo. Reclame su premio aquí: [enlace sospechoso],spam,premio@ganagratis.com,0,0,0,0,HAM,0,0,0,0,85,1,0.07462686567164178,12
+Invitación a even#o exclusivo,Te invitamos a un evento exclusivo co# descuentos increíbles. ¡Regístrate aquí!,ham,eventos@empresa.com,0,0,0,0,SPAM,0,0,0,0,83,1,0.09090909090909091,11
+"Problemas con tu cuenta;""Hemos detectado un problema con tu cuenta. Por favor; contacta con nosotros inmediatamente."";ham;soporte@empresa.com;False;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Oferta Exclusiva: ¡50% de descuento!,Aprovecha nuestra oferta exclusiva del 50% de descuento. ¡Compra ahora!,ham,ofertas@tiendaonline.com,0,0,0,0,SPAM,0,0,0,0,72,2,0.05263157894736842,10
+Tu paquete ha llegado,Tu paquete ha llegado a la oficina de correos. Recógelo antes de 5 días.,ham,notificaciones@correo.com,0,0,0,0,SPAM,0,0,0,0,74,0,0.07142857142857142,14
+"¡Felicidades! Has ganado un premio;""Para reclamar tu premio; visita este enlace: [enlace sospechoso]"";spam;premios@ganapremios.com;True;False;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,1,0.0,0
+Re: Tu reserva de hotel,Tu reserva de hotel ha sido confirmada.,ham,reservas@hotel.com,0,0,0,0,SPAM,0,0,0,0,39,0,0.03125,7
+Alerta de seguridad,Se ha detectado una actividad sospechosa en tu cuenta. Cambia tu contraseña inmediatamente: [enlace sospechoso],spam,seguridad@bancoseguro.com,0,0,0,0,SPAM,0,0,0,0,112,0,0.03225806451612903,15
+Nuevo mensaje de tu amigo,Tu amigo te ha enviado un nuevo mensaje. Léelo aquí: [enlace seguro],ham,notificaciones@redsocial.com,0,0,0,0,SPAM,0,0,0,0,70,0,0.07547169811320754,12
+¡Gana un crucero gratis!,¡Felicidades! Ha ganado un crucero gratis. Reclame su premio aquí: [enlace sospechoso],spam,crucero@ganacruceros.com,0,0,0,0,HAM,0,0,0,0,88,2,0.07142857142857142,12
+Re: Tu factura mensual,Tu factura mensual está lista para ser descargada.,ham,facturas@empresa.com,0,0,0,0,HAM,0,0,0,0,51,0,0.047619047619047616,8
+Tu cuenta está en riesgo,Tu cuenta está en riesgo debido a actividad sospechosa. Verifica tu cuenta ahora: [enlace sospechoso],spam,seguridad@cuentas.net,0,0,0,0,SPAM,0,0,0,0,102,0,0.03614457831325301,15
+"¡Oferta Flash: Descuento del 70%!;""¡Por tiempo limitado; obtén un descuento del 70%! ¡Compra ahora!"";ham;ofertas@tiendaflash.com;False;False;True;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,3,0.0,0
+"Oferta increíble: ¡Gane un millón de dólares!;""¡Felicidades! Ha ganado un millón de dólares. Para reclamar su premio; haga clic aquí: [enlace sospechoso]"";spam;premios@ofertasespeciales.com;True;False;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,2,0.0,0
+"Re: Su pedido ha sido enviado;""Estimado cliente; su pedido ha sido enviado y llegará en 2-3 días hábiles. Puede rastrearlo aquí: [enlace legítimo]"";ham;pedidos@ejemplo.com;False;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Actualice su información bancaria;""Estimado cliente; necesitamos actualizar su información bancaria para evitar interrupciones en el servicio. Por favor; ingrese sus datos aquí: [enlace sospechoso]"";spam;seguridad@bancofalso.com;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Nueva promoción: 50% de descuento,Aproveche nuestra nueva promoción y obtenga un 50% de descuento en todos nuestros productos. ¡Compre ahora!,spam,promociones@descuentos.net,0,0,0,0,SPAM,0,0,0,0,109,1,0.04597701149425287,16
+"Su cuenta ha sido comprometida;""Estimado usuario; hemos detectado actividad sospechosa en su cuenta. Por favor; cambie su contraseña inmediatamente: [enlace sospechoso]"";spam;seguridad@cuentafalsa.com;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Re: Cita médica;""Estimado paciente; le recordamos su cita médica para mañana a las 10:00 AM."";ham;citas@clinicamedical.com;False;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"¡Gane un auto nuevo!;""¡Felicidades! Ha ganado un auto nuevo. Para reclamarlo; ingrese sus datos aquí: [enlace sospechoso]"";spam;premios@ganeauto.com;True;False;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,2,0.0,0
+"Re: Presupuesto aprobado;""Estimado cliente; su presupuesto ha sido aprobado. Puede revisarlo aquí: [enlace legítimo]"";ham;presupuestos@empresa.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Oferta irresistible: ¡Viaje gratis!,¡Viaje gratis a cualquier parte del mundo! ¡Reserve ahora!,spam,viajes@ofertasincreibles.com,0,0,0,0,SPAM,0,0,0,0,60,3,0.08333333333333333,9
+"Re: Factura;""Estimado cliente; adjunta encontrará su factura."";ham;facturas@empresa.com;False;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Oferta increíble: ¡Gane un millón de dólares!;""¡Felicidades! Ha ganado un millón de dólares. Para reclamar su premio; haga clic aquí: [enlace sospechoso]"";spam;premios@ofertasespeciales.com;True;False;True;True;Spam",,,,1,1,1,1,HAM,1,1,1,1,0,2,0.0,0
+"Re: Reunión;""Estimado colega; la reunión ha sido reprogramada para mañana a las 2:00 PM."";ham;reuniones@empresa.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Su cuenta ha sido bloqueada;""Estimado usuario; su cuenta ha sido bloqueada debido a actividad sospechosa. Para desbloquearla; haga clic aquí: [enlace sospechoso]"";spam;seguridad@cuentabloqueada.com;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Oferta flash: 70% de descuento,Aproveche nuestra oferta flash y obtenga un 70% de descuento en todos nuestros productos. ¡Compre ahora!,spam,ofertas@flashdescuentos.com,0,0,0,0,SPAM,0,0,0,0,105,1,0.03571428571428571,16
+"Re: Proyecto X;""Estimado equipo; les adjunto los archivos del proyecto X."";ham;proyectos@empresa.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"¡Gane un viaje a Hawai!;""¡Felicidades! Ha ganado un viaje a Hawai. Para reclamarlo; ingrese sus datos aquí: [enlace sospechoso]"";spam;premios@ganaviaje.com;True;False;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,2,0.0,0
+"Re: Solicitud de vacaciones;""Estimado empleado; su solicitud de vacaciones ha sido aprobada."";ham;vacaciones@empresa.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Actualice su contraseña;""Estimado usuario; por favor; actualice su contraseña para mayor seguridad: [enlace sospechoso]"";spam;seguridad@contraseñafalsa.com;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Oferta especial: 2x1,Aproveche nuestra oferta especial 2x1 en todos nuestros productos. ¡Compre ahora!,spam,ofertas@2x1.com,0,0,0,0,SPAM,0,0,0,0,82,1,0.04477611940298507,11
+"Re: Informe mensual;""Estimado jefe; adjunto encontrará el informe mensual."";ham;informes@empresa.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Oferta increíble: ¡Gane un millón de dólares!;""¡Felicidades! Ha ganado un millón de dólares. Para reclamar su premio; haga clic aquí: [enlace sospechoso]"";spam;premios@ofertasespeciales.com;True;False;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,2,0.0,0
+"Re: Pedido #12345;""Estimado cliente; su pedido #12345 ha sido enviado."";ham;pedidos@ejemplo.com;False;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Su cuenta ha sido comprometida;""Estimado usuario; hemos detectado actividad sospechosa en su cuenta. Por favor; cambie su contraseña inmediatamente: [enlace sospechoso]"";spam;seguridad@cuentafalsa.com;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Nueva promoción: 50% de descuento,Aproveche nuestra nueva promoción y obtenga un 50% de descuento en todos nuestros productos. ¡Compre ahora!,spam,promociones@descuentos.net,0,0,0,0,SPAM,0,0,0,0,109,1,0.04597701149425287,16
+"Re: Reserva de hotel;""Estimado cliente; su reserva de hotel ha sido confirmada."";ham;reservas@hotel.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"¡Gane un auto nuevo!;""¡Felicidades! Ha ganado un auto nuevo. Para reclamarlo; ingrese sus datos aquí: [enlace sospechoso]"";spam;premios@ganeauto.com;True;False;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,2,0.0,0
+"Re: Pago recibido;""Estimado cliente; hemos recibido su pago."";ham;pagos@empresa.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Oferta irresistible: ¡Viaje gratis!,¡Viaje gratis a cualquier parte del mundo! ¡Reserve ahora!,spam,viajes@ofertasincreibles.com,0,0,0,0,SPAM,0,0,0,0,60,3,0.08333333333333333,9
+"Re: Cita con el dentista;""Estimado paciente; le recordamos su cita con el dentista para mañana a las 3:00 PM."";ham;citas@dentista.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Su cuenta ha sido bloqueada;""Estimado usuario; su cuenta ha sido bloqueada debido a actividad sospechosa. Para desbloquearla; haga clic aquí: [enlace sospechoso]"";spam;seguridad@cuentabloqueada.com;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Oferta flash: 70% de descuento,Aproveche nuestra oferta flash y obtenga un 70% de descuento en todos nuestros productos. ¡Compre ahora!,spam,ofertas@flashdescuentos.com,0,0,0,0,SPAM,0,0,0,0,105,1,0.03571428571428571,16
+"Re: Reunión de equipo;""Estimado equipo; la reunión de equipo será mañana a las 10:00 AM."";ham;reuniones@empresa.com;False;False;False;False;Ham",,,,1,1,1,1,HAM,1,1,1,1,0,0,0.0,0
+"¡Gane un viaje a Hawai!;""¡Felicidades! Ha ganado un viaje a Hawai. Para reclamarlo; ingrese sus datos aquí: [enlace sospechoso]"";spam;premios@ganaviaje.com;True;False;True;True;Spam",,,,1,1,1,1,HAM,1,1,1,1,0,2,0.0,0
+"Re: Informe de ventas;""Estimado jefe; adjunto encontrará el informe de ventas."";ham;informes@empresa.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Actualice su contraseña;""Estimado usuario; por favor; actualice su contraseña para mayor seguridad: [enlace sospechoso]"";spam;seguridad@contraseñafalsa.com;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Oferta especial: 2x1,Aproveche nuestra oferta especial 2x1 en todos nuestros productos. ¡Compre ahora!,spam,ofertas@2x1.com,0,0,0,0,SPAM,0,0,0,0,82,1,0.04477611940298507,11
+"Re: Presupuesto para el proyecto;""Estimado cliente; adjunto encontrará el presupuesto para el proyecto."";ham;presupuestos@empresa.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Oferta increíble: ¡Gane un millón de dólares!;""¡Felicidades! Ha ganado un millón de dólares. Para reclamar su premio; haga clic aquí: [enlace sospechoso]"";spam;premios@ofertasespeciales.com;True;False;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,2,0.0,0
+"Re: Solicitud de información;""Estimado cliente; gracias por su solicitud de información. Nos pondremos en contacto con usted en breve."";ham;info@empresa.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Su cuenta ha sido comprometida;""Estimado usuario; hemos detectado actividad sospechosa en su cuenta. Por favor; cambie su contraseña inmediatamente: [enlace sospechoso]"";spam;seguridad@cuentafalsa.com;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Nueva promoción: 50% de descuento,Aproveche nuestra nueva promoción y obtenga un 50% de descuento en todos nuestros productos. ¡Compre ahora!,spam,promociones@descuentos.net,0,0,0,0,HAM,0,0,0,0,109,1,0.04597701149425287,16
+"Re: Cambio de domicilio;""Estimado cliente; hemos actualizado su domicilio."";ham;clientes@empresa.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"¡Gane un auto nuevo!;""¡Felicidades! Ha ganado un auto nuevo. Para reclamarlo; ingrese sus datos aquí: [enlace sospechoso]"";spam;premios@ganeauto.com;True;False;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,2,0.0,0
+"Re: Reserva de vuelo;""Estimado cliente; su reserva de vuelo ha sido confirmada."";ham;reservas@aerolinea.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Oferta Increíble: ¡Gane un Millón!;""¡Felicidades! Ha ganado un millón de dólares. Para reclamar su premio; haga clic aquí: [enlace sospechoso]"";spam;ofertasincreibles@ganamillon.com;True;True;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,2,0.0,0
+"Re: Su pedido ha sido enviado;""Estimado cliente; su pedido ha sido enviado y llegará en 2-3 días hábiles. Puede rastrearlo aquí: [enlace legítimo]"";ham;ventas@example.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Actualice su contraseña ahora;""Estimado usuario; por favor actualice su contraseña para mejorar la seguridad de su cuenta. [enlace sospechoso]"";spam;seguridad@actualizatucuenta.net;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Factura Mensual;""Estimado cliente; adjunta encontrará su factura mensual. Por favor; realice el pago antes del día 15."";ham;facturas@empresa.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Gane un viaje a Hawaii;""¡Felicitaciones! Ha ganado un viaje a Hawái. Para reclamarlo; proporcione su información personal: [enlace sospechoso]"";spam;viajesgratis@hawai.net;True;True;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,1,0.0,0
+Nueva promoción en tu tienda favorita,Aprovecha nuestras increíbles ofertas. ¡Visita nuestra página web!,ham,promociones@tienda.com,0,0,0,0,SPAM,0,0,0,0,69,1,0.08771929824561403,8
+"Su cuenta ha sido comprometida;""Estimado usuario; hemos detectado actividad sospechosa en su cuenta. Por favor; cambie su contraseña inmediatamente: [enlace sospechoso]"";spam;seguridad@seguridadcuenta.com;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Reunión de equipo mañana;""Hola equipo; recordatorio de reunión mañana a las 9am."";ham;jefe@empresa.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Oferta limitada: ¡50% de descuento!,Aprovecha nuestro descuento del 50% en todos nuestros productos. ¡Compra ahora!,ham,ofertas@tiendaonline.com,1,1,1,1,SPAM,1,1,1,1,80,2,0.046875,11
+GANE UN AUTO NUEVO,¡Felicidades! Ha ganado un auto nuevo. Reclámelo aquí: [enlace sospechoso],spam,ganeauto@autosgratis.com,0,0,0,0,SPAM,0,0,0,0,77,1,0.1,10
+"Re: Invitación a evento;""Hola; confirma tu asistencia al evento."";ham;eventos@empresa.com;False;False;False;False;Ham",,,,1,1,1,1,HAM,1,1,1,1,0,0,0.0,0
+"Actualice su información;""Estimado cliente; actualice su información personal para evitar problemas con su cuenta. [enlace sospechoso]"";spam;actualizacion@informacion.net;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Problemas con su cuenta;""Estimado usuario; hemos detectado un problema con su cuenta. Por favor; revise los detalles: [enlace sospechoso]"";spam;soporte@cuenta.com;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Re: Presupuesto aprobado;""Estimado cliente; su presupuesto ha sido aprobado.  Gracias"";ham;contabilidad@empresa.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡Dinero gratis!,¡Reciba dinero gratis! Haga clic aquí: [enlace sospechoso],spam,dinero@gratis.com,0,0,0,0,SPAM,0,0,0,0,60,2,0.0851063829787234,8
+"Re: Cita médica;""Estimado paciente; le recordamos su cita médica mañana a las 10am."";ham;citas@clinica.com;False;False;False;False;Ham",,,,1,1,1,1,HAM,1,1,1,1,0,0,0.0,0
+¡Oferta irresistible!,Aproveche nuestra oferta irresistible. [enlace sospechoso],spam,ofertas@irresistible.com,0,0,0,0,SPAM,0,0,0,0,58,1,0.02,6
+"Re: Proyecto X;""Hola equipo; avances del proyecto X."";ham;gerente@empresa.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Aumente #us ventas,Aprenda a aumentar s#s ventas con nuestra guía gratuita: [enlace sospechoso],spam,ventas@aumentar.net,0,0,0,0,SPAM,0,0,0,0,77,0,0.03225806451612903,11
+"Re: Reunión;""Hola; recordatorio de reunión."";ham;reuniones@empresa.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡Gane un iPhone!,¡Felicitaciones! Ha ganado un iPhone.  Reclámelo aquí: [enlace sospechoso],spam,iphonegratis@ganaiphone.com,1,1,1,1,SPAM,1,1,1,1,77,2,0.11666666666666667,9
+"Re: Pedido #12345;""Estimado cliente; su pedido #12345 ha sido enviado."";ham;pedidos@tienda.com;False;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡Descuento especial!,Aprovecha nuestro descuento especial. ¡Compra ahora!,ham,descuentos@tienda.com,0,0,0,0,SPAM,0,0,0,0,53,2,0.06666666666666667,6
+"Su cuenta ha sido bloqueada;""Estimado usuario; su cuenta ha sido bloqueada debido a actividad sospechosa.  [enlace sospechoso]"";spam;seguridad@bloqueado.com;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Re: Informe semanal;""Hola equipo; adjunto el informe semanal."";ham;informes@empresa.com;False;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡Gane un auto!,¡Ha ganado un auto! Reclámelo aquí: [enlace sospechoso],spam,ganeauto@autos.com,0,0,0,0,SPAM,0,0,0,0,58,2,0.11363636363636363,8
+"Re: Vacaciones;""Hola; confirmando sus vacaciones."";ham;rrhh@empresa.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Oferta limitada: ¡70% de descuento!,Aprovecha nuestro descuento del 70% en todos nuestros productos. ¡Compra ahora!,ham,ofertas@supertienda.com,0,0,0,0,SPAM,0,0,0,0,80,2,0.046875,11
+"Su contraseña ha expirado;""Estimado usuario; su contraseña ha expirado.  Por favor; restablézcala aquí: [enlace sospechoso]"";spam;seguridad@contraseña.com;True;False;False;True;Spam",,,,1,1,1,1,HAM,1,1,1,1,0,0,0.0,0
+"Re: Proyecto Y;""Hola equipo; actualización del proyecto Y."";ham;gerente@empresa.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡Gane un viaje a Europa!,¡Felicitaciones! Ha ganado un viaje a Europa. Reclámelo aquí: [enlace sospechoso],spam,viajes@europa.com,0,0,0,0,SPAM,0,0,0,0,84,2,0.10606060606060606,11
+"Re: Reunión de ventas;""Hola equipo; recordatorio de la reunión de ventas."";ham;ventas@empresa.com;False;False;False;False;Ham",,,,1,1,1,1,HAM,1,1,1,1,0,0,0.0,0
+¡Oferta especial para usted!,Tenemos una oferta especial solo para usted. [enlace sospechoso],spam,ofertas@especial.com,0,0,0,0,SPAM,0,0,0,0,64,1,0.018867924528301886,9
+"Re: Informe de progreso;""Estimado jefe; adjunto el informe de progreso."";ham;empleado@empresa.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡Gane una casa!,¡Felicidades! Ha ganado una casa. Reclámela aquí: [enlace sospechoso],spam,ganacasa@casasgratis.com,0,0,0,0,SPAM,0,0,0,0,72,2,0.10714285714285714,9
+"Re: Presentación;""Hola equi#o; les recuerdo la presentación."";ham;presentaciones@empresa.com;False;False;False;False;Ham",No#e,,,1,1,1,1,HAM,1,1,1,1,4,0,0.3333333333333333,1
+Oferta flash: ¡50% de descuento!,Aprovecha nuestra oferta flash del 50%. ¡Compra ahora!,ham,ofertas@tiendaonline.com,0,0,0,0,SPAM,0,0,0,0,55,2,0.07142857142857142,8
+"Su cuenta ha sido hackeada;""Estimado usuario; su cuenta ha sido hackeada.  Por favor; cambie su contraseña inmediatamente: [enlace sospechoso]"";spam;seguridad@hackeado.com;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Re: Reunión de proyecto;""Hola equipo; recordatorio de reunión de proyecto."";ham;proyectos@empresa.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡Gane un crucero!,¡Felicidades! Ha ganado un crucero. Reclámelo aquí: [enlace sospechoso],spam,crucerosgratis@cruceros.com,0,0,0,0,SPAM,0,0,0,0,74,2,0.10344827586206896,9
+"Re: Informe financiero;""Estimado jefe; adjunto el informe financiero."";ham;finanzas@empresa.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Oferta increíble: ¡80% de descuento!,Aprovecha nuestro increíble descuento del 80%. ¡Compra ahora!,ham,ofertas@megatienda.com,0,0,0,0,SPAM,0,0,0,0,63,2,0.08163265306122448,8
+"Su cuenta está en riesgo;""Estimado usuario; su cuenta está en riesgo.  Por favor; verifique su información: [enlace sospechoso]"";spam;seguridad@riesgo.com;True;False;False;True;Spam",,,,1,1,1,1,HAM,1,1,1,1,0,0,0.0,0
+"Re: Reunión de equipo;""Hola equipo; nos vemos en la reunión."";ham;equipo@empresa.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"¡Gane un millón de dólares!;""¡Felicidades! Ha ganado un millón de dólares. Para reclamar su premio; proporcione su información personal: [enlace sospechoso]"";spam;ganamillon@millones.com;True;True;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,2,0.0,0
+Oferta increíble de vacaciones,¡Reserva ahora tu viaje a Cancún con un 50% de descuento!,spam,ofertasincreibles@ofertasespeciales.com,0,0,0,0,SPAM,0,0,0,0,59,1,0.09302325581395349,11
+"Re: Tu pedido ha sido enviado;""Estimado cliente; su pedido ha sido enviado y llegará en 2-3 días hábiles. Puede consultar el estado del envío aquí: [enlace]"";ham;pedidos@ejemplo.com;True;False;False;False;Spam",,,,1,1,1,1,HAM,1,1,1,1,0,0,0.0,0
+"Ganaste un premio!;""¡Felicidades! Has ganado un premio de $1;000;000. Haz clic aquí para reclamarlo: [enlace]"";spam;premio1000000@ganaunmillon.com;True;True;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,2,0.0,0
+"Actualización de seguridad;""Estimado usuario; hemos detectado actividad inusual en su cuenta. Por favor; actualice su contraseña aquí: [enlace]"";spam;seguridad@seguridadcuenta.com;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Tu cuenta ha sido comprometida;""Estimado usuario; hemos detectado actividad sospechosa en su cuenta. Por favor; verifique su información aquí: [enlace]"";spam;seguridad@seguridadcuenta.com;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Nueva promoción de productos,Aprovecha nuestras nuevas ofertas en productos electrónicos,spam,ofertas@electronicos.com,0,0,0,0,SPAM,0,0,0,0,60,0,0.03773584905660377,7
+Re: Tu pedido #12345,Gracias por tu compra. Tu pedido #12345 ha sido enviado. Puedes rastrearlo aqui: [enlace],ham,notificaciones@ejemplo.com,0,0,0,0,SPAM,0,0,0,0,89,0,0.046153846153846156,14
+"Oferta limitada de tiempo;""Solo por tiempo limitado; obtén un 75% de descuento en todos nuestros productos. ¡Compra ahora!"";spam;ofertaslimitadas@descuentos.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,1,0.0,0
+INSCRIPCIÓN AL CONCURSO,Inscríbete a nuestro concurso y gana un auto nuevo. ¡Es fácil! ,spam,concursos@ganauto.com,0,0,0,0,SPAM,0,0,0,0,66,1,0.1,11
+"Problemas con tu cuenta;""Hemos detectado un problema con tu cuenta. Por favor; inicia sesión para solucionarlo."";spam;soporte@cuentaproblema.com;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Re: Cita médica,Recuerda tu cita médica para el lunes a las 10:00 am. ,ham,citas@clinica.com,0,0,0,0,HAM,0,0,0,0,55,0,0.05405405405405406,11
+Felicidades!! Has ganado un viaje,¡Has ganado un viaje a europa! Reclámalo aquí: [enlace],spam,viajesgratis@europa.com,0,0,0,0,SPAM,0,0,0,0,58,3,0.11627906976744186,9
+Solicitud de empleo,Postula a nuestro puesto vacante de Desarrollador de Software. Manda tu CV a [correo],ham,rrhh@empresa.com,0,0,0,0,HAM,0,0,0,0,85,0,0.08695652173913043,14
+Aumenta tus ventas,Aumenta tus ventas con nuestra nueva herramienta de marketing,spam,marketing@ventas.com,0,0,0,0,SPAM,0,0,0,0,61,0,0.018867924528301886,9
+Recuerda pagar tu factura,Recuerda que tu factura vence mañana. Paga ahora para evitar recargos.,ham,facturacion@empresa.com,1,1,1,1,SPAM,1,1,1,1,71,0,0.05172413793103448,11
+Oferta de trabajo,Buscamos programadores con experiencia en Python. ¡Aplica ahora!,ham,empleos@empresa.com,0,0,0,0,HAM,0,0,0,0,65,1,0.07272727272727272,8
+Tu paquete ha llegado,Tu paquete ha llegado a la oficina de correos. Recoge tu paquete hoy mismo.,ham,envios@correo.com,0,0,0,0,HAM,0,0,0,0,75,0,0.03333333333333333,14
+Gana dinero fácil,Gana dinero fácilmente desde casa. ¡Regístrate ahora!,spam,dinero@facil.com,0,0,0,0,SPAM,0,0,0,0,56,1,0.1111111111111111,7
+Re: Reunión de mañana,Recuerda nuestra reunión de mañana a las 9:00 am. Nos vemos allí.,ham,jefe@empresa.com,0,0,0,0,HAM,0,0,0,0,68,0,0.10416666666666667,12
+Tu cuenta ha sido bloq#eada,Tu cuenta ha sido bloquead# debido a actividad sospechosa. Inicia sesión para desbloquearla.,spam,seguridad@seguridadcuenta.com,0,0,0,0,SPAM,0,0,0,0,93,0,0.03896103896103896,13
+Nueva actualización de software,Hemos lanzado una nueva actualización de software. Descarga la actualización ahora mismo.,ham,soporte@software.com,0,0,0,0,HAM,0,0,0,0,91,0,0.05263157894736842,12
+!!!GRAN OFERTA!!!,¡Aprovecha nuestra gran oferta por tiempo limitado! ,spam,ofertas@grandesofertas.com,0,0,0,0,SPAM,0,0,0,0,53,7,0.045454545454545456,7
+Re: Proyecto X,Actualización del proyecto X:  [enlace],ham,proyectox@empresa.com,1,1,1,1,SPAM,1,1,1,1,40,0,0.0967741935483871,5
+Ahorra dinero,Ahorra dinero con nuestros consejos financieros,spam,ahorro@dinero.com,0,0,0,0,SPAM,0,0,0,0,47,0,0.023809523809523808,6
+Tu suscripción ha sido renovada,Tu suscripción a Netflix ha sido renovada exitosamente.,ham,notificaciones@netflix.com,0,0,0,0,HAM,0,0,0,0,56,0,0.06382978723404255,8
+¡Gana un iPhone gratis!,¡Participa en nuestro concurso y gana un iPhone gratis!,spam,concursos@iphonegratis.com,0,0,0,0,SPAM,0,0,0,0,56,2,0.06521739130434782,9
+Re: Cita dentista,Recuerda tu cita con el dentista mañana a las 3:00 pm.,ham,citas@dentista.com,0,0,0,0,HAM,0,0,0,0,55,0,0.05128205128205128,11
+"Problemas con tu pago;""Hemos detectado un problema con tu pago. Por favor; actualiza tu información de pago."";spam;pagos@problemas.com;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Oferta irresistible de electrónica,Aprovecha nuestra oferta irresistible de electrónica. ¡Últimas unidades disponibles!,spam,electronica@ofertas.com,0,0,0,0,SPAM,0,0,0,0,87,1,0.05405405405405406,9
+Re: Reunión de equipo,La reunión de equipo está programada para mañana a las 11:00 am.,ham,equipo@empresa.com,0,0,0,0,HAM,0,0,0,0,67,0,0.0851063829787234,12
+¡Oferta flash de 24 horas!,¡No te pierdas nuestra oferta flash de 24 horas!,spam,ofertasflash@flash.com,0,0,0,0,SPAM,0,0,0,0,49,2,0.05405405405405406,9
+Re: Proyecto Alpha,Actualización del proyecto Alpha: [enlace],ham,proyectoalpha@empresa.com,0,0,0,0,SPAM,0,0,0,0,43,0,0.08571428571428572,5
+Tu pedido está en camino,Tu pedido está en camino. Puedes seguir su estado aquí: [enlace],ham,envios@tienda.com,0,0,0,0,SPAM,0,0,0,0,66,0,0.08,11
+Increíble oferta de viajes,Reserva ahora tu viaje soñado con un gran descuento,spam,viajes@ofertas.com,0,0,0,0,SPAM,0,0,0,0,52,0,0.046511627906976744,9
+Re: Presentación del producto,Te recordamos la presentación del nuevo producto mañana a las 2:00 pm. ,ham,marketing@empresa.com,0,0,0,0,HAM,0,0,0,0,73,0,0.05555555555555555,12
+Consigue un préstamo fácil,Consigue un préstamo fácil y rápido sin comprobaciones de crédito.,spam,prestamos@rapido.com,0,0,0,0,SPAM,0,0,0,0,70,0,0.08928571428571429,10
+Re: Cita médica,Recuerda tu cita médica para el martes a las 11:00 am. ,ham,citas@clinica.com,1,1,1,1,HAM,1,1,1,1,56,0,0.05263157894736842,11
+Oferta de productos,Tenemos una nueva oferta de productos de limpieza.,spam,ofertas@limpieza.com,1,1,1,1,SPAM,1,1,1,1,50,0,0.023809523809523808,8
+Re: Proyecto Beta,Actualización del proyecto Beta.  [enlace],ham,proyectobeta@empresa.com,0,0,0,0,SPAM,0,0,0,0,43,0,0.08823529411764706,5
+Tu pago ha sido procesado,Tu pago ha sido procesado exitosamente. Gracias por tu compra.,ham,pagos@tienda.com,1,1,1,1,HAM,1,1,1,1,62,0,0.0392156862745098,10
+¡Gana un viaje a Disney!,¡Participa en nuestro concurso y gana un viaje a Disney!,spam,concursos@disney.com,0,0,0,0,SPAM,0,0,0,0,57,2,0.06521739130434782,10
+Re: Reunión,Recuerda la reunión de hoy a las 10:00 am. ,ham,jefe@empresa.com,0,0,0,0,HAM,0,0,0,0,44,0,0.07142857142857142,9
+Oferta de empleo,Buscamos diseñadores gráficos con experiencia en Adobe Illustrator. Envía tu CV a [correo electrónico],ham,rrhh@empresa.com,0,0,0,0,SPAM,0,0,0,0,106,0,0.11627906976744186,14
+Atención: actividad sospechosa,Hemos detectado actividad sospechosa en tu cuenta.  Actualiza tu contraseña aquí: [enlace],spam,seguridad@seguridad.com,0,0,0,0,SPAM,0,0,0,0,92,0,0.05405405405405406,12
+Oferta Increíble: ¡Gane un Millón!,¡Felicidades! Ha ganado un millón de dólares.  Reclame su premio aquí: [enlace sospechoso],spam,premiosmillonarios@ofertasespeciales.com,0,0,0,0,SPAM,0,0,0,0,94,2,0.09722222222222222,13
+"Re: Tu pedido ha sido enviado;""Estimado cliente; su pedido ha sido enviado y llegará en 2-3 días hábiles. Puede rastrearlo aquí: [enlace legítimo]"";ham;pedidos@tiendaonline.com;False;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Actualiza tu contraseña;""Estimado usuario; por favor actualiza tu contraseña para mayor seguridad.  [enlace legítimo]"";ham;seguridad@example.com;False;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+GANE UN AUTO NUEVO!!!,¡Felicidades! Ha ganado un auto nuevo. Visite [enlace sospechoso] para reclamarlo.,spam,ganeauto@promociones.net,0,0,0,0,SPAM,0,0,0,0,83,4,0.05970149253731343,11
+Re: Tu cita médica,Su cita médica está confirmada para el 15 de Noviembre a las 10:00 AM. [enlace legítimo],ham,citasmedicas@hospital.org,0,0,0,0,SPAM,0,0,0,0,91,0,0.1111111111111111,16
+¡Oferta Exclusiva!,¡Oferta exclusiva solo para ti! Compre ahora y obtenga un 50% de descuento. [enlace sospechoso],spam,ofertas@descuentos.com,1,1,1,1,SPAM,1,1,1,1,96,2,0.04054054054054054,15
+Problemas con tu cuenta,Hemos detectado actividad sospechosa en tu cuenta. Inicia sesión aquí para solucionarlo: [enlace sospechoso],spam,seguridad@bancomercial.com,0,0,0,0,SPAM,0,0,0,0,110,0,0.04395604395604396,14
+Su paquete está listo para envío,Su paquete está listo para envío. Puede rastrearlo aquí: [enlace legítimo],ham,envios@paqueteria.com,0,0,0,0,SPAM,0,0,0,0,78,0,0.1,11
+Atención: Problemas con su cuenta bancaria,Hemos detectado actividad sospechosa en su cuenta bancaria. Ingrese sus datos para verificarla: [enlace sospechoso],spam,seguridadbancaria@correo.com,0,0,0,0,HAM,0,0,0,0,115,0,0.020618556701030927,15
+Re: Invitación a evento,Te invitamos a nuestro evento anual. Más información: [enlace legítimo],ham,eventos@empresa.com,0,0,0,0,SPAM,0,0,0,0,74,0,0.08620689655172414,10
+Oferta Increíble: ¡Gane un Millón!,¡Felicidades! Ha ganado un millón de dólares.  Reclame su premio aquí: [enlace sospechoso],spam,premiosmillonarios@ofertasespeciales.com,0,0,0,0,SPAM,0,0,0,0,94,2,0.09722222222222222,13
+Tu suscripción ha sido renovada,Tu suscripción a nuestro servicio ha sido renovada exitosamente.,ham,notificaciones@servicio.com,0,0,0,0,SPAM,0,0,0,0,65,0,0.03636363636363636,9
+Gane una casa gratis!!!,¡Felicidades! Ha ganado una casa gratis. Visite [enlace sospechoso] para reclamarla.,spam,ganacasa@suerte.net,0,0,0,0,SPAM,0,0,0,0,85,4,0.057971014492753624,11
+Re: Tu reserva está confirmada,Tu reserva está confirmada. El número de confirmación es: [código].,ham,reservas@hotel.com,1,1,1,1,SPAM,1,1,1,1,71,0,0.11320754716981132,10
+"Actualiza tus datos;""Por favor; actualiza tus datos para seguir usando nuestro servicio. [enlace sospechoso]"";spam;actualizacion@datos.com;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Re: Tu paquete ha llegado,Su paquete ha llegado a la oficina de correos. Puede recogerlo en [dirección].,ham,correo@paqueteria.com,0,0,0,0,HAM,0,0,0,0,79,0,0.04838709677419355,13
+#roblemas con tu cuenta,Hemos detect#do actividad sospechosa en tu cuenta. Inicia sesión aquí para solucionarlo: [enlace sospechoso],spam,seguridad@bancomercial.com,1,1,1,1,SPAM,1,1,1,1,110,0,0.044444444444444446,14
+Re: Recordatorio de cita,Recordatorio de tu cita médica para mañana a las 11:00 AM.,ham,citasmedicas@hospital.org,0,0,0,0,HAM,0,0,0,0,60,0,0.11904761904761904,11
+Oferta Increíble: ¡Gane un Millón!,¡Felicidades! Ha ganado un millón de dólares.  Reclame su premio aquí: [enlace sospechoso],spam,premiosmillonarios@ofertasespeciales.com,0,0,0,0,SPAM,0,0,0,0,94,2,0.09722222222222222,13
+Re: Tu compra ha sido procesada,Tu compra ha sido procesada exitosamente. Puedes ver el detalle aquí: [enlace legítimo],ham,compras@tiendaonline.com,0,0,0,0,HAM,0,0,0,0,89,0,0.056338028169014086,13
+Gane un viaje a Hawaii!!!,¡Felicidades! Ha ganado un viaje a Hawaii. Visite [enlace sospechoso] para reclamarlo.,spam,ganahawaii@viajes.net,0,0,0,0,SPAM,0,0,0,0,87,4,0.07142857142857142,12
+Re: Tu factura está lista,Tu factura está lista para ser descargada: [enlace legítimo],ham,facturas@empresa.com,0,0,0,0,HAM,0,0,0,0,62,0,0.061224489795918366,9
+ATENCIÓN: Tu cuenta ha sido comprometida,Tu cuenta ha sido comprometida.  Cámbia tu contraseña inmediatamente: [enlace sospechoso],spam,seguridad@cuenta.com,0,0,0,0,SPAM,0,0,0,0,91,0,0.05405405405405406,11
+Re: Cambio de contraseña,Hemos recibido una solicitud de cambio de contraseña para tu cuenta.,ham,seguridad@example.com,0,0,0,0,HAM,0,0,0,0,69,0,0.03508771929824561,11
+Oferta Increíble: ¡Gane un Millón!,¡Felicidades! Ha ganado un millón de dólares.  Reclame su premio aquí: [enlace sospechoso],spam,premiosmillonarios@ofertasespeciales.com,0,0,0,0,SPAM,0,0,0,0,94,2,0.09722222222222222,13
+"Re: Tu pedido ha sido enviado;""Estimado cliente; su pedido ha sido enviado y llegará en 2-3 días hábiles. Puede rastrearlo aquí: [enlace legítimo]"";ham;pedidos@tiendaonline.com;False;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Atención: Problemas con su tarjeta de crédito,Hemos detectado actividad sospechosa en su tarjeta de crédito. Verifique su cuenta aquí: [enlace sospechoso],spam,seguridadtarjeta@correo.com,0,0,0,0,SPAM,0,0,0,0,110,0,0.044444444444444446,15
+Re: Confirmación de reserva,Su reserva ha sido confirmada.  Gracias por su reserva.,ham,reservas@hotel.com,0,0,0,0,HAM,0,0,0,0,55,0,0.045454545454545456,9
+¡Gane un crucero gratis!,¡Felicidades! Ha ganado un crucero gratis.  Visite [enlace sospechoso] para reclamarlo.,spam,ganacrucero@viajes.net,0,0,0,0,HAM,0,0,0,0,88,2,0.056338028169014086,11
+Re: Tu pago ha sido recibido,Tu pago ha sido recibido exitosamente. Gracias por su compra.,ham,pagos@tiendaonline.com,0,0,0,0,HAM,0,0,0,0,61,0,0.04,10
+Oferta Exclusiva: ¡Descuento del 70%!,¡Oferta exclusiva! Obtenga un 70% de descuento en todos nuestros productos. [enlace sospechoso],spam,ofertas@descuentos.com,1,1,1,1,SPAM,1,1,1,1,96,2,0.039473684210526314,13
+Re: Tu solicitud ha sido aprobada,Tu solicitud ha sido aprobada.  Más información: [enlace legítimo],ham,solicitudes@empresa.com,0,0,0,0,HAM,0,0,0,0,69,0,0.09433962264150944,9
+Problemas con tu cuenta bancaria,Hemos detectado actividad sospechosa en su cuenta bancaria. Ingrese sus datos para verificarla: [enlace sospechoso],spam,seguridadbancaria@correo.com,0,0,0,0,SPAM,0,0,0,0,115,0,0.020618556701030927,15
+Re:#Tu cita médica,Su cita médica está confirmada para el 15 de Noviembre a las 10:00 AM.#[enlace legítimo],ham,citasmedicas@hospital.org,0,0,0,0,SPAM,0,0,0,0,91,0,0.1111111111111111,15
+GANE UN AUTO NUEVO!!!,¡Felicidades! Ha ganado un auto nuevo. Visite [enlace sospechoso] para reclamarlo.,spam,ganeauto@promociones.net,0,0,0,0,SPAM,0,0,0,0,83,4,0.05970149253731343,11
+"Re: Tu pedido ha sido enviado;""Estimado cliente; su pedido ha sido enviado y llegará en 2-3 días hábiles. Puede rastrearlo aquí: [enlace legítimo]"";ham;pedidos@tiendaonline.com;False;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡Oferta Exclusiva!,¡Oferta exclusiva solo para ti! Compre ahora y obtenga un 50% de descuento. [enlace sospechoso],spam,ofertas@descuentos.com,1,1,1,1,SPAM,1,1,1,1,96,2,0.04054054054054054,15
+Problemas con tu cuenta,Hemos detectado actividad sospechosa en tu cuenta. Inicia sesión aquí para solucionarlo: [enlace sospechoso],spam,seguridad@bancomercial.com,0,0,0,0,SPAM,0,0,0,0,110,0,0.04395604395604396,14
+Re: Invitación a evento,Te invitamos a nuestro evento anual. Más información: [enlace legítimo],ham,eventos@empresa.com,1,1,1,1,SPAM,1,1,1,1,74,0,0.08620689655172414,10
+Su paquete está listo para envío,Su paquete está listo para envío. Puede rastrearlo aquí: [enlace legítimo],ham,envios@paqueteria.com,0,0,0,0,SPAM,0,0,0,0,78,0,0.1,11
+Atención: Problemas con su cuenta bancaria,Hemos detectado actividad sospechosa en su cuenta bancaria. Ingrese sus datos para verificarla: [enlace sospechoso],spam,seguridadbancaria@correo.com,0,0,0,0,SPAM,0,0,0,0,115,0,0.020618556701030927,15
+Re: Tu cita médica,Su cita médica está confirmada para el 15 de Noviembre a las 10:00 AM. [enlace legítimo],ham,citasmedicas@hospital.org,0,0,0,0,SPAM,0,0,0,0,91,0,0.1111111111111111,16
+"Actualiza tu contrase�#a;""Estimado usuario; por favor actualiza tu contraseña para mayor seguridad. [enlace legítimo]"";ham;seguridad@example.com;False;False;False;True;Spam",N#ne,,,0,0,0,0,HAM,0,0,0,0,4,0,0.3333333333333333,1
+Re: Tu reserva está confirmada,Tu reserva está confirmada. El número de confirmación es: [código].,ham,reservas@hotel.com,0,0,0,0,SPAM,0,0,0,0,71,0,0.11320754716981132,10
+Re: ¡Oferta Increíble! ¡Gana un millón de dólares!,¡Felicidades! Ha ganado un millón de dólares. Haga clic aquí para reclamar su premio: [enlace sospechoso],spam,premios@ofertasespeciales.com,0,0,0,0,SPAM,0,0,0,0,109,3,0.08235294117647059,16
+"Actualización de seguridad de tu cuenta;""Estimado usuario; hemos detectado actividad sospechosa en su cuenta. Por favor; actualice su contraseña aquí: [enlace sospechoso]"";spam;seguridad@bancofalso.com;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Tu paquete está listo para ser recogido;""Su paquete está listo para su entrega. Para más información; ingrese aquí: [enlace sospechoso]"";spam;envios@empresaficticia.net;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Nueva promoción en nuestra tienda online!,Tenemos grandes ofertas que no puedes perderte. Entra y mira: [enlace sospechoso],spam,promociones@megapromocion.org,0,0,0,0,SPAM,0,0,0,0,81,1,0.030303030303030304,12
+Re: ¡Oferta Increíble! ¡Gana un millón de dólares!,¡Felicidades! Ha ganado un millón de dólares. Haga clic aquí para reclamar su premio: [enlace sospechoso],spam,premios@ofertasespeciales.com,0,0,0,0,SPAM,0,0,0,0,109,3,0.08235294117647059,16
+Cita médica confirmada,Su cita médica para el 15 de octubre ha sido confirmada. Para más detalles visite: [enlace sospechoso],spam,citasmedicas@clinicavirt.com,0,0,0,0,SPAM,0,0,0,0,104,0,0.05,17
+Feliz Cumpleaños!,Feliz cumpleaños! Esperamos que tengas un maravilloso día. Aquí tienes un descuento en tu compra!,ham,soporte@tiendaonline.com,0,0,0,0,HAM,0,0,0,0,100,3,0.075,15
+Tu pedido ha sido enviado,Tu pedido número 12345 ha sido enviado. Puedes hacer el seguimiento aquí: [enlace seguro],ham,pedidos@tiendaonline.com,0,0,0,0,SPAM,0,0,0,0,91,0,0.05970149253731343,14
+"Reunión de equipo;""Hola equipo; hay una reunión hoy a las 10am. Saludos."";ham;jefe@empresa.com;False;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Actualización de software,Actualiza el software a la última versión para mejorar la seguridad.,ham,soporte@software.com,0,0,0,0,SPAM,0,0,0,0,70,0,0.05263157894736842,11
+Re: ¡Oferta Increíble! ¡Gana un millón de dólares!,¡Felicidades! Ha ganado un millón de dólares. Haga clic aquí para reclamar su premio: [enlace sospechoso],spam,premios@ofertasespeciales.com,0,0,0,0,SPAM,0,0,0,0,109,3,0.08235294117647059,16
+Oferta de empleo,Te invitamos a aplicar a esta oferta de trabajo. Más información: [enlace seguro],ham,empleos@empresa.com,0,0,0,0,SPAM,0,0,0,0,83,0,0.06153846153846154,13
+Invitación a evento,Te invitamos a nuestro evento. Más información: [enlace seguro],ham,eventos@empresa.com,1,1,1,1,SPAM,1,1,1,1,65,0,0.0784313725490196,9
+Recordatorio de pago,Recuerda realizar el pago de tu factura. Más información: [enlace seguro],ham,facturacion@empresa.com,1,1,1,1,SPAM,1,1,1,1,75,0,0.06779661016949153,11
+"GANE UN AUTO NUEVO!!!;""FELICIDADES; HA GANADO UN AUTO NUEVO!! RECLAME SU PREMIO AQUI: [enlace sospechoso]"";spam;ganador@concurso.com;True;True;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,5,0.0,0
+"Tu cuenta ha sido bloqueada;""Tu cuenta ha sido bloqueada debido a actividad sospechosa. Para desbloquearla; haz clic aquí: [enlace sospechoso]"";spam;seguridad@bancofalso.com;True;False;False;True;Spam",,,,1,1,1,1,HAM,1,1,1,1,0,0,0.0,0
+Increíble oferta de vacaciones!,Disfruta de unas vacaciones increíbles a un precio irresistible. Reserva ahora: [enlace sospechoso],spam,vacaciones@ofertas.com,0,0,0,0,SPAM,0,0,0,0,100,1,0.03614457831325301,13
+"Re: Tu paquete está listo para ser recogido;""Su paquete está listo para su entrega. Para más información; ingrese aquí: [enlace sospechoso]"";spam;envios@empresaficticia.net;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Saludos cordiales,Espero que este correo te encuentre bien.,ham,amigo@gmail.com,0,0,0,0,SPAM,0,0,0,0,41,0,0.029411764705882353,7
+"Problemas con tu tarjeta de crédito;""Hemos detectado problemas con tu tarjeta de crédito. Por favor; actualiza tus datos: [enlace sospechoso]"";spam;seguridad@bancofalso.com;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Re: Nueva promoción en nuestra tienda online!,Tenemos grandes ofertas que no puedes perderte. Entra y mira: [enlace sospechoso],spam,promociones@megapromocion.org,0,0,0,0,SPAM,0,0,0,0,81,1,0.030303030303030304,12
+Planifica tu viaje soñado,Encuentra el viaje de tus sueños. Más información: [enlace seguro],ham,viajes@agenciaviajes.com,0,0,0,0,HAM,0,0,0,0,69,0,0.09433962264150944,10
+Re: Cita médica confirmada,Su cita médica para el 15 de octubre ha sido confirmada. Para más detalles visite: [enlace sospechoso],spam,citasmedicas@clinicavirt.com,0,0,0,0,SPAM,0,0,0,0,104,0,0.05,17
+Nuevo mensaje,Tienes un nuevo mensaje.,ham,notificaciones@gmail.com,0,0,0,0,SPAM,0,0,0,0,24,0,0.05,4
+Tu pedido ha sido enviado,Tu pedido número 12345 ha sido enviado. Puedes hacer el seguimiento aquí: [enlace seguro],ham,pedidos@tiendaonline.com,0,0,0,0,SPAM,0,0,0,0,91,0,0.05970149253731343,14
+"Re: GANE UN AUTO NUEVO!!!;""FELICIDADES; HA GANADO UN AUTO NUEVO!! RECLAME SU PREMIO AQUI: [enlace sospechoso]"";spam;ganador@concurso.com;True;True;True;True;Spam",,,,1,1,1,1,HAM,1,1,1,1,0,5,0.0,0
+Actualización de tu perf#l,Actualiza tu perfil para mejo#ar tu experiencia.,ham,soporte@plataforma.com,0,0,0,0,SPAM,0,0,0,0,48,0,0.025,7
+"Re: Problemas con tu tarjeta de crédito;""Hemos detectado problemas con tu tarjeta de crédito. Por favor; actualiza tus datos: [enlace sospechoso]"";s#am;seguridad@bancofalso.com;True;False;False;True;Spam",N#ne,,,0,0,0,0,HAM,0,0,0,0,4,0,0.3333333333333333,1
+Re: Increíble oferta de vacaciones!,Disfruta de unas vacaciones increíbles a un precio irresistible. Reserva ahora: [enlace sospechoso],spam,vacaciones@ofertas.com,0,0,0,0,SPAM,0,0,0,0,100,1,0.03614457831325301,13
+Re: Planifica tu viaje soñado,Encuentra el viaje de tus sueños. Más información: [enlace seguro],ham,viajes@agenciaviajes.com,0,0,0,0,SPAM,0,0,0,0,69,0,0.09433962264150944,10
+Re: Recordatorio de pago,Recuerda realizar el pago de tu factura. Más información: [enlace seguro],ham,facturacion@empresa.com,0,0,0,0,SPAM,0,0,0,0,75,0,0.06779661016949153,11
+Re: Nuevo mensaje,Tienes un nuevo mensaje.,ham,notificaciones@gmail.com,0,0,0,0,SPAM,0,0,0,0,24,0,0.05,4
+Re: Actualización de tu perfil,Actualiza tu perfil para mejorar tu experiencia.,ham,soporte@plataforma.com,0,0,0,0,SPAM,0,0,0,0,48,0,0.024390243902439025,7
+Re: Saludos cordiales,Espero que este correo te encuentre bien.,ham,amigo@gmail.com,0,0,0,0,SPAM,0,0,0,0,41,0,0.029411764705882353,7
+Re: Oferta de empleo,Te invitamos a aplicar a esta oferta de trabajo. Más información: [enlace seguro],ham,empleos@empresa.com,0,0,0,0,SPAM,0,0,0,0,83,0,0.06153846153846154,13
+"Re: Reunión de equipo;""Hola equipo; hay una reunión hoy a las 10am. Saludos."";ham;jefe@empresa.com;False;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Re: Actualización de software,Actualiza el software a la última versión para mejorar la seguridad.,ham,soporte@software.com,0,0,0,0,HAM,0,0,0,0,70,0,0.05263157894736842,11
+Re: Invitación a evento,Te invitamos a nuestro evento. Más información: [enlace seguro],ham,eventos@empresa.com,0,0,0,0,HAM,0,0,0,0,65,0,0.0784313725490196,9
+Oferta especial para ti!,Tenemos una oferta especial solo para ti. Más información: [enlace seguro],ham,ofertas@tienda.com,0,0,0,0,SPAM,0,0,0,0,76,1,0.06666666666666667,11
+"Tu contraseña ha sido cambiada;""Tu contraseña ha sido cambiada. Si no has sido tú; por favor contacta con nosotros."";ham;seguridad@plataforma.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Re: Feliz Cumpleaños!,Feliz cumpleaños! Esperamos que tengas un maravilloso día. Aquí tienes un descuento en tu compra!,ham,soporte@tiendaonline.com,1,1,1,1,SPAM,1,1,1,1,100,3,0.075,15
+"Oferta Increíble: ¡Gana un millón de dólares!;""¡Felicidades! Ha ganado un millón de dólares. Para reclamar su premio; haga clic aquí: [enlace sospechoso]"";spam;ofertasincreibles@ganadinero.com;True;False;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,2,0.0,0
+"Re: Tu pedido ha sido enviado;""Estimado cliente; su pedido ha sido enviado. Puede rastrearlo aquí: [enlace legítimo]"";ham;pedidos@ejemplo.com;True;False;False;False;Spam",,,,1,1,1,1,HAM,1,1,1,1,0,0,0.0,0
+"Actualización de seguridad importante;""Estimado usuario; hemos detectado actividad sospechosa en su cuenta. Por favor; verifique su información aquí: [enlace sospechoso]"";spam;seguridad@bancofalso.com;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Tu paquete está listo para ser recogido;""Hola; tu paquete está listo para ser recogido en nuestra oficina. Más información aquí: [enlace legítimo]"";ham;notificaciones@empresaenvios.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡¡GRAN OFERTA!!,Aprovecha nuestra gran oferta por tiempo limitado. Haga clic aquí para obtener más información: [enlace sospechoso],spam,ofertas@superdescuento.net,0,0,0,0,SPAM,0,0,0,0,118,2,0.052083333333333336,16
+"Su cuenta ha sido bloqueada;""Estimado cliente; su cuenta ha sido bloqueada debido a una violación de seguridad. Haga clic aquí para desbloquearla: [enlace sospechoso]"";spam;seguridad@bancomundial.net;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Solicitud de amistad;""Hola; me llamo Juan y quería agregarle a mi lista de amigos"";ham;juan.perez@gmail.com;False;False;False;False;Spam",,,,1,1,1,1,HAM,1,1,1,1,0,0,0.0,0
+"Re: Cita médica;""Doctor; he adjuntado mis resultados médicos"";ham;paciente@hospital.com;False;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+GANA DINERO FACILMENTE,Gana dinero fácilmente desde casa. Haga clic aquí para más información: [enlace sospechoso],spam,ganadinero@facil.com,0,0,0,0,HAM,0,0,0,0,95,0,0.08,13
+"Tu pedido ha sido enviado;""Estimado cliente; su pedido ha sido enviado. Puede rastrearlo aquí: [enlace legítimo]"";ham;pedidos@tiendaonline.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Oferta Increíble: ¡Gana un millón de dólares!;""¡Felicidades! Ha ganado un millón de dólares. Para reclamar su premio; haga clic aquí: [enlace sospechoso]"";spam;ofertasincreibles@ganadinero.com;True;False;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,2,0.0,0
+"Re: Tu pedido ha sido enviado;""Estimado cliente; su pedido ha sido enviado. Puede rastrearlo aquí: [enlace legítimo]"";ham;pedidos@ejemplo.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Actualización de seguridad importante;""Estimado usuario; hemos detectado actividad sospechosa en su cuenta. Por favor; verifique su información aquí: [enlace sospechoso]"";spam;seguridad@bancofalso.com;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Tu paquete está listo para ser recogido;""Hola; tu paquete está listo para ser recogido en nuestra oficina. Más información aquí: [enlace legítimo]"";ham;notificaciones@empresaenvios.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡¡GRAN OFERTA!!,Aprovecha nuestra gran oferta por tiempo limitado. Haga clic aquí para obtener más información: [enlace sospechoso],spam,ofertas@superdescuento.net,0,0,0,0,SPAM,0,0,0,0,118,2,0.052083333333333336,16
+"Su cuenta ha sido bloqueada;""Estimado cliente; su cuenta ha sido bloqueada debido a una violación de seguridad. Haga clic aquí para desbloquearla: [enlace sospechoso]"";spam;seguridad@bancomundial.net;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Solicitud de amistad;""Hola; me llamo Juan y quería agregarle a mi lista de amigos"";ham;juan.perez@gmail.com;False;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Re: Cita médica;""Doctor; he adjuntado mis resultados médicos"";ham;paciente@hospital.com;False;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+GANA DINERO FACILMENTE,Gana dinero fácilmente desde casa. Haga clic aquí para más información: [enlace sospechoso],spam,ganadinero@facil.com,0,0,0,0,SPAM,0,0,0,0,95,0,0.08,13
+"Tu pedido ha sido enviado;""Estimado cliente; su pedido ha sido enviado. Puede rastrearlo aquí: [enlace legítimo]"";ham;pedidos@tiendaonline.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Nueva promoción!,Tenemos una nueva promoción que te encantará!,ham,promotions@example.com,0,0,0,0,SPAM,0,0,0,0,47,2,0.07894736842105263,7
+"Atención al cliente;""Para cualquier consulta; contáctanos al +555-555-5555"";ham;support@example.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+R#: Reunión de mañana,Confirmado. Nos vemos mañana#a las 10:00 AM,ham,coworker@example.com,0,0,0,0,HAM,0,0,0,0,44,0,0.16666666666666666,7
+Recordatorio de evento,Recuerda que tenemos un evento el próximo sábado!,ham,events@example.com,0,0,0,0,HAM,0,0,0,0,51,1,0.07317073170731707,8
+"Felicidades; has ganado un premio!;""Para#reclamar tu premio; haz click aquí: [enlace sospechoso]"";spam;premios@fakemail.com;True;False;False;True;Spam",N#ne,,,0,0,0,0,HAM,0,0,0,0,4,1,0.3333333333333333,1
+Tu cuenta ha sido comprometida!,Necesitas actualizar tu información inmediatamente. Haz click aquí: [enlace sospechoso],spam,security@fakebank.com,0,0,0,0,SPAM,0,0,0,0,89,1,0.05405405405405406,10
+Oferta exclusiva para ti!,Descubre nuestra oferta exclusiva. Haz click aquí para más información: [enlace sospechoso],spam,ofertas@spammail.com,0,0,0,0,SPAM,0,0,0,0,94,1,0.06578947368421052,12
+"Actualiza tu software ahora!;""Para evitar problemas; actualiza tu software inmediatamen#e."";ham;software@example.com;False;False;False;False;Ham",N#ne,,,1,1,1,1,HAM,1,1,1,1,4,1,0.3333333333333333,1
+Gana un coche nuevo!,Participa en nuestro sorteo y gana un coche nuevo!,spam,sorteo@fakecompany.com,1,1,1,1,SPAM,1,1,1,1,50,2,0.024390243902439025,9
+"Problemas con tu cuenta?;""Si tienes problemas con tu cuenta; contacta con soporte."";ham;support@example.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Tu contraseña ha sido cambiada.;""Si no has sido tú; contacta con soporte inmediatamente."";ham;security@example.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Inicia sesión ahora!,Necesitas iniciar sesión para acceder a tu cuenta.,ham,login@example.com,0,0,0,0,HAM,0,0,0,0,51,1,0.047619047619047616,8
+Recuerda tu cita!,No olvides tu cita el próximo martes.,ham,calendar@example.com,0,0,0,0,HAM,0,0,0,0,38,1,0.06666666666666667,7
+Re: Proyecto X,Hemos actualizado el estado del proyecto X. Más información aquí: [enlace legítimo],ham,projectmanager@example.com,0,0,0,0,SPAM,0,0,0,0,87,0,0.10294117647058823,12
+Oferta limitada: ¡No te lo pierdas!,¡Oferta por tiempo limitado! Haz click aquí: [enlace sospechoso],spam,ofertas@spam.com,0,0,0,0,SPAM,0,0,0,0,66,2,0.07692307692307693,9
+Su pedido ha sido confirmado,Gracias por su compra! Su pedido ha sido confirmado. Puede verlo aquí: [enlace legítimo],ham,orders@onlineStore.com,0,0,0,0,SPAM,0,0,0,0,90,1,0.07142857142857142,14
+Tu suscripción ha expirado,Renueva tu suscripción aquí: [enlace legítimo],ham,subscriptions@example.com,0,0,0,0,HAM,0,0,0,0,49,0,0.10526315789473684,6
+"Problema con tu pago;""Hemos detectado un problema con tu pago reciente. Por favor; verifica tu información aquí: [enlace legítimo]"";ham;payments@example.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Nueva actualización disponible!,Descarga la nueva actualización ahora mismo!,ham,updates@example.com,0,0,0,0,HAM,0,0,0,0,45,2,0.05263157894736842,6
+Tu reserva ha sido confirmada,Tu reserva ha sido confirmada exitosamente. Más detalles aquí: [enlace legítimo],ham,reservations@hotel.com,0,0,0,0,SPAM,0,0,0,0,83,0,0.07575757575757576,11
+¡No te pierdas esta oportunidad!,¡Oferta especial por tiempo limitado! Haz click aquí: [enlace sospechoso],spam,superofertas@spam.com,0,0,0,0,SPAM,0,0,0,0,75,2,0.06666666666666667,10
+Tu cuenta ha s#do creada,Bienvenido a nuestro #ervicio! Tu cuenta ha sido creada exitosamente.,ham,signup@example.com,0,0,0,0,HAM,0,0,0,0,69,1,0.03508771929824561,10
+"Oferta Increíble: ¡Gane un Millón de Dólares!;""¡Felicidades! Ha ganado un millón de dólares. Para reclamar su premio; haga clic aquí: [enlace sospechoso]"";spam;premiosmillonarios@ofertasespeciales.com;True;True;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,2,0.0,0
+"Re: Su pedido ha sido enviado;""Estimado cliente; su pedido ha sido enviado y llegará en 2-3 días hábiles. Puede rastrearlo aquí: [enlace legítimo]"";ham;ventas@ejemplo.com;False;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Actualice su contraseña ahora;""Estimado usuario; por motivos de seguridad; actualice su contraseña haciendo clic aquí: [enlace sospechoso]"";spam;seguridad@seguridadfalsa.net;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Su cuenta ha sido comprometida,Su cuenta ha sido comprometida. Haga clic aquí para restablecer su contraseña: [enlace sospechoso],spam,seguridad_sistema@dominiofalso.org,0,0,0,0,SPAM,0,0,0,0,100,0,0.04938271604938271,14
+Nueva promoción en productos de limpieza,Aproveche nuestras ofertas en productos de limpieza. Visite nuestro sitio web: [enlace legítimo],ham,ofertas@limpiezas.com,0,0,0,0,SPAM,0,0,0,0,97,0,0.0375,13
+Gane un viaje gratis a Hawaii,¡Felicitaciones! Ha ganado un viaje gratis a Hawaii. Visite nuestro sitio para reclamar su premio: [enlace sospechoso],spam,viajesgratis@ganapremios.com,0,0,0,0,SPAM,0,0,0,0,119,1,0.05154639175257732,17
+"Re: Cita médica;""Estimado paciente; le recordamos su cita médica para mañana a las 10:00 AM."";ham;citasmedicas@hospital.com;False;False;False;False;Spam",,,,1,1,1,1,HAM,1,1,1,1,0,0,0.0,0
+"¡¡¡Gane un auto nuevo!!!;""¡Felicidades! Ha ganado un auto nuevo. Para reclamar su premio; proporcione su información personal: [enlace sospechoso]"";spam;ganeauto@sorteos.net;True;True;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,4,0.0,0
+"Invitación a evento;""Estimado/a [nombre]; le invitamos a nuestro evento el próximo sábado. Más detalles en: [enlace legítimo]"";ham;eventos@empresa.com;False;False;False;False;Ham",,,,1,1,1,1,HAM,1,1,1,1,0,0,0.0,0
+Oferta Limitada por Tiempo: ¡Aprovecha ahora!,Oferta por tiempo limitado. ¡No te quedes sin tu producto! Compra ahora: [enlace sospechoso],spam,ofertaslimitadas@superofertas.com,0,0,0,0,SPAM,0,0,0,0,93,2,0.05405405405405406,14
+"Re: Su solicitud de empleo;""Estimado/a [nombre]; hemos recibido su solicitud de empleo y la estamos revisando. Le mantendremos informado."";ham;rrhh@empresa.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"¡¡¡Oferta Increíble!!! ¡Gane un Millón de Dólares!;""¡Felicidades! Ha ganado un millón de dólares. Para reclamar su premio; haga clic aquí: [enlace sospechoso]"";spam;premiosmillonarios@ofertasespeciales.com;True;True;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,5,0.0,0
+Re: Confirmación de pedido,Su pedido ha sido confirmado. Puede ver el detalle aquí: [enlace legítimo],ham,pedidos@tiendaonline.com,0,0,0,0,HAM,0,0,0,0,76,0,0.06779661016949153,12
+"Actualice su información personal;""Estimado usuario; actualice su información personal para mantener su cuenta segura: [enlace sospechoso]"";spam;actualizaciones@seguridadfalsa.net;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Su cuenta ha sido bloqueada,Su cuenta ha sido bloqueada. Haga clic aquí para desbloquearla: [enlace sospechoso],spam,seguridad_sistema@dominiofalso.org,0,0,0,0,SPAM,0,0,0,0,84,0,0.04411764705882353,12
+"Oferta de empleo;""Estimado/a [nombre]; hemos encontrado una oferta de empleo que puede interesarle. Visite nuestro sitio web para más información: [enlace legítimo]"";ham;empleo@empleos.com;False;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"¡¡¡Gane un viaje a Europa!!!;""¡Felicidades! Ha ganado un viaje a Europa. Para reclamar su premio; proporcione su información personal: [enlace sospechoso]"";spam;ganaviaje@sorteos.net;True;True;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,4,0.0,0
+"Re: Cambio de contraseña;""Hemos detectado un cambio de contraseña. Si no lo ha hecho usted; contacte con nosotros."";ham;seguridad@banco.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Oferta Increíble: ¡Gane un Millón de Dólares!;""¡Felicidades! Ha ganado un millón de dólares. Para reclamar su premio; haga clic aquí: [enlace sospechoso]"";spam;premiosmillonarios@ofertasespeciales.com;True;True;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,2,0.0,0
+"Re: Factura pendiente;""Estimado cliente; le recordamos que tiene una factura pendiente. Puede pagarla aquí: [enlace legítimo]"";ham;facturas@empresa.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡Felicidades! Ha ganado un premio,Ha ganado un premio. Haga clic aquí para reclamarlo: [enlace sospechoso],spam,premios@premiosfalso.com,0,0,0,0,SPAM,0,0,0,0,73,1,0.05172413793103448,11
+"Re: Reunión de trabajo;""Estimado/a [nombre]; le recordamos la reunión de trabajo de mañana a las 9:00 AM."";ham;reuniones@empresa.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Oferta Exclusiva: ¡No te lo pierdas!,Oferta exclusiva para ti. ¡Compra ahora!: [enlace sospechoso],spam,ofertas@ofertasfalsas.net,0,0,0,0,SPAM,0,0,0,0,62,2,0.061224489795918366,8
+"Re: Reserva de hotel;""Estimado/a [nombre]; su reserva de hotel ha sido confirmada. Consulte los detalles aquí: [enlace legítimo]"";ham;reservas@hotel.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"¡¡¡¡Gane un crucero gratis!!!!;""¡Felicidades! Ha ganado un crucero gratis. Para reclamar su premio; proporcione sus datos personales: [enlace sospechoso]"";spam;ganacrucero@sorteos.net;True;True;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,5,0.0,0
+Re: Pago realizado,Su pago ha sido realizado con éxito. Gracias por su compra.,ham,pagos@tiendaonline.com,0,0,0,0,HAM,0,0,0,0,60,0,0.06382978723404255,11
+"¡Gane un viaje a Disney!;""¡Felicidades! Ha ganado un viaje a Disney. Para reclamarlo; haga clic aquí: [enlace sospechoso]"";spam;disney@premiosfalso.com;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,2,0.0,0
+"Re: Entrevista de trabajo;""Estimado/a [nombre]; nos ponemos en contacto para programar su entrevista de trabajo."";ham;rrhh@empresa.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Oferta Limitada: ¡Aprovecha ahora!,Oferta limitada por tiempo limitado. ¡No te quedes sin tu producto! Compra ahora: [enlace sospechoso],spam,ofertaslimitadas@superofertas.com,0,0,0,0,SPAM,0,0,0,0,102,2,0.04878048780487805,15
+"Re: Boleto de avión;""Estimado/a [nombre]; su boleto de avión ha sido enviado a su correo electrónico."";ham;boletos@aerolinea.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"¡¡¡Gane una casa nueva!!!;""¡Felicidades! Ha ganado una casa nueva. Para reclamar su premio; proporcione sus datos: [enlace sospechoso]"";spam;ganacasa@sorteos.net;True;True;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,4,0.0,0
+"Re: Pago procesado;""Estimado cliente; su pago ha sido procesado con éxito. Gracias por su compra."";ham;pagos@tiendaonline.com;False;False;#alse;False;Ham",#one,,,0,0,0,0,HAM,0,0,0,0,4,0,0.0,1
+¡Ganaste un premio!,¡Felicidades! Has ganado un premio. Haz clic aquí para reclamarlo: [enlace sospechoso],spam,premios@premiosfalso.com,0,0,0,0,SPAM,0,0,0,0,88,2,0.07142857142857142,12
+"Re: Actualización de cuenta;""Estimado usuario; hemos actualizado su cuenta. Puede revisar los detalles en su perfil."";ham;soporte@banco.com;False;False;False;False;Ham",,,,1,1,1,1,HAM,1,1,1,1,0,0,0.0,0
+Oferta Irresi#tible: ¡No te la pierdas!,Oferta irresistible por tiempo limitado.#¡Compra ahora!: [enlace sospechoso],spam,ofertas@ofertasfalsas.net,0,0,0,0,SPAM,0,0,0,0,77,2,0.047619047619047616,8
+"Re: Envío de paquete;""Estimado cliente; su paquete ha sido enviado. Puede rastrearlo aquí: [enlace legítimo]"";ham;envios@empresa.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"¡¡¡Gane una moto nueva!!!;""¡Felicidades! Ha ganado una moto nueva. Para reclamar su premio; complete el formulario: [enlace sospechoso]"";spam;ganamoto@sorteos.net;True;True;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,4,0.0,0
+"Re: Información de vuelo;""Estimado/a [nombre]; su información de vuelo se encuentra adjunta."";ham;informacion@aerolinea.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡Oferta Flash! ¡Compra ahora!,¡Oferta flash por tiempo limitado! Compra ahora antes de que se agote: [enlace sospechoso],spam,ofertasflash@ofertasfalsas.net,0,0,0,0,SPAM,0,0,0,0,91,3,0.0410958904109589,14
+Re: Confirmación de reserva,Su reserva ha sido confirmada. Gracias por elegirnos.,ham,reservas@hotel.com,0,0,0,0,HAM,0,0,0,0,53,0,0.045454545454545456,8
+"¡¡¡Gane un televisor nuevo!!!;""¡Felicidades! Ha ganado un televisor nuevo. Para reclamar su premio; ingrese sus datos: [enlace sospechoso]"";spam;ganatelevisor@sorteos.net;Tru#;True;True;True;Spam",No#e,,,0,0,0,0,HAM,0,0,0,0,4,4,0.3333333333333333,1
+Re: Su pedido está en camino,Su pedido está en camino. Puede rastrearlo aquí: [enlace legítimo],ham,envios@empresa.com,0,0,0,0,HAM,0,0,0,0,69,0,0.09433962264150944,10
+"Oferta increíble: ¡Gane un millón de dólares!;""¡Felicidades! Ha ganado un millón de dólares. Para reclamar su premio; haga clic aquí: [enlace sospechoso]"";spam;premios@ofertasespeciales.com;True;False;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,2,0.0,0
+"Re: Tu#pedido ha sido enviado;""Estimado cliente; su pedido ha sido enviado. Puede rastrearlo aquí: [enlace seguro]"";ham;pedidos@ejemplo.com;True;False;False;False;Spam",#one,,,0,0,0,0,HAM,0,0,0,0,4,0,0.0,1
+"Actualización de seguridad;""Estimado usuario; hemos detectado actividad inusual en su cuenta. Por favor; verifique su información aquí: [enlace sospechoso]"";spam;seguridad@cuentasegura.net;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Tu paquete está listo para ser recogido;""Hola; tu paquete ya está listo para ser recogido en la oficina de correos más cercana."";ham;notificaciones@correo.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Re: Cita#médica;""Estimado paciente; le recordamos su cita médica para mañana a las 10:00 AM."";ham;citas@clinica.com;False;False;False;False;Spam",N#ne,,,0,0,0,0,HAM,0,0,0,0,4,0,0.3333333333333333,1
+"Acceso a su cuenta bancaria;""Estimado cliente; hemos detectado un intento de acceso no autorizado a su cuenta. Haga clic aquí para verificar su información: [enlace sospechoso]"";spam;seguridad@banconacional.net;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Nueva oferta de trabajo;""Estimado candidato; tenemos una nueva oferta de trabajo que podría interesarle. Vea los detalles aquí: [enlace seguro]"";ham;empleos@empresa.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"¡Gane un auto nuevo!;""¡Felicitaciones! Ha ganado un auto nuevo. Para reclamar su premio; ingrese sus datos aquí: [enlace sospechoso]"";spam;premios@ganagratis.com;True;False;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,2,0.0,0
+"Problemas con su cuenta;""Estimado usuario; hemos detectado un problema con su cuenta. Por favor; verifique su información aquí: [enlace sospechoso]"";spam;soporte@cuentasegura.net;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Tu pedido ha sido enviado;""Estimado cliente; su pedido ha sido enviado con éxito. Puede rastrearlo aquí: [enlace seguro]"";ham;pedidos@tiendaonline.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Oferta limitada: ¡50% de descuento!,¡Aprovecha esta increíble oferta! 50% de descuento en todos nuestros productos. Haga clic aquí: [enlace sospechoso],spam,ofertas@descuentos.com,1,1,1,1,SPAM,1,1,1,1,118,2,0.05434782608695652,16
+"Recordatorio de pago;""Estimado cliente; le recordamos que su pago vence el 15 de octubre."";ham;pagos@empresa.com;False;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Su cuenta ha sido bloqueada;""Estimado usuario; su cuenta ha sido bloqueada debido a actividad sospechosa. Por favor; restablezca su contraseña aquí: [enlace sospechoso]"";spam;seguridad@correo.com;True;False;False;True;Spam",,,,1,1,1,1,HAM,1,1,1,1,0,0,0.0,0
+"Re: Reserva de hotel;""Estimado cliente; su reserva de hotel ha sido confirmada. Puede ver los detalles aquí: [enlace seguro]"";ham;reservas@hotel.com;True;False;False;False;Spam",,,,1,1,1,1,HAM,1,1,1,1,0,0,0.0,0
+"¡Gane un viaje gratis!;""¡Felicidades! Ha ganado un viaje gratis. Para reclamar su premio; haga clic aquí: [enlace sospechoso]"";spam;premios@viajesgratis.com;True;False;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,2,0.0,0
+"Actualización de software;""Estimado usuario; hay una actualización importante de software disponible. Por favor; descargue la actualización aquí: [enlace seguro]"";ham;soporte@software.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Oferta de préstamo;""Estimado cliente; obtenga un préstamo personal con tasas bajas. Solicite aquí: [enlace sospechoso]"";spam;prestamos@dinero.com;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Re: Reunión de trabajo;""Estimado colega; le recordamos la reunión de trabajo para mañana a las 9:00 AM."";ham;reuniones@trabajo.com;False;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"¡Gane un millón de dólares!;""¡Felicidades! Ha ganado un millón de dólares. Para reclamar su premio; haga clic aquí: [enlace sospechoso]"";spam;premios@ofertasespeciales.com;True;False;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,2,0.0,0
+"Re: Tu compra ha sido procesada;""Estimado cliente; su compra ha sido procesada correctamente. Puede ver el detalle aquí: [enlace seguro]"";ham;compras@tiendaonline.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Problemas con su cuenta bancaria;""Estimado cliente; hemos detectado actividad inusual en su cuenta bancaria. Haga clic aquí para verificar su información: [enlace sospechoso]"";spam;seguridad@banco.net;True;False;False;True;Spam",,,,1,1,1,1,HAM,1,1,1,1,0,0,0.0,0
+"Su compra ha sido procesada;""Estimado cliente; su compra ha sido procesada correctamente. Puede ver el detalle aquí: [enlace seguro]"";ham;compras@tiendaonline.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Re: Cita médica;""Estimado paciente; le recordamos su cita médica para mañana a las 10:00 AM."";ham;citas@clinica.com;False;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Oferta de trabajo;""Estimado candidato; tenemos una nueva oferta de trabajo que podría interesarle. Vea los detalles aquí: [enlace seguro]"";ham;empleos@empresa.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"¡Gane un auto nuevo!;""¡Felicitaciones! Ha ganado un auto nuevo. Para reclamar su premio; ingrese sus datos aquí: [enlace sospechoso]"";spam;premios@ganagratis.com;True;False;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,2,0.0,0
+"Problemas con su cuenta;""Estimado usuario; hemos detectado un problema con su cuenta. Por favor; verifique su información aquí: [enlace sospechoso]"";spam;soporte@cuentasegura.net;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Oferta limitada: ¡50% de descuento!,¡Aprovecha esta increíble oferta! 50% de descuento en todos nuestros productos. Haga clic aquí: [enlace sospechoso],spam,ofertas@descuentos.com,1,1,1,1,SPAM,1,1,1,1,118,2,0.05434782608695652,16
+"Recordatorio de pago;""Estimado cliente; le recordamos que su pago vence el 15 de octubre."";ham;pagos@empresa.com;False;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Su cuenta ha sido bloqueada;""Estimado usuario; su cuenta ha sido bloqueada debido a actividad sospechosa. Por favor; restablezca su contraseña aquí: [enlace sospechoso]"";spam;seguridad@correo.com;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Re: Reserva de hotel;""Estimado cliente; su reserva de hotel ha sido confirmada. Puede ver los detalles aquí: [enlace seguro]"";ham;reservas@hotel.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"¡Gane un viaje gratis!;""¡Felicidades! Ha ganado un viaje gratis. Para reclamar su premio; haga clic aquí: [enlace sospechoso]"";spam;premios@viajesgratis.com;True;False;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,2,0.0,0
+"Actualización de software;""Estimado usuario; hay una actualización importante de software disponible. Por favor; descargue la actualización aquí: [enlace seguro]"";ham;soporte@software.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Oferta de préstamo;""Estimado cliente; obtenga un préstamo personal con tasas bajas. Solicite aquí: [enlace sospechoso]"";spam;prestamos@dinero.com;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Re: Reunión de trabajo;""Estimado colega; le recordamos la reunión de trabajo para mañana a las 9:00 AM."";ham;reuniones@trabajo.com;False;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Tu paquete ha llegado;""Su paquete llegó a la oficina de correos; puede recogerlo."";ham;envios@correo.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Factura pendiente;""Estimado cliente; le recordamos que tiene una factura pendiente. Por favor; realice el pago lo antes posible."";ham;facturas@empresa.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡Oferta irresistible!,¡No te pierdas esta increíble oferta! ¡Precios rebajados hasta un 70%,spam,ofertas@superdescuento.com,0,0,0,0,SPAM,0,0,0,0,72,2,0.09090909090909091,11
+"Cambio de contraseña;""Estimado usuario; hemos detectado un intento de acceso no autorizado a tu cuenta. Cambia tu contraseña cuanto antes."";ham;seguridad@gmail.com;False;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Gane dinero fácil,Aprenda a ganar dinero desde casa. ¡Haga clic aquí para más información!,spam,dinero@facil.com,0,0,0,0,SPAM,0,0,0,0,76,1,0.1016949152542373,12
+Re: Confirmación de pedido,Su pedido ha sido confirmado. Haga clic aquí para ver los detalles.,ham,pedidos@amazon.com,0,0,0,0,SPAM,0,0,0,0,68,0,0.05555555555555555,12
+Alerta de seguridad,Hemos detectado una actividad sospechosa en tu cuenta. ¡Actúa ya!,spam,seguridad@bancaonline.com,0,0,0,0,SPAM,0,0,0,0,67,1,0.07407407407407407,10
+Tu suscripción ha sido renovada,Tu suscripción a nuestro servicio ha sido renovada exitosamente.,ham,suscripciones@netflix.com,0,0,0,0,SPAM,0,0,0,0,65,0,0.03636363636363636,9
+Oferta Increíble: ¡Gana un Millón!,¡Felicidades! Ha ganado un millón de dólares. Reclame su premio aquí: [enlace sospechoso],spam,premios@ofertasespeciales.com,1,1,1,1,SPAM,1,1,1,1,93,2,0.09722222222222222,13
+"Re: Tu pedido ha sido enviado;""Estimado cliente; su pedido ha sido enviado. Puede rastrearlo aquí: [enlace legítimo]"";ham;pedidos@ejemplo.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Actualiza tu contraseña;""Estimado usuario; por favor actualiza tu contraseña para mejorar tu seguridad. [enlace legítimo]"";ham;seguridad@gmail.com;True;False;False;True;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Re: Tu paquete está listo,Su paquete está listo para ser recogido. Verifique su estado aquí: [enlace legítimo],ham,envios@yahoo.com,0,0,0,0,SPAM,0,0,0,0,87,0,0.07352941176470588,13
+"¡¡Gana un auto!!;""¡Felicitaciones! Ha ganado un auto nuevo. Para reclamarlo; ingrese sus datos aquí: [enlace sospechoso]"";spam;ganador@sorteos.net;True;True;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,3,0.0,0
+"Mensaje importante;""Su cuenta ha sido bloqueada. Por favor; inicie sesión aquí para desbloquearla: [enlace sospechoso]"";spam;seguridad@cuenta.com;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Compra ahora,Aprovecha nuestras ofertas. Compre aquí: [enlace sospechoso],spam,ofertas@promociones.com,0,0,0,0,SPAM,0,0,0,0,61,0,0.06,7
+"Solicitud de amistad;""Hola; ¿quieres ser mi amigo?"";ham;amigo@gmail.com;False;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Tu cuenta ha sido comprometida;""Estimado usuario; #emos detectado actividad sospechosa en su cuenta. Por favor; cambie su contraseña inmediatamente."";ham;seguridad@gmail.com;False;False;False;True;Ham",No#e,,,0,0,0,0,HAM,0,0,0,0,4,0,0.3333333333333333,1
+Re: Cita médica,Su cita médica está confirmada para mañana a las 10:00 am.,ham,citas@hospital.com,0,0,0,0,HAM,0,0,0,0,61,0,0.09523809523809523,11
+Oferta Exclusiva: ¡50% de descuento!,Aprovecha nuestro descuento del 50% en todos nuestros productos. Compra ahora: [enlace sospechoso],spam,ofertas@descuentos.net,0,0,0,0,SPAM,0,0,0,0,98,1,0.02531645569620253,13
+"Mensaje importante del banco;""Estimado cliente; por favor verifique su saldo aquí: [enlace sospechoso]"";spam;banco@correos.com;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Re: Tu reserva está confirmada,Su reserva está confirmada. Vea los detalles aquí: [enlace legítimo],ham,reservas@hotel.com,0,0,0,0,SPAM,0,0,0,0,71,0,0.09090909090909091,10
+¡Felicidades! Has ganado un premio,¡Felicidades! Has ganado un premio. Reclámalo aquí: [enlace sospechoso],spam,premios@ganadores.net,0,0,0,0,HAM,0,0,0,0,74,2,0.10344827586206896,9
+"Re: Tu pedido ha sido enviado;""Estimado cliente; su pedido ha sido enviado. Puede rastrearlo aquí: [enlace legítimo]"";ham;pedidos@ejemplo.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"¡¡Gana un viaje!!;""¡Felicitaciones! Ha ganado un viaje gratis. Para reclamarlo; ingrese sus datos aquí: [enlace sospechoso]"";spam;ganador@viajes.net;True;True;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,3,0.0,0
+"Actualiza tu información;""Estimado usuario; por favor actualiza tu información personal para mejorar tu experiencia."";ham;soporte@gmail.com;False;False;False;Tru#;Spam",#one,,,0,0,0,0,HAM,0,0,0,0,4,0,0.0,1
+Re: Tu cita médica,Tu cita médica está confirmada para el lunes a las 3pm.,ham,citas@medicas.com,0,0,0,0,HAM,0,0,0,0,57,0,0.06976744186046512,11
+Compra ahora,Aprovecha nuestras ofertas. Compre aquí: [enlace sospechoso],spam,ofertas@promociones.com,0,0,0,0,SPAM,0,0,0,0,61,0,0.06,7
+¡Gana un millón de dólares!,¡Felicidades! Ha ganado un millón de dólares. Reclame su premio aquí: [enlace sospechoso],spam,premios@ofertasespeciales.com,0,0,0,0,SPAM,0,0,0,0,93,2,0.09722222222222222,13
+Re: Tu paquete está listo,Su paquete está listo para ser recogido. Verifique su estado aquí: [enlace legítimo],ham,envios@yahoo.com,0,0,0,0,SPAM,0,0,0,0,87,0,0.07352941176470588,13
+"Mensaje importante;""Su cuenta ha sido bloqueada. Por favor; inicie sesión aquí para desbloquearla: [enlace sospechoso]"";spam;seguridad@cuenta.com;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Re: Tu pedido ha sido enviado;""Estimado cliente; su pedido ha sido enviado. Puede rastrearlo aquí: [enlace legítimo]"";ham;pedidos@ejemplo.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Oferta Increíble: ¡Gana un Millón!,¡Felicidades! Ha ganado un millón de dólares. Reclame su premio aquí: [enlace sospechoso],spam,premios@ofertasespeciales.com,0,0,0,0,SPAM,0,0,0,0,93,2,0.09722222222222222,13
+Re: Tu reserva está confirmada,Su reserva está confirmada. Vea los detalles aquí: [enlace legítimo],ham,reservas@hotel.com,1,1,1,1,SPAM,1,1,1,1,71,0,0.09090909090909091,10
+"¡¡Gana un auto!!;""¡Felicitaciones! Ha ganado un auto nuevo. Para reclamarlo; ingrese sus datos aquí: [enlace sospechoso]"";spam;ganador@sorteos.net;True;True;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,3,0.0,0
+"Actualiza tu contraseña;""Estimado usuario; por favor actualiza tu contraseña para mejorar tu seguridad. [enlace legítimo]"";ham;seguridad@gmail.com;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Re: Tu #aquete está listo,Su paquete está listo para ser recogido. Verifique su estado aquí: [enlace #egítimo],ham,envios@yahoo.com,0,0,0,0,SPAM,0,0,0,0,87,0,0.07462686567164178,13
+Oferta Exclusiva: ¡50% de descuento!,Aprovecha nuestro descuento del 50% en todos nuestros productos. Compra ahora: [enlace sospechoso],spam,ofertas@descuentos.net,1,1,1,1,SPAM,1,1,1,1,98,1,0.02531645569620253,13
+"Mensaje importante del banco;""Estimado cliente; por favor verifique su saldo aquí: [enlace sospechoso]"";spam;banco@correos.com;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Re: Tu pedido ha sido enviado;""Estimado cliente; su pedido ha sido enviado. Puede rastrearlo aquí: [enlace legítimo]"";ham;pedidos@ejemplo.com;True;False;False;False;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+¡Felicidades! Has ganado un premio,¡Felicidades! Has ganado un premio. Reclámalo aquí: [enlace sospechoso],spam,premios@ganadores.net,0,0,0,0,SPAM,0,0,0,0,74,2,0.10344827586206896,9
+Re: Tu cita médica,Tu cita médica está confirmada para el lunes a las 3pm.,ham,citas@medicas.com,0,0,0,0,SPAM,0,0,0,0,57,0,0.06976744186046512,11
+Compra ahora,Aprovecha nuestras ofertas. Compre aquí: [enlace sospechoso],spam,ofertas@promociones.com,1,1,1,1,SPAM,1,1,1,1,61,0,0.06,7
+¡Gana un millón de dólares!,¡Felicidades! Ha ganado un millón de dólares. Reclame su premio aquí: [enlace sospechoso],spam,premios@ofertasespeciales.com,0,0,0,0,SPAM,0,0,0,0,93,2,0.09722222222222222,13
+Re: Tu reserva está confirmada,Su reserva está confirmada. Vea los detalles aquí: [enlace legítimo],ham,reservas@hotel.com,0,0,0,0,SPAM,0,0,0,0,71,0,0.09090909090909091,10
+"¡¡Gana un auto!!;""¡Felicitaciones! Ha ganado un auto nuevo. Para reclamarlo; ingrese sus datos aquí: [enlace sospechoso]"";spam;ganador@sorteos.net;True;True;True;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,3,0.0,0
+"Actualiza tu contraseña;""Estimado usuario; por favor actualiza tu contraseña para mejorar tu seguridad. [enlace legítimo]"";ham;seguridad@gmail.com;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Re: Tu paquete está listo,Su paquete está listo para ser recogido. Verifique su estado aquí: [enlace legítimo],ham,envios@yahoo.com,0,0,0,0,SPAM,0,0,0,0,87,0,0.07352941176470588,13
+Oferta Exclusiva: ¡50% de descuento!,Aprovecha nuestro descuento del 50% en todos nuestros productos. Compra ahora: [enlace sospechoso],spam,ofertas@descuentos.net,0,0,0,0,SPAM,0,0,0,0,98,1,0.02531645569620253,13
+"Mensaje importante del banco;""Estimado cliente; por favor verifique su saldo aquí: [enlace sospechoso]"";spam;banco@correos.com;True;False;False;True;Spam",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+"Re: Tu pedido ha sido enviado;""Estimado cliente; su pedido ha sido enviado. Puede rastrearlo aquí: [enlace legítimo]"";ham;pedidos@ejemplo.com;True;False;False;False;Ham",,,,0,0,0,0,HAM,0,0,0,0,0,0,0.0,0
+Recuerda tu cita,Recuerda tu cita médica mañana a las 10:00 AM.,ham,citasmedicas@hospital.com,1,1,1,1,HAM,1,1,1,1,48,0,0.15625,9
