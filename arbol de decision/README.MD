@@ -5,6 +5,7 @@
 * **Oscar David Barbosa Rodríguez** 
 * **Introducción a Machine Learning - 801** 
 * **Universidad de Cundinamarca** 
+* **Link de repositorio https://github.com/ODavidBRodriguez/Proyectos-machine-learning/tree/main/arbol%20de%20decision** 
 
 ### Descripción del Proyecto
 
@@ -45,6 +46,12 @@ Distribución de Métricas: Este gráfico muestra la dispersión de los valores 
 
 Distribución de Z-Scores: Un Z-Score cercano a cero significa que el resultado de esa repetición estuvo muy cerca del promedio. Por otro lado, un Z-Score alto o bajo indica que ese resultado fue inusualmente alto o bajo en comparación con el resto. En este caso, la distribución de los Z-Scores centrada en cero confirma la robustez del modelo.
 
+La caja de Exactitud es ligeramente más grande que la de F1-Score, una caja más grande representa mayor variabilidad y por el contrario, una caja pequeña representa mayor consistencia, esto significa que el 50% de las puntuaciones de exactitud tuvieron un rango de variación mayor. Una caja más pequeña, como la del F1-score, es ideal, ya que indica que la mayoría de los resultados están muy agrupados alrededor de la mediana.
+
+Los puntos que aparecen solos fuera de los bigotes son los valores atípicos u outliers. Cada uno de esos puntos representa el resultado que fue inusualmente bajo en comparación con el resto.
+La división aleatoria de los datos (70% entrenamiento, 30% prueba) resultó en un conjunto de prueba particularmente difícil o poco representativo. Ese conjunto de prueba pudo haber contenido muchos correos difíciles de clasificar, haciendo que el modelo se equivocara más de lo normal.
+Hay muy pocos outliers y no están extremadamente lejos. Esto significa que el mal rendimiento es un evento raro en el modelo, que generalmente se comporta de manera estable.
+
 ### Análisis y Conclusiones del Modelo
 
 Los resultados del modelo de Árbol de Decisión demuestran una estabilidad y consistencia notables a lo largo de las 50 repeticiones de la evaluación. Esto indica que el modelo no solo es preciso, sino que su rendimiento es fiable, independientemente de la partición de datos utilizada para el entrenamiento y la prueba.
@@ -59,7 +66,7 @@ Las ligeras variaciones observadas en las métricas de desempeño son un comport
 
 ### Ejecución del Proyecto
 
- **Ejecuta el Script, desde el bash:**
+ **Ejecutar el Script, desde el bash:**
     
     cd "arbol de decision/src"
     python arboldecision.py
