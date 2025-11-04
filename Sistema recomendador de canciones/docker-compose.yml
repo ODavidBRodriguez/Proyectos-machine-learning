@@ -1,0 +1,28 @@
+
+services:
+  music_backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: music_backend
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./backend:/app
+    environment:
+      - DATA_PATH=/app/modelo/dataset_canciones_colombia_3000.csv
+    depends_on:
+      - music_frontend
+
+  music_frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: music_frontend
+    ports:
+      - "3000:80"
+    volumes:
+      - ./frontend:/app
+    environment:
+      - REACT_APP_API_URL=http://localhost:5000
+
