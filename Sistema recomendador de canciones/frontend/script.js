@@ -5,6 +5,19 @@ const API_URL = window.location.hostname === "localhost"
 const USER_ID = "user_1"; // puedes cambiarlo o generar dinámicamente
 
 // 🟦 Cargar canciones no calificadas (carrusel)
+// Función para configurar los event listeners de los botones
+function setupRateButtons() {
+    // Event delegation para los botones de calificar
+    document.addEventListener('click', function(e) {
+        if (e.target.classList.contains('rate-btn')) {
+            const songId = e.target.getAttribute('data-song-id');
+            const songTitle = e.target.closest('.carousel-item').querySelector('h5').textContent;
+            const songArtist = e.target.closest('.carousel-item').querySelector('div').textContent.split(' - ')[0];
+            showRatingView(songId, songTitle, songArtist);
+        }
+    });
+}
+
 async function loadSongs() {
   try {
     const res = await fetch(`${API_URL}/songs_not_rated/${USER_ID}`);
@@ -25,7 +38,7 @@ async function loadSongs() {
           <div style="color: white; opacity: 0.9; margin: 10px 0;">
               ${song.artist} - ${song.genre}
           </div>
-          <button class="rate-btn" data-song-id="${song.id}">
+          <button class="rate-btn" onclick="goToRating(${song.id})">
               Calificar canción
           </button>
         </div>
