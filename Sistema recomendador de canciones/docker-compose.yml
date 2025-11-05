@@ -9,6 +9,7 @@ services:
       - "5000:5000"
     volumes:
       - ./backend:/app
+      - ./backend/modelo:/app/modelo
     environment:
       - DATA_PATH=/app/modelo/dataset_canciones_colombia_3000.csv
     depends_on:

@@ -1,0 +1,201 @@
+﻿id,nombre,artista,genero,año,popularidad_base
+1,La Piragua,Carlos Vives,Vallenato,1991,85
+2,La Gota Fría,Carlos Vives,Vallenato,1993,90
+3,La Bicicleta,Carlos Vives & Shakira,Pop,2016,89
+4,Pa' Mayte,Carlos Vives,Vallenato,1997,82
+5,Volví a Nacer,Carlos Vives,Vallenato,2013,84
+6,Robarte un Beso,Carlos Vives,Vallenato,2017,86
+7,La Camisa Negra,Juanes,Rock Pop,2004,88
+8,A Dios Le Pido,Juanes,Pop,2002,90
+9,Me Enamora,Juanes,Pop,2007,87
+10,La Paga,Juanes,Pop,2002,86
+11,Fotografía,Juanes,Pop,2002,85
+12,La Plata,Juanes,Pop,2019,83
+13,Tusa,Karol G,Reggaeton,2019,95
+14,Provenza,Karol G,Reggaeton,2022,96
+15,Bichota,Karol G,Reggaeton,2020,92
+16,Cairo,Karol G,Reggaeton,2022,89
+17,Gatúbela,Karol G,Reggaeton,2022,88
+18,Mientras Me Curo del Cora,Karol G,Reggaeton,2023,87
+19,Hawái,Maluma,Reggaeton,2020,92
+20,Felices los 4,Maluma,Reggaeton,2017,90
+21,Borro Cassette,Maluma,Reggaeton,2015,88
+22,11 PM,Maluma,Reggaeton,2015,85
+23,Chantaje,Maluma,Reggaeton,2016,89
+24,Sobrio,Maluma,Reggaeton,2021,86
+25,Mi Gente,J Balvin,Reggaeton,2017,94
+26,Ginza,J Balvin,Reggaeton,2015,91
+27,Blanco,J Balvin,Reggaeton,2020,88
+28,Ambiente,J Balvin,Reggaeton,2022,87
+29,Azul,J Balvin,Reggaeton,2019,86
+30,Agua,J Balvin,Reggaeton,2020,85
+31,Rebelión,Joe Arroyo,Salsa,1986,90
+32,En Barranquilla Me Quedo,Joe Arroyo,Salsa,1981,85
+33,La Noche,Joe Arroyo,Salsa,1983,82
+34,Tumbatecho,Joe Arroyo,Salsa,1986,83
+35,Yamulemau,Joe Arroyo,Salsa,1988,81
+36,Centro de la Ciudad,Joe Arroyo,Salsa,1988,80
+37,Cali Pachanguero,Grupo Niche,Salsa,1984,82
+38,Una Aventura,Grupo Niche,Salsa,1990,85
+39,Han Cogido la Cosa,Grupo Niche,Salsa,1989,80
+40,Gotas de Lluvia,Grupo Niche,Salsa,1995,78
+41,Etcéteras,Grupo Niche,Salsa,2001,77
+42,Me Sabe a Perú,Grupo Niche,Salsa,2005,76
+43,Te Mando Flores,Fonseca,Pop,2005,78
+44,Eres Mi Sueño,Fonseca,Pop,2011,80
+45,Arroyito,Fonseca,Pop,2015,77
+46,Hace Tiempo,Fonseca,Pop,2019,79
+47,Si Tú Me Quieres,Fonseca,Pop,2008,76
+48,Confusión,Fonseca,Pop,2022,75
+49,Ay Hombe,Silvestre Dangond,Vallenato,2010,80
+50,Ilusión,Silvestre Dangond,Vallenato,2012,82
+51,No Te Vallas,Silvestre Dangond,Vallenato,2009,79
+52,La Cruda,Silvestre Dangond,Vallenato,2020,78
+53,Cásate Conmigo,Silvestre Dangond,Vallenato,2016,81
+54,La Llamada,Silvestre Dangond,Vallenato,2021,77
+55,Esta Vida,Jorge Celedón,Vallenato,2004,83
+56,Señorita,Jorge Celedón,Vallenato,2007,82
+57,Parranda en el Cafetal,Jorge Celedón,Vallenato,2005,80
+58,La Invité a Bailar,Jorge Celedón,Vallenato,2010,79
+59,Que Bonita es Esta Vida,Jorge Celedón,Vallenato,2002,81
+60,Me Dejaste,Jorge Celedón,Vallenato,2015,78
+61,Sin Medir Distancias,Diomedes Díaz,Vallenato,1987,81
+62,Los Caminos de la Vida,Diomedes Díaz,Vallenato,1995,85
+63,Amor de Mi Vida,Diomedes Díaz,Vallenato,1988,82
+64,Tres Canciones,Diomedes Díaz,Vallenato,1986,80
+65,El Cuchillo,Diomedes Díaz,Vallenato,1990,79
+66,Titán,Diomedes Díaz,Vallenato,1991,78
+67,Soy Yo,Bomba Estéreo,Electropop,2015,86
+68,To My Love,Bomba Estéreo,Electropop,2012,83
+69,Fuego,Bomba Estéreo,Electropop,2015,82
+70,Camino,Bomba Estéreo,Electropop,2021,80
+71,Agua,Bomba Estéreo,Electropop,2021,79
+72,Deja,Bomba Estéreo,Electropop,2017,78
+73,To My Love,Monsieur Periné,Pop,2012,80
+74,Nuestra Canción,Monsieur Periné,Pop,2015,78
+75,Bailar Contigo,Monsieur Periné,Pop,2012,77
+76,Suin Romanticón,Monsieur Periné,Pop,2021,76
+77,Me Necesita,Monsieur Periné,Pop,2018,75
+78,La Muerte,Monsieur Periné,Pop,2015,74
+79,Colombia Tierra Querida,Lucho Bermúdez,Porro,1950,75
+80,Carmen de Bolívar,Lucho Bermúdez,Porro,1949,74
+81,Prende el Fogon,Lucho Bermúdez,Porro,1951,73
+82,Salsaloco,Los Hermanos Martinez,Salsa,1995,76
+83,La Agarro Bajando,Los Hermanos Martinez,Salsa,1997,75
+84,La Quiero a Morir,DLG,Salsa,1997,82
+85,No Morirá,DLG,Salsa,1995,80
+86,Juliana,DLG,Salsa,1996,78
+87,Oiga Mire Vea,Guayacán Orquesta,Salsa,1991,79
+88,Que Manera de Quererte,Guayacán Orquesta,Salsa,1995,77
+89,Un Montón de Estrellas,Polo Montañez,Son,2000,81
+90,La Vida Sin Ti,Polo Montañez,Son,2000,79
+91,La Ultima Cancion,Polo Montañez,Son,2000,78
+92,La Colegiala,Rodolfo Aicardi,Cumbia,1977,83
+93,8 Dias,La Sonora Dinamita,Cumbia,2020,80
+94,Se Me Perdió la Cadenita,La Sonora Dinamita,Cumbia,1984,78
+95,La Cumbia del Sol,La Sonora Dinamita,Cumbia,2021,77
+96,El Africano,La Sonora Dinamita,Cumbia,1984,76
+97,La Ventanita,Sergio Vargas,Merengue,1995,79
+98,El Negro No Puede,Sergio Vargas,Merengue,1998,77
+99,Dile,Sergio Vargas,Merengue,1996,76
+100,Suavemente,Elvis Crespo,Merengue,1998,89
+101,Píntame,Elvis Crespo,Merengue,1999,82
+102,Tu Sonrisa,Elvis Crespo,Merengue,1998,81
+103,La Bilirrubina,Juan Luis Guerra,Merengue,1990,86
+104,Bachata Rosa,Juan Luis Guerra,Bachata,1990,87
+105,El Niagara en Bicicleta,Juan Luis Guerra,Merengue,1990,85
+106,A Pedir Su Mano,Juan Luis Guerra,Merengue,1994,84
+107,Ojalá Que Llueva Café,Juan Luis Guerra,Merengue,1989,83
+108,La Travesía,Juan Luis Guerra,Merengue,2004,82
+109,Propuesta Indecente,Romeo Santos,Bachata,2013,88
+110,Eres Mía,Romeo Santos,Bachata,2014,85
+111,Odio,Romeo Santos,Bachata,2014,83
+112,La Diabla,Romeo Santos,Bachata,2012,82
+113,Sobredosis,Romeo Santos,Bachata,2014,81
+114,Promise,Romeo Santos,Bachata,2011,80
+115,Flaca,Andrés Calamaro,Rock,1997,79
+116,Paloma,Andrés Calamaro,Rock,1997,77
+117,Cuando Te Conocí,Andrés Calamaro,Rock,1997,76
+118,Bolero Falaz,Aterciopelados,Rock,1995,77
+119,Florecita Rockera,Aterciopelados,Rock,1995,76
+120,El Estuche,Aterciopelados,Rock,1996,75
+121,Baracunatana,Aterciopelados,Rock,1997,74
+122,La Misma Pluma,Aterciopelados,Rock,2008,73
+123,Whenever Wherever,Shakira,Pop,2001,92
+124,Hips Don't Lie,Shakira,Pop,2005,95
+125,La Tortura,Shakira,Pop,2005,93
+126,Waka Waka,Shakira,Pop,2010,94
+127,Chantaje,Shakira,Pop,2016,90
+128,Me Gusta,Shakira,Pop,2020,88
+129,Despacito,Luis Fonsi,Pop,2017,97
+130,Échame La Culpa,Luis Fonsi,Pop,2017,89
+131,Calypso,Luis Fonsi,Pop,2018,85
+132,No Me Doy por Vencido,Luis Fonsi,Pop,2008,84
+133,Tengo un Amor,Luis Fonsi,Pop,2019,83
+134,Aquí Estoy Yo,Luis Fonsi,Pop,2008,82
+135,Vivir Mi Vida,Marc Anthony,Salsa,2013,90
+136,Yo No Sé Mañana,Marc Anthony,Salsa,2009,85
+137,Valió la Pena,Marc Anthony,Salsa,2004,84
+138,Aguanile,Marc Anthony,Salsa,2005,83
+139,Pa'lla Voy,Marc Anthony,Salsa,2022,82
+140,You Sang to Me,Marc Anthony,Balada,1999,81
+141,Dákiti,Bad Bunny,Reggaeton,2020,96
+142,Safaera,Bad Bunny,Reggaeton,2020,94
+143,Yo Perreo Sola,Bad Bunny,Reggaeton,2020,92
+144,Callaíta,Bad Bunny,Reggaeton,2019,89
+145,Tití Me Preguntó,Bad Bunny,Reggaeton,2022,93
+146,Moscow Mule,Bad Bunny,Reggaeton,2022,90
+147,Shape of You,Ed Sheeran,Pop,2017,97
+148,Perfect,Ed Sheeran,Pop,2017,96
+149,Thinking Out Loud,Ed Sheeran,Pop,2014,95
+150,Photograph,Ed Sheeran,Pop,2014,92
+151,Galway Girl,Ed Sheeran,Pop,2017,88
+152,Shivers,Ed Sheeran,Pop,2021,91
+153,Blinding Lights,The Weeknd,Pop,2019,98
+154,Save Your Tears,The Weeknd,Pop,2020,94
+155,Starboy,The Weeknd,Pop,2016,93
+156,The Hills,The Weeknd,Pop,2015,92
+157,Can't Feel My Face,The Weeknd,Pop,2015,91
+158,Die For You,The Weeknd,Pop,2016,90
+159,Bad Guy,Billie Eilish,Electropop,2019,96
+160,Therefore I Am,Billie Eilish,Electropop,2020,92
+161,Happier Than Ever,Billie Eilish,Electropop,2021,90
+162,Everything I Wanted,Billie Eilish,Electropop,2019,89
+163,When the Party's Over,Billie Eilish,Electropop,2019,88
+164,Lovely,Billie Eilish,Electropop,2018,87
+165,Levitating,Dua Lipa,Pop,2020,94
+166,Don't Start Now,Dua Lipa,Pop,2019,95
+167,Physical,Dua Lipa,Pop,2020,90
+168,New Rules,Dua Lipa,Pop,2017,92
+169,Love Again,Dua Lipa,Pop,2021,88
+170,Cold Heart,Dua Lipa,Pop,2021,91
+171,Watermelon Sugar,Harry Styles,Pop,2019,93
+172,As It Was,Harry Styles,Pop,2022,96
+173,Adore You,Harry Styles,Pop,2019,90
+174,Sign of the Times,Harry Styles,Pop,2017,89
+175,Golden,Harry Styles,Pop,2020,87
+176,Late Night Talking,Harry Styles,Pop,2022,88
+177,Bohemian Rhapsody,Queen,Rock,1975,99
+178,Another One Bites the Dust,Queen,Rock,1980,95
+179,We Will Rock You,Queen,Rock,1977,97
+180,Don't Stop Me Now,Queen,Rock,1978,96
+181,Somebody to Love,Queen,Rock,1976,94
+182,Radio Ga Ga,Queen,Rock,1984,90
+183,Believer,Imagine Dragons,Rock,2017,93
+184,Thunder,Imagine Dragons,Rock,2017,92
+185,Radioactive,Imagine Dragons,Rock,2012,94
+186,Demons,Imagine Dragons,Rock,2012,90
+187,Bones,Imagine Dragons,Rock,2022,86
+188,Enemy,Imagine Dragons,Rock,2021,89
+189,Counting Stars,OneRepublic,Pop Rock,2013,95
+190,Apologize,OneRepublic,Pop Rock,2006,93
+191,Secrets,OneRepublic,Pop Rock,2009,88
+192,Love Runs Out,OneRepublic,Pop Rock,2014,87
+193,I Lived,OneRepublic,Pop Rock,2014,85
+194,Sunflower,OneRepublic,Pop Rock,2018,84
+195,God's Plan,Drake,Hip Hop,2018,95
+196,Hotline Bling,Drake,Hip Hop,2015,90
+197,In My Feelings,Drake,Hip Hop,2018,92
+198,One Dance,Drake,Hip Hop,2016,91
+199,Passionfruit,Drake,Hip Hop,2017,89
+200,Wait For U,Drake,Hip Hop,2022,88

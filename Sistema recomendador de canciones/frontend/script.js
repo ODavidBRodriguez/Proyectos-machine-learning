@@ -21,10 +21,12 @@ async function loadSongs() {
       div.className = `carousel-item ${activeClass}`;
       div.innerHTML = `
         <div class="text-center p-4">
-          <h5>${song.title}</h5>
-          <p class="text-muted">${song.artist} - ${song.genre}</p>
-          <button class="btn btn-primary" onclick="goToRating(${song.id})">
-            Calificar canción
+          <h5 style="color: white; font-weight: bold;">${song.title}</h5>
+          <div style="color: white; opacity: 0.9; margin: 10px 0;">
+              ${song.artist} - ${song.genre}
+          </div>
+          <button class="rate-btn" data-song-id="${song.id}">
+              Calificar canción
           </button>
         </div>
       `;
