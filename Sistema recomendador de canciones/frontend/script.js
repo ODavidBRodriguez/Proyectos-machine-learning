@@ -1,10 +1,45 @@
+
 const API_URL = window.location.hostname === "localhost"
   ? "http://localhost:5000"
-  : "http://music_backend:5000";
+  : "http://music_backend:5000"
 
-const USER_ID = "user_1"; // puedes cambiarlo o generar dinámicamente
+let USER_ID = localStorage.getItem('currentUserId');
+if (!USER_ID) {
+    // Generar un ID único simple si no existe
+    USER_ID = 'user_' + Date.now();
+    localStorage.setItem('currentUserId', USER_ID);
+    console.log("Nuevo usuario generado:", USER_ID); 
+}
 
-// 🟦 Cargar canciones no calificadas (carrusel)
+// Cargar y mostrar la clasificación del usuario
+async function loadUserClassification() {
+    try {
+        const res = await fetch(`${API_URL}/classify_user`, {
+            method: "POST", 
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ user_id: USER_ID })
+        });
+        
+        if (!res.ok) { 
+            throw new Error(`HTTP error! status: ${res.status}`);
+        }
+        
+        const data = await res.json();
+        
+        const classificationElement = document.getElementById("user-classification");
+        if (classificationElement) {
+            
+            // Espera el campo 'user_type' de la respuesta
+            const message = `Hola, ${data.user_type}!`;
+            
+            classificationElement.textContent = message;
+        }
+    } catch (err) {
+        console.error("Error cargando clasificación:", err); 
+    }
+}
+
+
 // Función para configurar los event listeners de los botones
 function setupRateButtons() {
     // Event delegation para los botones de calificar
@@ -50,12 +85,12 @@ async function loadSongs() {
   }
 }
 
-// 🟩 Redirigir a la vista de calificación
+// Redirigir a la vista de calificación
 function goToRating(songId) {
   window.location.href = `calificacion.html?song_id=${songId}`;
 }
 
-// 🟨 Cargar recomendaciones
+// Cargar recomendaciones
 async function loadRecommendations() {
   try {
     const res = await fetch(`${API_URL}/recommendations/${USER_ID}`);
@@ -81,7 +116,7 @@ async function loadRecommendations() {
   }
 }
 
-// 🧩 Enviar calificación
+// Enviar calificación
 async function sendRating() {
   const urlParams = new URLSearchParams(window.location.search);
   const songId = urlParams.get("song_id");
@@ -105,7 +140,7 @@ async function sendRating() {
       return;
     }
 
-    // ✅ Mostrar mensaje y volver al inicio
+    //  Mostrar mensaje y volver al inicio
     localStorage.setItem("alerta", "true");
     window.location.href = "index.html";
   } catch (err) {
@@ -113,7 +148,7 @@ async function sendRating() {
   }
 }
 
-// 🧡 Mostrar alerta al volver al inicio
+// Mostrar alerta al volver al inicio
 function showAlertIfNeeded() {
   const alertBox = document.getElementById("alerta");
   if (localStorage.getItem("alerta") === "true" && alertBox) {
@@ -125,10 +160,11 @@ function showAlertIfNeeded() {
   }
 }
 
-// 🚀 Inicialización automática
+// Inicialización automática
 document.addEventListener("DOMContentLoaded", () => {
   if (window.location.pathname.endsWith("index.html") || window.location.pathname === "/") {
     showAlertIfNeeded();
+    loadUserClassification();
     loadSongs();
     loadRecommendations();
   }

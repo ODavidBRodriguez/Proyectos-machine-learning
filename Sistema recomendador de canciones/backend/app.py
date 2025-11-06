@@ -2,72 +2,89 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 import pandas as pd
 import random
-from sklearn.metrics import precision_score, f1_score
-from sklearn.model_selection import train_test_split
+
+
+# Importar el nuevo módulo del modelo KNN
+from modelo_knn import ModeloKNN, K_OPTIMO, METRICA_OPTIMA, COLUMNA_ID_USUARIO
 
 app = Flask(__name__)
 CORS(app)
 
 # Cargar datasets reales
 def load_datasets():
-    """Carga los datasets de canciones y calificaciones"""
-    try:
-        # Intentar diferentes rutas posibles
-        rutas_posibles = [
-            'modelo/metadata_canciones.csv',      # Ruta dentro del contenedor
-            'backend/modelo/metadata_canciones.csv',  # Ruta en desarrollo
-            '/app/modelo/metadata_canciones.csv',     # Ruta absoluta en contenedor
-            './modelo/metadata_canciones.csv'         # Ruta relativa
-        ]
-        
-        canciones_df = None
-        calificaciones_df = None
-        
-        for ruta_meta in rutas_posibles:
-            try:
-                canciones_df = pd.read_csv(ruta_meta)
-                print(f"✅ Metadata cargada desde: {ruta_meta}")
-                break
-            except:
-                continue
-        
-        if canciones_df is None:
-            print("❌ No se pudo cargar canciones_metadata.csv desde ninguna ruta")
-            return None, None
-        
-        # Buscar dataset de calificaciones
-        rutas_calificaciones = [
-            'modelo/dataset_canciones.csv',
-            'backend/modelo/dataset_canciones.csv', 
-            '/app/modelo/dataset_canciones.csv',
-            './modelo/dataset_canciones.csv'
-        ]
-        
-        for ruta_cal in rutas_calificaciones:
-            try:
-                calificaciones_df = pd.read_csv(ruta_cal)
-                print(f"✅ Calificaciones cargadas desde: {ruta_cal}")
-                break
-            except:
-                continue
-        
-        if calificaciones_df is None:
-            print("❌ No se pudo cargar dataset_canciones.csv desde ninguna ruta")
-            return None, None
-        
-        print(f"📊 Datasets cargados:")
-        print(f"   - Canciones: {len(canciones_df)}")
-        print(f"   - Usuarios: {len(calificaciones_df)}")
-        print(f"   - Calificaciones: {len(calificaciones_df.columns[6:])} canciones")
-        
-        return canciones_df, calificaciones_df
+    """Carga los datasets de canciones y calificaciones usando try/except para las rutas."""
     
-    except Exception as e:
-        print(f"❌ Error cargando datasets: {e}")
+    # 1. Rutas para la METADATA DE CANCIONES (knn_model.metadata)
+    rutas_metadata = [
+        'modelo/metadata_canciones.csv',
+        'backend/modelo/metadata_canciones.csv',
+        '/app/modelo/metadata_canciones.csv',
+        './modelo/metadata_canciones.csv'
+    ]
+    
+    canciones_df = None
+    
+    for ruta_meta in rutas_metadata:
+        try:
+            canciones_df = pd.read_csv(ruta_meta)
+            print(f"Metadata cargada desde: {ruta_meta}")
+            break
+        except Exception:
+            # Continuar a la siguiente ruta si esta falla
+            continue
+    
+    if canciones_df is None:
+        print("ERROR: No se pudo cargar la metadata de canciones desde ninguna ruta.")
         return None, None
+    
+    # 2. Rutas para las CALIFICACIONES/MATRIZ (calificaciones_df)
+    rutas_calificaciones = [
+        'modelo/dataset_canciones.csv', 
+        'backend/modelo/dataset_canciones.csv', 
+        '/app/modelo/dataset_canciones.csv',
+        './modelo/dataset_canciones.csv'
+    ]
+    
+    calificaciones_df = None
+    
+    for ruta_cal in rutas_calificaciones:
+        try:
+            # Se mantiene 'latin-1' por si el archivo tiene caracteres especiales
+            calificaciones_df = pd.read_csv(ruta_cal, encoding='latin-1') 
+            print(f"Calificaciones cargadas desde: {ruta_cal}")
+            break
+        except Exception:
+            # Continuar a la siguiente ruta si esta falla
+            continue
+        
+    if calificaciones_df is None:
+        print("No se pudo cargar el archivo de calificaciones desde ninguna ruta.")
+        return None, None
+    
+    # 3. Reporte final
+    try:
+        print(f"Datasets cargados exitosamente.")
+        return canciones_df, calificaciones_df
+    except Exception as e:
+        print(f"Error final al retornar DataFrames: {e}")
+        return None, None
+
+@app.route("/", methods=["GET"])
+def health_check():
+    return jsonify({"status": "ok", "service": "Recomendador Music Backend", "version": "1.0"})
+
 
 # Cargar datos al iniciar
 canciones_df, calificaciones_df = load_datasets()
+
+# Inicializar el Modelo KNN si los datos fueron cargados
+knn_model = None
+if calificaciones_df is not None and canciones_df is not None:
+    try:
+        knn_model = ModeloKNN(calificaciones_df.copy(), canciones_df.copy())
+        print("Modelo KNN inicializado correctamente.")
+    except Exception as e:
+        print(f"Error inicializando Modelo KNN: {e}")
 
 # Crear lista de songs para la API
 songs = []
@@ -93,20 +110,20 @@ else:
         {"id": 7, "title": "La Camisa Negra", "artist": "Juanes", "genre": "Rock Pop", "year": 2004, "popularity_base": 88},
         {"id": 8, "title": "Rebelión", "artist": "Joe Arroyo", "genre": "Salsa", "year": 1986, "popularity_base": 90},
     ]
-    print("⚠️  Usando datos de canciones simulados")
+    print("Usando datos de canciones simulados")
 
-# 🎧 Estructuras en memoria para sesiones activas
+# Estructuras en memoria para sesiones activas
 ratings = {}             # user_id -> { song_id: rating }
 user_preferences = {}    # user_id -> { género: peso }
 
-# Calcular popularidad basada en el dataset real
+# Calcular popularidad basada en el dataset real (Se mantiene la lógica Content-Based para fallback)
 def calcular_popularidad_real():
     """Calcula la popularidad de cada canción basada en las calificaciones del dataset"""
     if calificaciones_df is None:
         return {}
     
     popularidad = {}
-    columnas_canciones = calificaciones_df.columns[6:]  # Columnas de canciones (IDs: '1', '2', ...)
+    columnas_canciones = calificaciones_df.columns[6:]  
     
     for cancion_id in columnas_canciones:
         ratings_col = calificaciones_df[cancion_id]
@@ -116,18 +133,15 @@ def calcular_popularidad_real():
             avg_rating = ratings_validas.mean()
             num_ratings = len(ratings_validas)
             
-            # Encontrar popularidad base del metadata
             cancion_meta = canciones_df[canciones_df['id'] == int(cancion_id)]
             pop_base = cancion_meta['popularidad_base'].iloc[0] if not cancion_meta.empty else 50
             
-            # Fórmula de popularidad ponderada
             popularidad[cancion_id] = {
                 'popularidad': (avg_rating * 15) + (num_ratings / 20) + (pop_base * 0.2),
                 'avg_rating': avg_rating,
                 'num_ratings': num_ratings
             }
         else:
-            # Si no hay calificaciones, usar popularidad base
             cancion_meta = canciones_df[canciones_df['id'] == int(cancion_id)]
             pop_base = cancion_meta['popularidad_base'].iloc[0] if not cancion_meta.empty else 50
             popularidad[cancion_id] = {
@@ -146,9 +160,8 @@ def calcular_preferencias_genero(user_id):
     user_ratings = ratings.get(user_id, {})
     
     if not user_ratings:
-        return {"Pop": 1.0}  # Género por defecto
+        return {"Pop": 1.0}
     
-    # Agrupar calificaciones por género
     genero_ratings = {}
     for song_id, rating in user_ratings.items():
         song = next((s for s in songs if s["id"] == song_id), None)
@@ -158,60 +171,74 @@ def calcular_preferencias_genero(user_id):
                 genero_ratings[genero] = []
             genero_ratings[genero].append(rating)
     
-    # Calcular peso para cada género
     genero_pesos = {}
     total_peso = 0
     
     for genero, ratings_list in genero_ratings.items():
-        # Promedio de calificaciones para este género
         avg_rating = sum(ratings_list) / len(ratings_list)
-        
-        # Cantidad de calificaciones para este género
         num_ratings = len(ratings_list)
         
-        # Fórmula: (promedio * cantidad) ^ 0.7 para balancear
         peso = (avg_rating * num_ratings) ** 0.7
         genero_pesos[genero] = peso
         total_peso += peso
     
-    # Normalizar pesos (que sumen 1.0)
     if total_peso > 0:
         for genero in genero_pesos:
             genero_pesos[genero] = genero_pesos[genero] / total_peso
     
-    # Ordenar por peso descendente
     generos_ordenados = dict(sorted(genero_pesos.items(), key=lambda x: x[1], reverse=True))
     
-    print(f"🎯 Preferencias de género para {user_id}: {generos_ordenados}")
+    print(f"Preferencias de género para {user_id}: {generos_ordenados}")
     return generos_ordenados
+
 
 @app.route("/recommendations/<user_id>", methods=["GET"])
 def recommendations(user_id):
     user_ratings = ratings.get(user_id, {})
     
-    # Si es usuario nuevo, recomendar por popularidad global
+    # Condición para usar KNN: al menos 5 calificaciones y el modelo debe existir
+    if len(user_ratings) >= 5 and knn_model is not None:
+        print(f"Usando KNN para {user_id} (ratings: {len(user_ratings)})")
+        
+        # El modelo KNN espera el user_id como el tipo de la columna UserID_Limpio.
+        # En el caso de los usuarios de sesión, es un string.
+        recomendaciones_knn = knn_model.generar_recomendaciones(user_id, k=K_OPTIMO)
+        
+        # Limpiar el formato de la recomendación (ya viene ordenado por predicción)
+        recs_limpias = [{
+            "id": r['id'],
+            "title": r['title'],
+            "artist": r['artist'],
+            "genre": r['genre'],
+            "pred_rating": f"{r['puntuacion_predicha']:.2f}" # Retornar la predicción para el front
+        } for r in recomendaciones_knn[:8]]
+        
+        if recs_limpias:
+            return jsonify(recs_limpias)
+        
+        print("KNN no encontró vecinos. Recurriendo a Content-Based.")
+
+    # FALLBACK: Si es usuario nuevo o KNN falla, usar Content-Based (popularidad/género)
     if not user_ratings:
+        # Recomendación por popularidad global (para nuevos)
         canciones_ordenadas = sorted(
             songs, 
             key=lambda x: popularidad_real.get(str(x["id"]), {}).get('popularidad', x["popularity_base"]), 
             reverse=True
         )
-        return jsonify(canciones_ordenadas[:8])  # ↑ De 5 a 8 canciones
+        return jsonify(canciones_ordenadas[:8])
     
-    # Calcular preferencias de género dinámicamente
+    # Recomendación por género (Content-Based)
     generos_usuario = calcular_preferencias_genero(user_id)
-    
-    # Obtener recomendaciones basadas en múltiples géneros
     recs = obtener_recomendaciones_por_generos(user_id, generos_usuario)
     
-    return jsonify(recs[:8])  # ↑ De 5 a 8 canciones
+    return jsonify(recs[:8])
 
-# También actualiza la función de recomendaciones para obtener más candidatos
+# Se mantiene la función Content-Based como fallback
 def obtener_recomendaciones_por_generos(user_id, generos_usuario):
-    """Obtiene recomendaciones considerando múltiples géneros"""
+    """Obtiene recomendaciones considerando múltiples géneros (Content-Based)"""
     user_rated = set(ratings.get(user_id, {}).keys())
     
-    # Limitar a los 3 géneros principales
     generos_principales = list(generos_usuario.keys())[:3]
     
     candidatos = []
@@ -219,13 +246,11 @@ def obtener_recomendaciones_por_generos(user_id, generos_usuario):
     for genero in generos_principales:
         peso = generos_usuario[genero]
         
-        # Obtener canciones de este género que el usuario no haya calificado
         canciones_genero = [
             s for s in songs 
             if s["genre"] == genero and s["id"] not in user_rated
         ]
         
-        # ↑ Aumentar de 10 a 15 canciones por género
         for cancion in canciones_genero[:15]:
             pop_score = popularidad_real.get(str(cancion["id"]), {}).get('popularidad', cancion["popularity_base"])
             score_final = pop_score * peso
@@ -236,8 +261,7 @@ def obtener_recomendaciones_por_generos(user_id, generos_usuario):
                 "peso_genero": peso
             })
     
-    # Si no hay suficientes candidatos, agregar de otros géneros populares
-    if len(candidatos) < 8:  # ↑ Aumentar el mínimo
+    if len(candidatos) < 8:
         generos_restantes = [g for g in set(s["genre"] for s in songs) if g not in generos_principales]
         
         for genero in generos_restantes:
@@ -246,7 +270,6 @@ def obtener_recomendaciones_por_generos(user_id, generos_usuario):
                 if s["genre"] == genero and s["id"] not in user_rated
             ]
             
-            # ↑ Aumentar de 3 a 5 por género adicional
             for cancion in canciones_genero[:5]:
                 pop_score = popularidad_real.get(str(cancion["id"]), {}).get('popularidad', cancion["popularity_base"])
                 score_final = pop_score * 0.1
@@ -257,10 +280,8 @@ def obtener_recomendaciones_por_generos(user_id, generos_usuario):
                     "peso_genero": 0.1
                 })
     
-    # Ordenar por score y eliminar duplicados
     candidatos_ordenados = sorted(candidatos, key=lambda x: x["score"], reverse=True)
     
-    # Eliminar duplicados por canción
     canciones_vistas = set()
     recomendaciones_finales = []
     
@@ -269,40 +290,36 @@ def obtener_recomendaciones_por_generos(user_id, generos_usuario):
             canciones_vistas.add(cand["cancion"]["id"])
             recomendaciones_finales.append(cand["cancion"])
         
-        # ↑ Aumentar el límite para tener más opciones
         if len(recomendaciones_finales) >= 15:
             break
     
-    print(f"🎵 Recomendaciones para {user_id}: {[r['title'] for r in recomendaciones_finales[:8]]}")
+    print(f"Recomendaciones (CB) para {user_id}: {[r['title'] for r in recomendaciones_finales[:8]]}")
     return recomendaciones_finales
 
-# 🟦 Obtener canciones no calificadas
+#  Obtener canciones no calificadas 
 @app.route("/songs_not_rated/<user_id>", methods=["GET"])
 def songs_not_rated(user_id):
     user_rated = ratings.get(user_id, {})
     not_rated = [s for s in songs if s["id"] not in user_rated]
     
-    # Mezclar todas las canciones para aleatoriedad
     canciones_mezcladas = not_rated.copy()
     random.shuffle(canciones_mezcladas)
     
-    # Tomar las primeras 15 canciones mezcladas
     seleccion_aleatoria = canciones_mezcladas[:15]
     
-    # Ordenar la selección por popularidad para mejor experiencia
     seleccion_ordenada = sorted(
         seleccion_aleatoria,
         key=lambda x: popularidad_real.get(str(x["id"]), {}).get('popularidad', x["popularity_base"]),
         reverse=True
     )
     
-    print(f"🎵 Carrusel para {user_id}: {len(seleccion_ordenada)} canciones")
-    print(f"🎭 Géneros en carrusel: {list(set(c['genre'] for c in seleccion_ordenada))}")
+    print(f"Carrusel para {user_id}: {len(seleccion_ordenada)} canciones")
+    print(f"Géneros en carrusel: {list(set(c['genre'] for c in seleccion_ordenada))}")
     
     return jsonify(seleccion_ordenada[:12])
 
 
-# 🟩 Calificar una canción (ACTUALIZADA para el nuevo sistema)
+# Calificar una canción 
 @app.route("/rate_song", methods=["POST"])
 def rate_song():
     data = request.json
@@ -316,8 +333,23 @@ def rate_song():
     if user_id not in ratings:
         ratings[user_id] = {}
 
-    # Guardar la calificación
+    # Guardar la calificación en la sesión (para Content-Based)
     ratings[user_id][song_id] = rating
+
+    if knn_model is not None:
+        # Añadir o actualizar el usuario en la matriz del modelo KNN
+        if user_id not in knn_model.matriz_usuarios:
+            knn_model.matriz_usuarios[user_id] = {}
+        
+        # Asegurar que la canción existe como columna en el modelo
+        if song_id not in knn_model.lista_ids_canciones:
+            knn_model.lista_ids_canciones.append(song_id)
+
+        # Actualizar la calificación
+        knn_model.matriz_usuarios[user_id][song_id] = float(rating)
+        
+        # Recalcular el promedio del usuario actual
+        knn_model.promedios_usuarios = knn_model.calcular_promedios_usuarios(knn_model.matriz_usuarios)
 
     # Recalcular preferencias de género
     generos_usuario = calcular_preferencias_genero(user_id)
@@ -327,39 +359,62 @@ def rate_song():
     song = next((s for s in songs if s["id"] == song_id), None)
     genero_cancion = song["genre"] if song else "Desconocido"
     
-    print(f"🎯 Usuario {user_id} calificó '{song['title'] if song else '?'}' ({genero_cancion}) con {rating} estrellas")
-    print(f"📊 Preferencias actualizadas: {generos_usuario}")
+    print(f"Usuario {user_id} calificó '{song['title'] if song else '?'}' ({genero_cancion}) con {rating} estrellas")
+    print(f"Preferencias actualizadas: {generos_usuario}")
 
     return jsonify({
-        "message": "✅ Calificación guardada correctamente.",
+        "message": "Calificación guardada correctamente.",
         "genero_cancion": genero_cancion,
         "preferencias_actuales": generos_usuario
     })
 
-# 🧩 Clasificación de usuarios
+# Clasificación de usuarios 
 @app.route("/classify_user", methods=["POST"])
 def classify_user():
-    data = request.json
-    user_id = str(data.get("user_id"))
-    user_data = ratings.get(user_id, {})
-
-    if not user_data:
-        return jsonify({"user_type": "Nuevo usuario"})
-
-    ratings_list = list(user_data.values())
-    avg_rating = sum(ratings_list) / len(ratings_list) if ratings_list else 0
-    num_ratings = len(user_data)
+    print("--- [DEBUG] Ruta /classify_user (SIMPLE) alcanzada. ---")
     
-    if num_ratings < 3:
-        return jsonify({"user_type": "Usuario en exploración"})
-    elif avg_rating >= 4.0:
-        return jsonify({"user_type": "Amante de la música"})
-    elif avg_rating <= 2.5:
-        return jsonify({"user_type": "Crítico exigente"})
-    else:
-        return jsonify({"user_type": "Usuario equilibrado"})
+    try:
+        data = request.get_json(force=True) 
+        
+        if not data or 'user_id' not in data:
+             return jsonify({"error": "Falta user_id en el cuerpo de la solicitud."}), 400
 
-# 📊 Métricas del sistema
+        user_id = str(data.get("user_id"))
+        # Asume que 'ratings' es el diccionario global de calificaciones
+        user_data = ratings.get(user_id, {}) 
+        
+        # --- LÓGICA DE CLASIFICACIÓN POR PUNTUACIÓN (Rating Type) ---
+        
+        num_ratings = len(user_data)
+        
+        if num_ratings == 0:
+            rating_type = "Nuevo usuario"
+        else:
+            ratings_list = list(user_data.values())
+            avg_rating = sum(ratings_list) / num_ratings
+            
+            if num_ratings < 3:
+                rating_type = "Explorador musical"
+            elif avg_rating >= 4.0:
+                rating_type = "Amante de la música"
+            elif avg_rating <= 2.5:
+                rating_type = "Crítico exigente"
+            else:
+                rating_type = "Usuario equilibrado"
+
+        # Devolvemos SOLO el tipo de rating.
+        return jsonify({
+            "user_type": rating_type
+        })
+        
+    except Exception as e:
+        print("-" * 50)
+        print(f"ERROR: Falla al procesar /classify_user. Detalles: {e}")
+        print("-" * 50)
+        # Devolvemos un mensaje genérico al frontend
+        return jsonify({"error": f"Error interno del servidor. Verifique logs."}), 500
+    
+# Métricas del sistema 
 @app.route("/metricas", methods=["GET"])
 def metricas():
     if calificaciones_df is None:
@@ -395,7 +450,7 @@ def metricas():
         "top_canciones": top_canciones
     })
 
-# 🐛 Endpoint para debug
+# Endpoint para debug 
 @app.route("/debug_user/<user_id>", methods=["GET"])
 def debug_user(user_id):
     """Endpoint para ver el estado interno del usuario"""
@@ -416,11 +471,11 @@ def debug_user(user_id):
         ]
     })
 
-# 🚀 Iniciar servidor
+# Iniciar servidor 
 if __name__ == "__main__":
-    print("🎵 Sistema de Recomendación de Música Iniciado")
-    print("📊 Datasets cargados:")
-    print(f"   - {len(songs)} canciones disponibles")
-    print(f"   - {len(calificaciones_df) if calificaciones_df is not None else 0} usuarios en dataset")
-    print(f"   - {len(popularidad_real)} canciones con datos de popularidad")
+    print("Sistema de Recomendación de Música Iniciado")
+    print("Datasets cargados:")
+    print(f" - {len(songs)} canciones disponibles")
+    print(f" - {len(calificaciones_df) if calificaciones_df is not None else 0} usuarios en dataset")
+    print(f" - {len(popularidad_real)} canciones con datos de popularidad")
     app.run(host="0.0.0.0", port=5000, debug=True)
