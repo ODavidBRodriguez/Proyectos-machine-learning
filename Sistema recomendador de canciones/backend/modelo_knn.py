@@ -8,24 +8,27 @@ METRICA_OPTIMA = 'euclidiana'
 COLUMNA_ID_USUARIO = 'UserID_Limpio' 
 
 class ModeloKNN:
-   def __init__(self, calificaciones_df, canciones_df):
+    def __init__(self, calificaciones_df, canciones_df):
     
-    
-    self.calificaciones_df = self.preparar_dataframe(calificaciones_df) 
-    self.canciones_df = canciones_df
-    
-    self.matriz_usuarios = calificaciones_df.pivot_table( # Usa calificaciones_df (la cruda) y no self.calificaciones_df (la preparada)
-        index='user_id', 
-        columns='song_id', 
-        values='rating'  
-    ).fillna(0)
-    
-    self.promedios_usuarios = {}
-    self.lista_ids_canciones = []
-    
-    self.metadata = canciones_df.set_index('song_id') 
-    
-    self.limpiar_y_construir_datos()
+        self.calificaciones_df = self.preparar_dataframe(calificaciones_df.copy())
+        self.canciones_df = canciones_df
+        
+        self.calificaciones_df[COLUMNA_ID_USUARIO] = self.calificaciones_df['UserID'].astype('Int64')
+        
+        self.matriz_usuarios_df = self.calificaciones_df.pivot_table(
+            index=COLUMNA_ID_USUARIO, 
+            columns='SongID', 
+            values='Rating'  
+        ).fillna(0)
+        
+        # Convertir a diccionario (para que el resto de tus funciones de KNN funcionen)
+        self.matriz_usuarios = self.matriz_usuarios_df.T.to_dict()
+
+        self.lista_ids_canciones = self.matriz_usuarios_df.columns.tolist() 
+        self.promedios_usuarios = self.calcular_promedios_usuarios(self.matriz_usuarios)
+        self.metadata = canciones_df.set_index('song_id') 
+        
+        self.limpiar_y_construir_datos()
 
     def preparar_dataframe(self, df):
         """Transforma el DataFrame de calificaciones de formato ancho a largo y estandariza nombres."""
@@ -203,16 +206,21 @@ class ModeloKNN:
         for cancion_id in candidatas:
             prediccion = self.predecir_calificacion(usuario_actual_id, cancion_id, vecinos)
             
-            cancion_meta = self.canciones_df[self.canciones_df['id'] == cancion_id]
-            if not cancion_meta.empty:
-                meta = cancion_meta.iloc[0]
+            try:
+                # Usamos el índice de la metadata limpia (SongID) para búsqueda O(1)
+                meta = self.metadata.loc[cancion_id]
+                
+                # Adaptar los campos a los nombres internos usados:
                 recomendaciones_finales.append({
                     "id": int(cancion_id),
-                    "title": meta['nombre'],
-                    "artist": meta['artista'],
-                    "genre": meta['genero'],
+                    "title": meta['Title'],      
+                    "artist": meta['Artist'],    
+                    "genre": meta['Genre'],      
                     "puntuacion_predicha": prediccion
                 })
+            except KeyError:
+                # Ignorar canciones si el ID no se encuentra en la metadata
+                continue
         
         recomendaciones_finales.sort(key=lambda x: x['puntuacion_predicha'], reverse=True)
         

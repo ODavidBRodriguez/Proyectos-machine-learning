@@ -91,6 +91,7 @@ songs = []
 if canciones_df is not None:
     for _, row in canciones_df.iterrows():
         songs.append({
+            # ¡VERIFICADO con tus columnas!
             "id": row['id'],
             "title": row['nombre'],
             "artist": row['artista'],
@@ -371,7 +372,7 @@ def rate_song():
 # Clasificación de usuarios 
 @app.route("/classify_user", methods=["POST"])
 def classify_user():
-    print("--- [DEBUG] Ruta /classify_user (SIMPLE) alcanzada. ---")
+    print("--- [DEBUG] Ruta /classify_user (GÉNERO/PERFIL) alcanzada. ---")
     
     try:
         data = request.get_json(force=True) 
@@ -380,38 +381,40 @@ def classify_user():
              return jsonify({"error": "Falta user_id en el cuerpo de la solicitud."}), 400
 
         user_id = str(data.get("user_id"))
-        # Asume que 'ratings' es el diccionario global de calificaciones
         user_data = ratings.get(user_id, {}) 
-        
-        # --- LÓGICA DE CLASIFICACIÓN POR PUNTUACIÓN (Rating Type) ---
-        
         num_ratings = len(user_data)
         
-        if num_ratings == 0:
-            rating_type = "Nuevo usuario"
-        else:
-            ratings_list = list(user_data.values())
-            avg_rating = sum(ratings_list) / num_ratings
+        # 1. LÓGICA DE CLASIFICACIÓN POR GÉNERO (Perfil de Gustos)
+        
+        if num_ratings >= 3:
+            # Usar las preferencias de género que se calculan en /rate_song
+            preferencias = user_preferences.get(user_id, {})
             
-            if num_ratings < 3:
-                rating_type = "Explorador musical"
-            elif avg_rating >= 4.0:
-                rating_type = "Amante de la música"
-            elif avg_rating <= 2.5:
-                rating_type = "Crítico exigente"
+            if preferencias:
+                # El primer elemento del diccionario ordenado es el favorito
+                genero_favorito = list(preferencias.keys())[0]
+                # Se envía el perfil de gustos
+                classification_message = f"Fan de {genero_favorito}"
             else:
-                rating_type = "Usuario equilibrado"
+                classification_message = "Usuario con múltiples gustos"
+                
+        # 2. LÓGICA DE FALLBACK (Para nuevos o con pocas calificaciones)
+        else:
+            if num_ratings == 0:
+                classification_message = "Nuevo usuario"
+            else:
+                # Si tiene 1 o 2 ratings
+                classification_message = "Explorador musical"
 
-        # Devolvemos SOLO el tipo de rating.
+        # Devolvemos la clasificación del perfil.
         return jsonify({
-            "user_type": rating_type
+            "user_type": classification_message 
         })
         
     except Exception as e:
         print("-" * 50)
         print(f"ERROR: Falla al procesar /classify_user. Detalles: {e}")
         print("-" * 50)
-        # Devolvemos un mensaje genérico al frontend
         return jsonify({"error": f"Error interno del servidor. Verifique logs."}), 500
     
 # Métricas del sistema 

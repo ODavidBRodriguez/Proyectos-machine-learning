@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ubicación Óptima de Hospitales (K-Means)</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        #controles, #resumen { margin-bottom: 20px; padding: 10px; border: 1px solid #ccc; }
+        #mapaCanvas { border: 1px solid #000; background-color: #f0f0f0; }
+        .control-group { margin-top: 10px; padding-left: 15px; }
+    </style>
+</head>
+<body>
+    <h1>Ubicación Óptima de Hospitales 🏥</h1>
+    
+    <div id="controles">
+        <label for="num_hospitals">Número de Hospitales (K):</label>
+        <input type="number" id="num_hospitals" value="3" min="1">
+        
+        <div class="control-group">
+            <input type="checkbox" id="random_matrix_size" onchange="toggleInputs('matrix_inputs', this.checked)" checked>
+            <label for="random_matrix_size">Tamaño de Matriz Aleatorio (50x50 a 200x200)</label>
+            <div id="matrix_inputs" style="display:none; padding: 5px; border: 1px dashed #ddd;">
+                <label for="map_size_m">Tamaño M (filas):</label>
+                <input type="number" id="map_size_m" value="100" min="1"> x 
+                <label for="map_size_n">Tamaño N (columnas):</label>
+                <input type="number" id="map_size_n" value="100" min="1">
+            </div>
+        </div>
+
+        <div class="control-group">
+            <input type="checkbox" id="random_casas" onchange="toggleInputs('casas_inputs', this.checked)" checked>
+            <label for="random_casas">Número de Vecindarios Aleatorio (300 a 1000)</label>
+            <div id="casas_inputs" style="display:none; padding: 5px; border: 1px dashed #ddd;">
+                <label for="num_casas_input">Número de Vecindarios (Casas):</label>
+                <input type="number" id="num_casas_input" value="500" min="1">
+            </div>
+        </div>
+
+        <br>
+        <button onclick="ejecutarKMeans()">Calcular Ubicaciones</button>
+    </div>
+
+    <h2>Visualización</h2>
+    <div id="visualizacion">
+        <canvas id="mapaCanvas" width="500" height="500"></canvas>
+    </div>
+    
+    <div id="resumen">Esperando datos...</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
