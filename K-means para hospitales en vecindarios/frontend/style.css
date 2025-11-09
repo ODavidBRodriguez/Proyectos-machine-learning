@@ -1,0 +1,148 @@
+/* Variables de color */
+:root {
+    --primary-color: #007BFF; /* Azul para botones */
+    --secondary-color: #6C757D; /* Gris para bordes y texto */
+    --background-color: #F8F9FA; /* Fondo ligero */
+    --card-background: #FFFFFF; /* Fondo de tarjetas/paneles */
+    --shadow-light: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+    color: #343A40;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Encabezado */
+h1 {
+    color: var(--primary-color);
+    margin: 20px 0;
+    font-size: 2em;
+}
+
+h2 {
+    color: #343A40;
+    margin-top: 30px;
+    border-bottom: 2px solid #E9ECEF;
+    padding-bottom: 5px;
+    width: 90%;
+    max-width: 1100px;
+    text-align: left;
+}
+
+/* Controles (Panel Superior) */
+#controles {
+    background-color: var(--card-background);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-light);
+    margin-bottom: 30px;
+    width: 90%;
+    max-width: 1100px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+#controles > label, #controles > input {
+    margin-right: 20px;
+    align-self: center;
+}
+
+/* Grupo de controles (para matriz y casas) */
+.control-group {
+    background-color: #F0F0F0;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--secondary-color);
+    transition: all 0.3s ease;
+    flex-grow: 1;
+    min-width: 250px;
+}
+
+.control-group input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* Inputs de números y botón */
+input[type="number"] {
+    padding: 8px;
+    border: 1px solid #CED4DA;
+    border-radius: 4px;
+    width: 60px;
+    text-align: center;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.1s;
+    align-self: flex-start;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-1px);
+}
+
+/* Contenedor de Mapas y Resumen */
+#mapas-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    width: 90%;
+    max-width: 1100px;
+    flex-wrap: wrap; /* Permite que los mapas se apilen en pantallas pequeñas */
+}
+
+.map-wrapper {
+    background-color: var(--card-background);
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1 45%; /* Flexibilidad para dos columnas */
+    min-width: 400px; /* Tamaño mínimo para evitar encogimiento excesivo */
+}
+
+.map-wrapper h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+    font-size: 1.1em;
+}
+
+#mapaCanvas, #clusterMapaCanvas {
+    border: 1px solid var(--secondary-color);
+    background-color: white;
+    border-radius: 8px;
+}
+
+/* Resumen de Resultados */
+#resumen {
+    background-color: var(--card-background);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-light);
+    margin: 30px 0;
+    width: 90%;
+    max-width: 1100px;
+}
+
+#resumen h4 {
+    color: var(--primary-color);
+    margin-top: 0;
+}

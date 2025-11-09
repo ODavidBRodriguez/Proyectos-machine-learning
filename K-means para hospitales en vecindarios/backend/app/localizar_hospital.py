@@ -2,34 +2,33 @@ import pandas as pd
 import random
 
 class LocalizarHospital:
-    """Implementación manual de K-Means sin numpy/math y lógica de generación condicional."""
     
     def __init__(self, K, M=100, N=100, num_casas=500, random_matrix_size=False, random_casas=False):
         self.K = K
         
-        # Lógica Condicional para Tamaño de Matriz
         if random_matrix_size:
-            self.M = random.randint(50, 200) # M y N aleatorios entre 50 y 200
+            self.M = random.randint(50, 200)
             self.N = random.randint(50, 200)
         else:
             self.M = M
             self.N = N
             
-        # Lógica Condicional para Vecindarios
         if random_casas:
-            self.num_casas = random.randint(300, 1000) # Vecindarios aleatorios entre 300 y 1000
+            self.num_casas = random.randint(300, 1000)
         else:
             self.num_casas = num_casas
             
         self.vecindarios = self._generar_vecindarios()
         self.hospitales = None
-        self.visualizacion_posible = self.M <= 200 and self.N <= 200 # Usado en la API
+        self.visualizacion_posible = self.M <= 200 and self.N <= 200
         
-        # Ajuste: Si el número de casas es menor que K, ajustamos K
         if len(self.vecindarios) < self.K:
             self.K = len(self.vecindarios)
             if self.K == 0:
                  raise ValueError("No se pudieron generar vecindarios únicos.")
+            
+        # Almacenar las etiquetas de los clusters de las casas 
+        self.casas_clusters = [] # Lista de diccionarios {x, y, cluster}
             
     def _generar_vecindarios(self):
         """Genera coordenadas aleatorias para las casas, sin semilla fija."""
@@ -38,7 +37,6 @@ class LocalizarHospital:
         
         casas = pd.DataFrame(list(zip(x_coords, y_coords)), columns=['x', 'y'])
         casas = casas.drop_duplicates().reset_index(drop=True)
-        # Actualizamos el número de casas por si se eliminaron duplicados
         self.num_casas = len(casas) 
         return casas
 
@@ -51,7 +49,6 @@ class LocalizarHospital:
         
         casas_set = set(map(tuple, casas_df[['x', 'y']].values))
         
-        # Redondeo manual: (int(x + 0.5) si x >= 0)
         hospital_pos = (int(centroide[0] + 0.5) if centroide[0] >= 0 else int(centroide[0]),
                         int(centroide[1] + 0.5) if centroide[1] >= 0 else int(centroide[1]))
         
@@ -61,7 +58,6 @@ class LocalizarHospital:
         mejor_pos = None
         min_dist_sq = float('inf')
         
-        # Buscamos la celda vacía más cercana dentro de los límites de la matriz
         for i in range(self.M):
             for j in range(self.N):
                 celda = (i, j)
@@ -78,22 +74,23 @@ class LocalizarHospital:
         
         X = self.vecindarios.values.tolist()
         
-        # Si K se ajustó previamente a 0, detenemos.
         if self.K == 0:
             return 
         
-        # 1. Inicialización: selección aleatoria de K puntos
         centroides = random.sample(X, self.K) 
         
-        for _ in range(max_iter):
-            # 2. Asignación (Clustering)
+        for iteration in range(max_iter): # Usamos 'iteration' para evitar conflicto con '_'
             clusters = [[] for _ in range(self.K)]
-            for casa in X:
+            
+            #  Almacenar temporalmente las asignaciones para la convergencia 
+            current_assignments = [] 
+
+            for casa_idx, casa in enumerate(X):
                 distancias = [self._distancia_euclidiana_cuadrada(casa, c) for c in centroides]
                 cluster_index = distancias.index(min(distancias))
                 clusters[cluster_index].append(casa)
+                current_assignments.append({'x': casa[0], 'y': casa[1], 'cluster': cluster_index})
             
-            # 3. Actualización (Recalcular Centroides)
             nuevos_centroides = []
             cambios_total_sq = 0
             for i, cluster in enumerate(clusters):
@@ -104,25 +101,29 @@ class LocalizarHospital:
                     cambios_total_sq += self._distancia_euclidiana_cuadrada(centroides[i], nuevo_centroide)
                     nuevos_centroides.append(nuevo_centroide)
                 else:
-                    # Mantiene el centroide anterior si el cluster está vacío
                     nuevos_centroides.append(centroides[i])
 
             centroides = nuevos_centroides
             if cambios_total_sq < tolerancia:
+                #  Cuando converge, guardamos las asignaciones finales 
+                self.casas_clusters = current_assignments 
                 break
+        
+        # Si no converge, usamos la última asignación.
+        if not self.casas_clusters: 
+             self.casas_clusters = current_assignments 
                 
-        # 4. Ajuste final de las ubicaciones
         self.hospitales = [self._ajustar_centroide_a_grilla(c, self.vecindarios) 
                            for c in centroides]
 
     def obtener_resultados(self):
-        """Devuelve los resultados finales, incluyendo los parámetros finales M, N y num_casas."""
+        """Devuelve los resultados finales, incluyendo los parámetros finales M, N, num_casas y los clusters de las casas."""
         return {
             'K': self.K,
             'M': self.M,
             'N': self.N,
             'num_casas': self.num_casas,
-            'vecindarios': self.vecindarios.to_dict(orient='records'),
+            'vecindarios': self.casas_clusters, #  Ahora esto contiene {x, y, cluster} 
             'hospitales': [{'x': p[0], 'y': p[1]} for p in self.hospitales] if self.hospitales else [],
             'visualizacion_posible': self.visualizacion_posible
         }

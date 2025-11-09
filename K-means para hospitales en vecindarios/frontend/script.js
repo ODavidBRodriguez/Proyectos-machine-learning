@@ -1,7 +1,14 @@
-// Llamada directa al puerto del host (5001) para evitar problemas de proxy/CORS
 const BACKEND_URL = 'http://localhost:5001/api/locate'; 
 
-// Función para mostrar/ocultar los campos de entrada
+// Paleta de colores atractiva para los clusters
+// Aseguramos que haya suficientes colores para K clusters
+const COLORS = [
+    '#FF5733', '#33FF57', '#3357FF', '#FF33A1', '#A1FF33', 
+    '#33A1FF', '#FF8333', '#83FF33', '#3383FF', '#FF33D6',
+    '#D6FF33', '#33D6FF', '#FFC300', '#C3FF00', '#00C3FF',
+    '#FF6D33', '#6DFF33', '#336DFF'
+];
+
 function toggleInputs(id, isChecked) {
     document.getElementById(id).style.display = isChecked ? 'none' : 'block';
 }
@@ -11,20 +18,16 @@ function ejecutarKMeans() {
     const resumenDiv = document.getElementById('resumen');
     resumenDiv.innerHTML = 'Calculando...';
 
-    // 1. Obtener los flags de aleatoriedad
     const randomMatrixSize = document.getElementById('random_matrix_size').checked;
     const randomCasas = document.getElementById('random_casas').checked;
 
     const payload = {
         K: K,
-        // Flags que le dicen al backend cómo generar los datos
         random_matrix_size: randomMatrixSize,
         random_casas: randomCasas
     };
 
-    // 2. Añadir M, N y num_casas solo si NO son aleatorios
     if (!randomMatrixSize) {
-        // Se envían como texto, pero el backend los parsea a entero
         payload.M = document.getElementById('map_size_m').value;
         payload.N = document.getElementById('map_size_n').value;
     }
@@ -33,7 +36,6 @@ function ejecutarKMeans() {
         payload.num_casas = document.getElementById('num_casas_input').value;
     }
 
-    // 3. Enviar la petición con el payload dinámico
     fetch(BACKEND_URL, {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
@@ -56,33 +58,40 @@ function ejecutarKMeans() {
 
 function mostrarResultados(data) {
     const resumenDiv = document.getElementById('resumen');
-    const canvas = document.getElementById('mapaCanvas');
-    const ctx = canvas.getContext('2d');
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    
-    // M y N se reciben del Backend (el valor final, incluso si fue aleatorio)
+    const mapaCanvas = document.getElementById('mapaCanvas');
+    const clusterMapaCanvas = document.getElementById('clusterMapaCanvas'); // Nuevo canvas
+    const ctxMapa = mapaCanvas.getContext('2d');
+    const ctxClusterMapa = clusterMapaCanvas.getContext('2d'); // Contexto del nuevo canvas
+
+    ctxMapa.clearRect(0, 0, mapaCanvas.width, mapaCanvas.height);
+    ctxClusterMapa.clearRect(0, 0, clusterMapaCanvas.width, clusterMapaCanvas.height); // Limpiar también el nuevo
+
     const M = data.M;
     const N = data.N;
     
     let h_list = data.hospitales.map(h => `(${h.x}, ${h.y})`).join('; ');
 
     if (!data.visualizacion_posible) {
-        // Caso Matriz Grande
-        canvas.style.display = 'none';
+        mapaCanvas.style.display = 'none';
+        clusterMapaCanvas.style.display = 'none'; // Ocultar también el nuevo
         resumenDiv.innerHTML = `
             <h4>¡Matriz Demasiado Grande para Dibujar!</h4>
             <p>Dimensiones: ${M} x ${N}. Vecindarios: ${data.num_casas}. Se muestra solo el resumen de coordenadas.</p>
             <h4>Hospitales (${data.K}):</h4>
             <p>${h_list}</p>`;
     } else {
-        // Caso Matriz Pequeña
-        canvas.style.display = 'block';
-        dibujarMapa(data, ctx, canvas.width, canvas.height);
+        mapaCanvas.style.display = 'block';
+        clusterMapaCanvas.style.display = 'block'; // Mostrar también el nuevo
+
+        // Dibujar ambos mapas
+        dibujarMapa(data, ctxMapa, mapaCanvas.width, mapaCanvas.height);
+        dibujarClusterMapa(data, ctxClusterMapa, clusterMapaCanvas.width, clusterMapaCanvas.height);
+        
         resumenDiv.innerHTML = `
             <h4>Resultados de K-Means:</h4>
-            <p>Distribución óptima para ${data.K} hospitales en **${M}x${N}** (${data.num_casas} vecindarios).</p>
+            <p>Distribución óptima para ${data.K} hospitales en ${M}x${N} (${data.num_casas} vecindarios).</p>
             <h4>Hospitales (${data.K}):</h4>
-            <p>${h_list}</p>`;
+            <p>Coordenadas: ${h_list}</p>`;
     }
 }
 
@@ -90,11 +99,10 @@ function dibujarMapa(data, ctx, width, height) {
     const scaleX = width / data.M;
     const scaleY = height / data.N;
 
-    // Dibujar vecindarios (puntos azules)
-    ctx.fillStyle = 'blue';
+    // Dibujar vecindarios (ahora los cargamos del nuevo formato)
+    ctx.fillStyle = 'blue'; // Color uniforme para este mapa
     data.vecindarios.forEach(v => {
         ctx.beginPath();
-        // Nota: Se invierte Y para que 0,0 esté en la esquina inferior izquierda
         ctx.arc(v.x * scaleX, height - (v.y * scaleY), 1.5, 0, Math.PI * 2); 
         ctx.fill();
     });
@@ -105,5 +113,28 @@ function dibujarMapa(data, ctx, width, height) {
         ctx.beginPath();
         ctx.arc(h.x * scaleX, height - (h.y * scaleY), 5, 0, Math.PI * 2); 
         ctx.fill();
+    });
+}
+
+// 🚨 Nueva función para dibujar los clusters 🚨
+function dibujarClusterMapa(data, ctx, width, height) {
+    const scaleX = width / data.M;
+    const scaleY = height / data.N;
+
+    // Dibujar cada casa con el color de su cluster
+    data.vecindarios.forEach(v => {
+        const clusterColor = COLORS[v.cluster % COLORS.length]; // Usa módulo para ciclar colores
+        ctx.fillStyle = clusterColor;
+        ctx.beginPath();
+        ctx.arc(v.x * scaleX, height - (v.y * scaleY), 1.5, 0, Math.PI * 2); 
+        ctx.fill();
+    });
+
+    // Opcional: Podrías dibujar también los hospitales en este mapa, si quieres ver su relación con los clusters.
+    ctx.fillStyle = 'black'; // Un color diferente para distinguirlos
+    data.hospitales.forEach(h => {
+    ctx.beginPath();
+    ctx.arc(h.x * scaleX, height - (h.y * scaleY), 5, 0, Math.PI * 2); 
+    ctx.fill();
     });
 }
