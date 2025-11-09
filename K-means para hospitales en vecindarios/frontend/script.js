@@ -75,8 +75,8 @@ function mostrarResultados(data) {
         mapaCanvas.style.display = 'none';
         clusterMapaCanvas.style.display = 'none'; // Ocultar también el nuevo
         resumenDiv.innerHTML = `
-            <h4>¡Matriz Demasiado Grande para Dibujar!</h4>
-            <p>Dimensiones: ${M} x ${N}. Vecindarios: ${data.num_casas}. Se muestra solo el resumen de coordenadas.</p>
+            <h4>¡Matriz demasiado grande para dibujar!</h4>
+            <p>Dimensiones: ${M} x ${N}. Casas: ${data.num_casas}. Se muestra solo el resumen de coordenadas.</p>
             <h4>Hospitales (${data.K}):</h4>
             <p>${h_list}</p>`;
     } else {
@@ -89,7 +89,7 @@ function mostrarResultados(data) {
         
         resumenDiv.innerHTML = `
             <h4>Resultados de K-Means:</h4>
-            <p>Distribución óptima para ${data.K} hospitales en ${M}x${N} (${data.num_casas} vecindarios).</p>
+            <p>Distribución óptima para ${data.K} hospitales en ${M}x${N} (${data.num_casas} casas).</p>
             <h4>Hospitales (${data.K}):</h4>
             <p>Coordenadas: ${h_list}</p>`;
     }

@@ -3,57 +3,103 @@
     --primary-color: #007BFF; /* Azul para botones */
     --secondary-color: #6C757D; /* Gris para bordes y texto */
     --background-color: #F8F9FA; /* Fondo ligero */
-    --card-background: #FFFFFF; /* Fondo de tarjetas/paneles */
+    --card-background: #FFFFFF; /* Fondo de tarjetas/paneles (EL CUADRO BLANCO) */
     --shadow-light: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--background-color);
     color: #343A40;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative; 
 }
+
+/* ================================================= */
+/* 🖼️ Banner de Imagen de Fondo (Full Width) */
+/* ================================================= */
+
+.hero-image-container {
+    width: 100vw;
+    height: 350px; /* Aumentado para que se vea más imagen antes del contenido */
+    overflow: hidden; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.85; 
+    z-index: 1; 
+}
+
+.hero-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: center 35%; 
+}
+
+/* ================================================= */
+/* 💻 Estructura y Contenido (Consolidación de Tarjetas) */
+/* ================================================= */
 
 /* Encabezado */
 h1 {
     color: var(--primary-color);
-    margin: 20px 0;
-    font-size: 2em;
+    font-size: 2.5em;
+    /* Fondo del encabezado (primera parte del bloque consolidado) */
+    background-color: var(--card-background); 
+    padding: 15px 30px 10px; /* Padding inferior más pequeño para unirse a #controles */
+    border-top-left-radius: 12px; /* Solo bordes superiores redondeados */
+    border-top-right-radius: 12px;
+    border-bottom-left-radius: 0; /* Bordes inferiores rectos */
+    border-bottom-right-radius: 0;
+    box-shadow: var(--shadow-light);
+    z-index: 10;
+    position: relative;
+    width: 90%; /* Ajustamos el ancho para que coincida con #controles */
+    max-width: 1100px;
+    
+    /* MOVER EL BLOQUE COMPLETO MÁS ABAJO */
+    /* Este margen es CRUCIAL. Empuja el bloque completo hacia abajo para exponer la imagen. */
+    margin-top: 250px; 
+    margin-bottom: 0; /* Elimina el margen inferior para que se una a #controles */
 }
 
-h2 {
-    color: #343A40;
-    margin-top: 30px;
-    border-bottom: 2px solid #E9ECEF;
-    padding-bottom: 5px;
-    width: 90%;
-    max-width: 1100px;
-    text-align: left;
-}
 
 /* Controles (Panel Superior) */
 #controles {
-    background-color: var(--card-background);
+    background-color: var(--card-background); /* Fondo Blanco (Continúa el cuadro blanco) */
     padding: 25px;
-    border-radius: 12px;
+    
+    /* Bordes inferiores redondeados para terminar el bloque */
+    border-radius: 0 0 12px 12px;
     box-shadow: var(--shadow-light);
+    
+    /* Alineación de margen negativo para que se superponga visualmente al h1, 
+       convirtiéndolos en un solo bloque */
+    margin-top: -1px; 
     margin-bottom: 30px;
+    
     width: 90%;
     max-width: 1100px;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     align-items: flex-start;
+    z-index: 10;
+    position: relative;
 }
 
 #controles > label, #controles > input {
     margin-right: 20px;
     align-self: center;
 }
+
+/* ... (El resto del CSS: h2, .control-group, input, button, #mapas-container, #resumen) ... 
+   Mantiene los mismos estilos ya que actúan como tarjetas separadas.
+*/
 
 /* Grupo de controles (para matriz y casas) */
 .control-group {
@@ -99,24 +145,30 @@ button:hover {
 
 /* Contenedor de Mapas y Resumen */
 #mapas-container {
+    background-color: var(--card-background); /* Fondo Blanco */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-light);
+    z-index: 10;
+    position: relative;
+    
     display: flex;
     justify-content: center;
     gap: 30px;
     width: 90%;
     max-width: 1100px;
-    flex-wrap: wrap; /* Permite que los mapas se apilen en pantallas pequeñas */
+    flex-wrap: wrap;
 }
 
 .map-wrapper {
-    background-color: var(--card-background);
     padding: 15px;
     border-radius: 12px;
-    box-shadow: var(--shadow-light);
+    box-shadow: none;
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex: 1 1 45%; /* Flexibilidad para dos columnas */
-    min-width: 400px; /* Tamaño mínimo para evitar encogimiento excesivo */
+    flex: 1 1 45%; 
+    min-width: 400px; 
 }
 
 .map-wrapper h3 {
@@ -133,16 +185,27 @@ button:hover {
 
 /* Resumen de Resultados */
 #resumen {
-    background-color: var(--card-background);
+    background-color: var(--card-background); /* Fondo Blanco */
     padding: 20px;
     border-radius: 12px;
     box-shadow: var(--shadow-light);
     margin: 30px 0;
     width: 90%;
     max-width: 1100px;
+    z-index: 10;
+    position: relative;
 }
 
 #resumen h4 {
     color: var(--primary-color);
     margin-top: 0;
+}
+
+.logo-hospital {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin: 0;
+    margin-right: 20px; 
+    align-self: center; 
 }
