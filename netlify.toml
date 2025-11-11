@@ -1,0 +1,4 @@
+[build]
+
+
+GIT_SUBMODULES_ARE_STRICT = "false"
