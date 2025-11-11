@@ -1,4 +1,4 @@
-const BACKEND_URL = 'http://localhost:5001/api/locate'; 
+const BACKEND_URL = 'https://ubicador-hospitales.onrender.com'; 
 
         // Paleta de colores para los clusters
         const COLORS = [
