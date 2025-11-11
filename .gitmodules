@@ -1,3 +1,1 @@
-[submodule "detector_spam"]
-	path = detector_spam
-	url = https://github.com/ODavidBRodriguez/detector_spam.git  # O la URL correcta del submódulo
+
