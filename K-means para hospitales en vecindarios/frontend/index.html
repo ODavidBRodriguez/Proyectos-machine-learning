@@ -17,6 +17,13 @@
         <input type="number" id="num_hospitals" value="3" min="1">
         
         <div class="control-group">
+            <label>
+                <input type="checkbox" id="checkFijarSemilla" checked>
+                Fijar distribución de casas (Semilla: 42)
+            </label>
+        </div>
+
+        <div class="control-group">
             <input type="checkbox" id="random_matrix_size" onchange="toggleInputs('matrix_inputs', this.checked)" checked>
             <label for="random_matrix_size">Tamaño de matriz aleatorio (50x50 a 200x200)</label>
             <div id="matrix_inputs" style="display:none;">

@@ -23,6 +23,8 @@ def locate_hospitals():
         random_matrix_size = bool(data.get('random_matrix_size', False))
         random_casas = bool(data.get('random_casas', False))
 
+        semilla_casas = data.get('semilla_aleatoria')
+
         # Validación básica
         if K <= 0 or (M <= 0 and not random_matrix_size) or (N <= 0 and not random_matrix_size):
             return jsonify({'error': 'Todos los parámetros deben ser positivos.'}), 400
@@ -34,11 +36,13 @@ def locate_hospitals():
             N=N, 
             num_casas=num_casas,
             random_matrix_size=random_matrix_size,
-            random_casas=random_casas
+            random_casas=random_casas,
+            semilla_casas=semilla_casas
         )
         
         # El método ubicar_hospitales se encarga del K-Means
         locator.ubicar_hospitales()
+        
         
         results = locator.obtener_resultados()
         

@@ -3,8 +3,9 @@ import random
 
 class LocalizarHospital:
     
-    def __init__(self, K, M=100, N=100, num_casas=500, random_matrix_size=False, random_casas=False):
+    def __init__(self, K, M=100, N=100, num_casas=500, random_matrix_size=False, random_casas=False, semilla_casas=None):
         self.K = K
+        self.seed_casas = semilla_casas # 👈 ALMACENADO PARA USAR EN K-MEANS
         
         if random_matrix_size:
             self.M = random.randint(50, 200)
@@ -18,7 +19,8 @@ class LocalizarHospital:
         else:
             self.num_casas = num_casas
             
-        self.vecindarios = self._generar_vecindarios()
+        # Generamos los vecindarios (la distribución de casas)
+        self.vecindarios = self._generar_vecindarios(semilla=semilla_casas)
         self.hospitales = None
         self.visualizacion_posible = self.M <= 200 and self.N <= 200
         
@@ -30,14 +32,17 @@ class LocalizarHospital:
         # Almacenar las etiquetas de los clusters de las casas 
         self.casas_clusters = [] # Lista de diccionarios {x, y, cluster}
             
-    def _generar_vecindarios(self):
-        """Genera coordenadas aleatorias para las casas, sin semilla fija."""
+    def _generar_vecindarios(self, semilla=None):
+        """Genera coordenadas aleatorias para las casas. Si se proporciona una semilla, la distribución es fija y reproducible."""
+        if semilla is not None:
+            random.seed(semilla)
         x_coords = [random.randint(0, self.M - 1) for _ in range(self.num_casas)]
         y_coords = [random.randint(0, self.N - 1) for _ in range(self.num_casas)]
         
         casas = pd.DataFrame(list(zip(x_coords, y_coords)), columns=['x', 'y'])
         casas = casas.drop_duplicates().reset_index(drop=True)
         self.num_casas = len(casas) 
+        random.seed(None) # Resetear la semilla inmediatamente después de generar las casas
         return casas
 
     def _distancia_euclidiana_cuadrada(self, p1, p2):
@@ -77,12 +82,22 @@ class LocalizarHospital:
         if self.K == 0:
             return 
         
+        # 🚨 CORRECCIÓN CLAVE: Aplicar la semilla ANTES de la inicialización de K-Means
+        # Esto hace que la selección de los puntos de partida de K-Means sea fija.
+        if self.seed_casas is not None:
+             random.seed(self.seed_casas)
+             
+        # Inicialización de centroides (esta es la línea que debe ser determinista)
         centroides = random.sample(X, self.K) 
+        
+        # Resetear la semilla DESPUÉS de la inicialización para no afectar el resto del sistema
+        if self.seed_casas is not None:
+             random.seed(None)
         
         for iteration in range(max_iter): # Usamos 'iteration' para evitar conflicto con '_'
             clusters = [[] for _ in range(self.K)]
             
-            #  Almacenar temporalmente las asignaciones para la convergencia 
+            # Almacenar temporalmente las asignaciones para la convergencia 
             current_assignments = [] 
 
             for casa_idx, casa in enumerate(X):
@@ -105,16 +120,16 @@ class LocalizarHospital:
 
             centroides = nuevos_centroides
             if cambios_total_sq < tolerancia:
-                #  Cuando converge, guardamos las asignaciones finales 
+                # Cuando converge, guardamos las asignaciones finales 
                 self.casas_clusters = current_assignments 
                 break
         
         # Si no converge, usamos la última asignación.
         if not self.casas_clusters: 
-             self.casas_clusters = current_assignments 
+              self.casas_clusters = current_assignments 
                 
         self.hospitales = [self._ajustar_centroide_a_grilla(c, self.vecindarios) 
-                           for c in centroides]
+                             for c in centroides]
 
     def obtener_resultados(self):
         """Devuelve los resultados finales, incluyendo los parámetros finales M, N, num_casas y los clusters de las casas."""
@@ -123,7 +138,7 @@ class LocalizarHospital:
             'M': self.M,
             'N': self.N,
             'num_casas': self.num_casas,
-            'vecindarios': self.casas_clusters, #  Ahora esto contiene {x, y, cluster} 
+            'vecindarios': self.casas_clusters, # Ahora esto contiene {x, y, cluster} 
             'hospitales': [{'x': p[0], 'y': p[1]} for p in self.hospitales] if self.hospitales else [],
             'visualizacion_posible': self.visualizacion_posible
         }
