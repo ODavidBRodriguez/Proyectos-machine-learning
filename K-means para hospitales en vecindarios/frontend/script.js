@@ -125,7 +125,7 @@ const BACKEND_URL = 'https://ubicador-hospitales.onrender.com/api/locate';
             
             // Dibujar vecindarios (Color uniforme: Azul)
             ctx.fillStyle = 'blue'; 
-            data.puntos_asignados.forEach(v => {
+            data.vecindarios.forEach(v => {
                 ctx.beginPath();
                 // Importante: La coordenada Y se invierte (height - y * scaleY) porque el canvas
                 // tiene el origen (0,0) en la esquina superior izquierda.
@@ -148,7 +148,7 @@ const BACKEND_URL = 'https://ubicador-hospitales.onrender.com/api/locate';
             const size = Math.min(scaleX, scaleY);
 
             // Dibujar cada casa con el color de su cluster
-            data.puntos_asignados.forEach(v => {
+            data.vecindarios.forEach(v => {
                 const clusterColor = COLORS[v.cluster % COLORS.length]; // Usa módulo para ciclar colores
                 ctx.fillStyle = clusterColor;
                 ctx.beginPath();
