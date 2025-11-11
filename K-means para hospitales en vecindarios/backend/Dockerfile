@@ -3,6 +3,6 @@ WORKDIR /usr/src/app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 COPY app/ app/
-EXPOSE 5000
+EXPOSE 8000
 # Correr la aplicación Flask de forma directa
-CMD ["python3", "-m", "app.api"]
+CMD ["gunicorn", "app.api:app", "--bind", "0.0.0.0:8000"]
