@@ -5,7 +5,7 @@ class LocalizarHospital:
     
     def __init__(self, K, M=100, N=100, num_casas=500, random_matrix_size=False, random_casas=False, semilla_casas=None):
         self.K = K
-        self.seed_casas = semilla_casas # 👈 ALMACENADO PARA USAR EN K-MEANS
+        self.seed_casas = semilla_casas # ALMACENADO PARA USAR EN K-MEANS
         
         if random_matrix_size:
             self.M = random.randint(50, 200)
@@ -82,7 +82,7 @@ class LocalizarHospital:
         if self.K == 0:
             return 
         
-        # 🚨 CORRECCIÓN CLAVE: Aplicar la semilla ANTES de la inicialización de K-Means
+        # CORRECCIÓN CLAVE: Aplicar la semilla ANTES de la inicialización de K-Means
         # Esto hace que la selección de los puntos de partida de K-Means sea fija.
         if self.seed_casas is not None:
              random.seed(self.seed_casas)

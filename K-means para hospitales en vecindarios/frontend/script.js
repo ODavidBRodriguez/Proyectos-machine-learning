@@ -52,7 +52,7 @@ const BACKEND_URL = 'https://ubicador-hospitales.onrender.com';
                  return;
             }
 
-            fetch(BACKEND_URL, {
+            fetch(`${BACKEND_URL}/api/locate`, {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify(payload)
@@ -112,7 +112,7 @@ const BACKEND_URL = 'https://ubicador-hospitales.onrender.com';
                 
                 resumenDiv.innerHTML = `
                     <h4 class="text-xl font-semibold text-gray-800">Resultados de K-Means:</h4>
-                    <p>Distribución óptima para <span class="font-bold text-indigo-600">${data.K}</span> hospitales en <span class="font-bold">${M}x${N}</span> (${data.num_casas} casas).</p>
+                    <p>Distribución óptima para <span class="font-bold text-indigo-600">${data.K}</span> hospitales en <span class="font-bold">${M}x${N}</span>.</p>
                     <h4 class="text-lg font-semibold mt-4">Hospitales (${data.K}):</h4>
                     <p class="break-all">${h_list}</p>`;
             }
